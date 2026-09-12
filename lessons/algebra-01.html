@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 01: Множини чисел та дії з ними. Числові та буквені вирази. Формули скороченого множення — Optima
+    </title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../index.html" class="logo">📐 Optima</a>
+            <p class="tagline">Підготовка до НМТ з математики</p>
+        </div>
+    </header>
+
+    <main class="container lesson-page">
+        <div class="lesson-header">
+            <p class="breadcrumb">
+                <a href="../index.html">Головна</a> ›
+                <a href="../index.html#algebra">📘 Алгебра</a> ›
+                Урок 01
+            </p>
+            <h1>Множини чисел та дії з ними. Числові та буквені вирази. Формули скороченого множення</h1>
+        </div>
+
+        <article class="lesson-content">
+
+            <h2>Мета заняття</h2>
+            <p>Повторити множини чисел та дії з ними, навчитися спрощувати числові та буквені вирази, застосовувати
+                формули скороченого множення для перетворення виразів.</p>
+
+            <h2>1. Множини чисел</h2>
+
+            <h3>Основні числові множини</h3>
+            <ul>
+                <li>$\mathbb{N}$ — <strong>натуральні числа</strong>: $1, 2, 3, 4, \ldots$</li>
+                <li>$\mathbb{Z}$ — <strong>цілі числа</strong>: $\ldots, -2, -1, 0, 1, 2, \ldots$</li>
+                <li>$\mathbb{Q}$ — <strong>раціональні числа</strong>: числа виду $\dfrac{m}{n}$, де $m \in \mathbb{Z}$,
+                    $n \in \mathbb{N}$</li>
+                <li>$\mathbb{R}$ — <strong>дійсні числа</strong>: усі раціональні та ірраціональні числа</li>
+            </ul>
+
+            <p>Між множинами виконується включення:</p>
+            <p>$$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$$</p>
+
+            <p><strong>Ірраціональні числа</strong> — числа, які не можна подати у вигляді дробу $\dfrac{m}{n}$.
+                Наприклад: $\sqrt{2}$, $\pi$, $e$.</p>
+
+            <h3>Модуль числа</h3>
+            <p>Модуль (абсолютна величина) числа $a$ — це відстань від точки $a$ до нуля на координатній прямій:</p>
+            <p>$$|a| = \begin{cases} a, & \text{якщо } a \geq 0 \\ -a, & \text{якщо } a < 0 \end{cases}$$</p>
+
+                    <p>Наприклад: $|5| = 5$, $|-3| = 3$, $|0| = 0$.</p>
+
+                    <h2>2. Числові та буквені вирази</h2>
+
+                    <p><strong>Числовий вираз</strong> — запис, що складається з чисел, знаків арифметичних дій і дужок.
+                        Наприклад: $3 + 5 \cdot 2$.</p>
+
+                    <p><strong>Буквений вираз</strong> — вираз, що містить букви (змінні) разом з числами. Наприклад:
+                        $2x + 3y$.</p>
+
+                    <p><strong>Значення виразу</strong> — число, яке отримуємо після виконання всіх дій.</p>
+
+                    <h3>Порядок виконання дій</h3>
+                    <ol>
+                        <li>Дії в дужках</li>
+                        <li>Піднесення до степеня, добування кореня</li>
+                        <li>Множення та ділення (зліва направо)</li>
+                        <li>Додавання та віднімання (зліва направо)</li>
+                    </ol>
+
+                    <h3>Область допустимих значень (ОДЗ)</h3>
+                    <p>ОДЗ — множина значень змінної, при яких вираз має зміст. Наприклад, у виразі $\dfrac{5}{x - 3}$
+                        ОДЗ: $x \neq 3$.</p>
+
+                    <h2>3. Формули скороченого множення</h2>
+
+                    <p>Ці формули — ключовий інструмент для спрощення виразів і розкладання многочленів на множники.</p>
+
+                    <h3>Квадрат суми та різниці</h3>
+                    <p>$$(a + b)^2 = a^2 + 2ab + b^2$$</p>
+                    <p>$$(a - b)^2 = a^2 - 2ab + b^2$$</p>
+
+                    <h3>Різниця квадратів</h3>
+                    <p>$$a^2 - b^2 = (a - b)(a + b)$$</p>
+
+
+                    <div class="example">
+                        <div class="example-title">Приклад 1. Спрощення виразу</div>
+                        <p>Спростіть вираз: $(x + 4)^2 - (x - 2)(x + 2)$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>Розкриємо дужки, використовуючи формули квадрата суми та різниці квадратів:</p>
+                        <p>$(x + 4)^2 - (x - 2)(x + 2) = x^2 + 8x + 16 - (x^2 - 4)$</p>
+                        <p>$= x^2 + 8x + 16 - x^2 + 4 = 8x + 20$</p>
+                        <p><strong>Відповідь:</strong> $8x + 20$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 2. Розкладання на множники</div>
+                        <p>Розкладіть на множники: $9a^2 - 25b^2$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>Помічаємо різницю квадратів: $9a^2 = (3a)^2$, $25b^2 = (5b)^2$.</p>
+                        <p>$9a^2 - 25b^2 = (3a)^2 - (5b)^2 = (3a - 5b)(3a + 5b)$</p>
+                        <p><strong>Відповідь:</strong> $(3a - 5b)(3a + 5b)$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 3. Обчислення значення виразу</div>
+                        <p>Обчисліть: $\dfrac{87^2 - 13^2}{74}$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>Застосуємо формулу різниці квадратів у чисельнику:</p>
+                        <p>$\dfrac{87^2 - 13^2}{74} = \dfrac{(87 - 13)(87 + 13)}{74} = \dfrac{74 \cdot 100}{74} = 100$
+                        </p>
+                        <p><strong>Відповідь:</strong> $100$.</p>
+                    </div>
+
+                    <h2>4. Дії зі степенями (коротко)</h2>
+                    <ul>
+                        <li>$a^m \cdot a^n = a^{m + n}$</li>
+                        <li>$\dfrac{a^m}{a^n} = a^{m - n}$, $a \neq 0$</li>
+                        <li>$(a^m)^n = a^{mn}$</li>
+                        <li>$(ab)^n = a^n b^n$</li>
+                        <li>$a^0 = 1$, $a \neq 0$</li>
+                        <li>$a^{-n} = \dfrac{1}{a^n}$, $a \neq 0$</li>
+                    </ul>
+
+                    <!-- ===== ТЕСТ ===== -->
+                    <div class="test">
+                        <div class="test-title">📝 Перевірте себе</div>
+
+                        <div class="question">
+                            <p class="question-text">1. До якої найменшої числової множини належить число $-7$?</p>
+                            <div class="options">
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$\mathbb{N}$</button>
+                                <button class="option" data-correct="true"
+                                    onclick="checkChoice(this, true)">$\mathbb{Z}$</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$\mathbb{Q}$</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$\mathbb{R}$</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">2. Обчисліть: $|-9| + |4| - |-2|$</p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Ваша відповідь">
+                                <button class="btn" onclick="checkInput(this, '11')">Перевірити</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">3. Спростіть вираз: $(a + 3)^2 - a(a + 6)$</p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Наприклад: 9">
+                                <button class="btn" onclick="checkInput(this, '9')">Перевірити</button>
+                                <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
+                                    розв'язок</button>
+                            </div>
+                            <p class="feedback"></p>
+                            <div class="solution">
+                                <div class="solution-title">Розв'язання:</div>
+                                <p>$(a + 3)^2 - a(a + 6) = a^2 + 6a + 9 - a^2 - 6a = 9$</p>
+                                <p><strong>Відповідь:</strong> $9$.</p>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">4. Розкладіть на множники: $x^2 - 16y^2$</p>
+                            <div class="options">
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(x -
+                                    4y)^2$</button>
+                                <button class="option" data-correct="true" onclick="checkChoice(this, true)">$(x - 4y)(x
+                                    + 4y)$</button>
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(x -
+                                    16y)(x + y)$</button>
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(x -
+                                    8y)(x + 2y)$</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">5. Обчисліть, використовуючи формули скороченого множення:
+                                $\dfrac{53^2 - 47^2}{60}$</p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Ваша відповідь">
+                                <button class="btn" onclick="checkInput(this, '10')">Перевірити</button>
+                                <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
+                                    розв'язок</button>
+                            </div>
+                            <p class="feedback"></p>
+                            <div class="solution">
+                                <div class="solution-title">Розв'язання:</div>
+                                <p>За формулою різниці квадратів:</p>
+                                <p>$\dfrac{53^2 - 47^2}{60} = \dfrac{(53 - 47)(53 + 47)}{60} = \dfrac{6 \cdot 100}{60} =
+                                    10$</p>
+                                <p><strong>Відповідь:</strong> $10$.</p>
+                            </div>
+                        </div>
+
+                    </div>
+        </article>
+        <nav class="lesson-nav">
+            <a href="combined-13.html">← Робота з комплексним завданням. Стереоме</a>
+            <a href="algebra-02.html">Відсотки. Пропорція →</a>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© Optima — підготовка до НМТ</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 04: Робота з комплексним завданням. Рівняння, системи рівнянь — Optima</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../index.html" class="logo">📐 Optima</a>
+            <p class="tagline">Підготовка до НМТ з математики</p>
+        </div>
+    </header>
+
+    <main class="container lesson-page">
+        <div class="lesson-header">
+            <p class="breadcrumb">
+                <a href="../index.html">Головна</a> ›
+                <a href="../index.html#combined">🎯 Комбіновані тести НМТ</a> ›
+                Урок 04
+            </p>
+            <h1>Робота з комплексним завданням. Рівняння, системи рівнянь</h1>
+        </div>
+
+        <article class="lesson-content">
+
+            <h2>Мета заняття</h2>
+            <p><em>Тут буде мета уроку.</em></p>
+
+            <h2>Теоретична довідка</h2>
+            <p><em>Тут буде теорія. Формули записуються в LaTeX між знаками $ ... $.</em></p>
+            <p>Наприклад: $a^2 + b^2 = c^2$</p>
+
+            <div class="example">
+                <div class="example-title">Приклад 1</div>
+                <p><em>Умова прикладу.</em></p>
+                <p><strong>Розв'язання:</strong></p>
+                <p><em>Покрокове розв'язання.</em></p>
+                <p><strong>Відповідь:</strong> ...</p>
+            </div>
+
+            <!-- ===== ТЕСТ ===== -->
+            <div class="test">
+                <div class="test-title">📝 Перевірте себе</div>
+
+                <!-- Питання 1: вибір варіанта -->
+                <div class="question">
+                    <p class="question-text">1. Текст питання?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант A</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">Варіант B (правильний)</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант C</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант D</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <!-- Питання 2: введення відповіді -->
+                <div class="question">
+                    <p class="question-text">2. Текст питання? У відповідь запишіть число.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <!-- Питання 3: введення + показати розв'язок -->
+                <div class="question">
+                    <p class="question-text">3. Текст питання?</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p><em>Тут буде розв'язання.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+        <nav class="lesson-nav">
+            <a href="combined-03.html">← Робота з комплексним завданням</a>
+            <a href="combined-05.html">Робота з комплексним завданням. Дії зі с →</a>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© Optima — підготовка до НМТ</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
