@@ -17,3 +17,7 @@ desktop.ini
 # Временные файлы
 *.tmp
 *.log
+
+# VS Code
+*.code-workspace
+.vscode/
