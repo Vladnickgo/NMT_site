@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="uk">
 
 <head>
@@ -19,7 +19,7 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <a href="../index.html" class="logo">📐 Optima</a>
+            <a href="../index.html" class="logo"><img src="../assets/images/logo.svg" alt="Optima Academy"></a>
             <p class="tagline">Підготовка до НМТ з математики</p>
         </div>
     </header>
@@ -56,6 +56,128 @@
 
             <p><strong>Ірраціональні числа</strong> — числа, які не можна подати у вигляді дробу $\dfrac{m}{n}$.
                 Наприклад: $\sqrt{2}$, $\pi$, $e$.</p>
+            <figure class="lesson-figure">
+                <img width="70%" src="../assets/images/lessons/algebra-01/setsOfNumbers.png"
+                    alt="Схема множин чисел: дійсні, раціональні, цілі, натуральні, ірраціональні">
+                <figcaption>Схема числових множин: $$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset
+                    \mathbb{R}, \mathbb{I} \subset \mathbb{R}$$</figcaption>
+            </figure>
+
+            <!-- Завдання на відповідність (оформлено як 4 питання) -->
+            <div class="question">
+                <p class="question-text">
+                    <strong>Завдання на відповідність.</strong><br>
+                    Установіть відповідність між числом (1–4) та множиною, до якої воно належить (А–Д).
+                </p>
+
+                <!-- Табличка "довідка" зі списками -->
+                <div class="matching-help">
+                    <div class="matching-col">
+                        <h4>Число</h4>
+                        <ol>
+                            <li>$-8$</li>
+                            <li>$23$</li>
+                            <li>$\sqrt{16}$</li>
+                            <li>$1{,}7$</li>
+                        </ol>
+                    </div>
+                    <div class="matching-col">
+                        <h4>Множина</h4>
+                        <ul class="matching-list">
+                            <li><strong>А)</strong> множина парних натуральних чисел</li>
+                            <li><strong>Б)</strong> множина цілих чисел, що не є натуральними</li>
+                            <li><strong>В)</strong> множина раціональних чисел, що не є цілими</li>
+                            <li><strong>Г)</strong> множина ірраціональних чисел</li>
+                            <li><strong>Д)</strong> множина простих чисел</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Питання 1: число -8 -->
+            <div class="question">
+                <p class="question-text">1. До якої множини належить число $-8$?</p>
+                <div class="options">
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">А — парні
+                        натуральні</button>
+                    <button class="option" data-correct="true" onclick="checkChoice(this, true)">Б — цілі, що не є
+                        натуральними</button>
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">В — раціональні, що
+                        не є цілими</button>
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">Г —
+                        ірраціональні</button>
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">Д — прості</button>
+                </div>
+                <p class="feedback"></p>
+            </div>
+
+            <!-- Питання 2: число 23 -->
+            <div class="question">
+                <p class="question-text">2. До якої множини належить число $23$?</p>
+                <div class="options">
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">А — парні
+                        натуральні</button>
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">Б — цілі, що не є
+                        натуральними</button>
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">В — раціональні, що
+                        не є цілими</button>
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">Г —
+                        ірраціональні</button>
+                    <button class="option" data-correct="true" onclick="checkChoice(this, true)">Д — прості</button>
+                </div>
+                <p class="feedback"></p>
+            </div>
+
+            <!-- Питання 3: √16 -->
+            <div class="question">
+                <p class="question-text">3. До якої множини належить число $\sqrt{16}$?</p>
+                <div class="options">
+                    <button class="option" data-correct="true" onclick="checkChoice(this, true)">А — парні
+                        натуральні</button>
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">Б — цілі, що не є
+                        натуральними</button>
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">В — раціональні, що
+                        не є цілими</button>
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">Г —
+                        ірраціональні</button>
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">Д — прості</button>
+                </div>
+                <p class="feedback"></p>
+            </div>
+
+            <!-- Питання 4: 1,7 -->
+            <div class="question">
+                <p class="question-text">4. До якої множини належить число $1{,}7$?</p>
+                <div class="options">
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">А — парні
+                        натуральні</button>
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">Б — цілі, що не є
+                        натуральними</button>
+                    <button class="option" data-correct="true" onclick="checkChoice(this, true)">В — раціональні, що не
+                        є цілими</button>
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">Г —
+                        ірраціональні</button>
+                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">Д — прості</button>
+                </div>
+                <p class="feedback"></p>
+            </div>
+
+            <!-- Пояснення правильних відповідей -->
+            <div class="question">
+                <div class="solution show" style="display:block;">
+                    <div class="solution-title">Правильні відповіді:</div>
+                    <ul>
+                        <li><strong>1 – Б:</strong> $-8$ — ціле, але не натуральне (натуральні — тільки $1, 2, 3,
+                            \ldots$).</li>
+                        <li><strong>2 – Д:</strong> $23$ — просте число (ділиться тільки на 1 і на себе).</li>
+                        <li><strong>3 – А:</strong> $\sqrt{16} = 4$ — парне натуральне число.</li>
+                        <li><strong>4 – В:</strong> $1{,}7 = \dfrac{17}{10}$ — раціональне, але не ціле.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
 
             <h3>Модуль числа</h3>
             <p>Модуль (абсолютна величина) числа $a$ — це відстань від точки $a$ до нуля на координатній прямій:</p>
@@ -115,6 +237,129 @@
                         <p>$9a^2 - 25b^2 = (3a)^2 - (5b)^2 = (3a - 5b)(3a + 5b)$</p>
                         <p><strong>Відповідь:</strong> $(3a - 5b)(3a + 5b)$.</p>
                     </div>
+
+                    <h2>4. Дії зі звичайними дробами</h2>
+
+                    <p><strong>Звичайний дріб</strong> — це запис виду $\dfrac{a}{b}$, де $a$ — чисельник, $b$ — знаменник,
+                        $b \neq 0$.</p>
+        
+                    <p>Основна властивість дробу:</p>
+                    <p>$$\dfrac{a}{b} = \dfrac{a \cdot k}{b \cdot k}, \quad k \neq 0$$</p>
+        
+                    <h3>Додавання та віднімання дробів</h3>
+        
+                    <p><strong>З однаковими знаменниками:</strong></p>
+                    <p>$$\dfrac{a}{c} + \dfrac{b}{c} = \dfrac{a + b}{c}, \qquad \dfrac{a}{c} - \dfrac{b}{c} = \dfrac{a - b}{c}$$</p>
+        
+                    <p><strong>З різними знаменниками:</strong> зводимо до спільного знаменника (найкраще — до найменшого
+                        спільного кратного, НСК):</p>
+                    <p>$$\dfrac{a}{b} + \dfrac{c}{d} = \dfrac{a \cdot d + c \cdot b}{b \cdot d}$$</p>
+        
+                    <h3>Множення та ділення дробів</h3>
+                    <p>$$\dfrac{a}{b} \cdot \dfrac{c}{d} = \dfrac{a \cdot c}{b \cdot d}$$</p>
+                    <p>$$\dfrac{a}{b} : \dfrac{c}{d} = \dfrac{a}{b} \cdot \dfrac{d}{c} = \dfrac{a \cdot d}{b \cdot c}, \quad c \neq 0$$</p>
+        
+                    <p><strong>Правило:</strong> при діленні дріб «перевертаємо» і множимо.</p>
+        
+                    <h3>Скорочення дробів</h3>
+                    <p>Щоб скоротити дріб, чисельник і знаменник ділять на їх спільний дільник:</p>
+                    <p>$$\dfrac{a \cdot k}{b \cdot k} = \dfrac{a}{b}$$</p>
+        
+                    <div class="example">
+                        <div class="example-title">Приклад 1. Додавання дробів з різними знаменниками</div>
+                        <p>Обчисліть: $\dfrac{3}{4} + \dfrac{5}{6}$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>НСК для 4 і 6 — це 12. Зведемо обидва дроби до знаменника 12:</p>
+                        <p>$\dfrac{3}{4} = \dfrac{3 \cdot 3}{4 \cdot 3} = \dfrac{9}{12}, \qquad \dfrac{5}{6} = \dfrac{5 \cdot 2}{6 \cdot 2} = \dfrac{10}{12}$</p>
+                        <p>$\dfrac{9}{12} + \dfrac{10}{12} = \dfrac{19}{12} = 1\dfrac{7}{12}$</p>
+                        <p><strong>Відповідь:</strong> $1\dfrac{7}{12}$.</p>
+                    </div>
+        
+                    <div class="example">
+                        <div class="example-title">Приклад 2. Множення та скорочення</div>
+                        <p>Обчисліть: $\dfrac{8}{15} \cdot \dfrac{25}{16}$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>Скоротимо множники перед множенням (це зручніше, ніж множити великі числа):</p>
+                        <p>$\dfrac{8}{15} \cdot \dfrac{25}{16} = \dfrac{8 \cdot 25}{15 \cdot 16}$</p>
+                        <p>Скоротимо $8$ і $16$ на $8$, $25$ і $15$ на $5$:</p>
+                        <p>$= \dfrac{1 \cdot 5}{3 \cdot 2} = \dfrac{5}{6}$</p>
+                        <p><strong>Відповідь:</strong> $\dfrac{5}{6}$.</p>
+                    </div>
+        
+                    <div class="example">
+                        <div class="example-title">Приклад 3. Ділення дробів</div>
+                        <p>Обчисліть: $\dfrac{3}{7} : \dfrac{9}{14}$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>Перевертаємо другий дріб і множимо:</p>
+                        <p>$\dfrac{3}{7} : \dfrac{9}{14} = \dfrac{3}{7} \cdot \dfrac{14}{9} = \dfrac{3 \cdot 14}{7 \cdot 9}$</p>
+                        <p>Скоротимо $3$ і $9$ на $3$, $14$ і $7$ на $7$:</p>
+                        <p>$= \dfrac{1 \cdot 2}{1 \cdot 3} = \dfrac{2}{3}$</p>
+                        <p><strong>Відповідь:</strong> $\dfrac{2}{3}$.</p>
+                    </div>
+        
+                    <div class="example">
+                        <div class="example-title">Приклад 4. Спрощення складного виразу</div>
+                        <p>Обчисліть: $\left(\dfrac{2}{3} + \dfrac{1}{4}\right) \cdot \dfrac{12}{11}$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>Спочатку виконаємо дію в дужках (НСК для 3 і 4 — 12):</p>
+                        <p>$\dfrac{2}{3} + \dfrac{1}{4} = \dfrac{8}{12} + \dfrac{3}{12} = \dfrac{11}{12}$</p>
+                        <p>Тепер множимо:</p>
+                        <p>$\dfrac{11}{12} \cdot \dfrac{12}{11} = 1$</p>
+                        <p><strong>Відповідь:</strong> $1$.</p>
+                    </div>
+        
+                    <!-- Невеликий тест на дроби -->
+                    <div class="test">
+                        <div class="test-title">📝 Перевірте себе: дроби</div>
+        
+                        <div class="question">
+                            <p class="question-text">1. Обчисліть: $\dfrac{5}{8} + \dfrac{1}{4}$</p>
+                            <div class="options">
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{6}{12}$</button>
+                                <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$\dfrac{7}{8}$</button>
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{6}{8}$</button>
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{5}{32}$</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+        
+                        <div class="question">
+                            <p class="question-text">2. Обчисліть: $\dfrac{3}{5} \cdot \dfrac{10}{9}$</p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Наприклад: 2/3">
+                                <button class="btn" onclick="checkInput(this, '2/3')">Перевірити</button>
+                                <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                            </div>
+                            <p class="feedback"></p>
+                            <div class="solution">
+                                <div class="solution-title">Розв'язання:</div>
+                                <p>$\dfrac{3}{5} \cdot \dfrac{10}{9} = \dfrac{3 \cdot 10}{5 \cdot 9}$</p>
+                                <p>Скоротимо: $3$ і $9$ на $3$, $10$ і $5$ на $5$: $\dfrac{1 \cdot 2}{1 \cdot 3} = \dfrac{2}{3}$</p>
+                                <p><strong>Відповідь:</strong> $\dfrac{2}{3}$.</p>
+                            </div>
+                        </div>
+        
+                        <div class="question">
+                            <p class="question-text">3. Обчисліть: $\dfrac{7}{12} : \dfrac{7}{4}$</p>
+                            <div class="options">
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{49}{48}$</button>
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{7}{3}$</button>
+                                <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$\dfrac{1}{3}$</button>
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{3}{1}$</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+        
+                        <div class="question">
+                            <p class="question-text">4. Обчисліть: $\dfrac{2}{3} - \dfrac{1}{6}$</p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Наприклад: 1/2">
+                                <button class="btn" onclick="checkInput(this, '1/2')">Перевірити</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+                    </div>
+
 
                     <div class="example">
                         <div class="example-title">Приклад 3. Обчислення значення виразу</div>
@@ -216,12 +461,12 @@
 
                     </div>
         </article>
-        <nav class="lesson-nav">
+<!--        <nav class="lesson-nav">
             <a href="combined-13.html">← Робота з комплексним завданням. Стереоме</a>
             <a href="algebra-02.html">Відсотки. Пропорція →</a>
         </nav>
     </main>
-
+-->
     <footer class="site-footer">
         <div class="container">
             <p>© Optima — підготовка до НМТ</p>

@@ -27,15 +27,49 @@ body {
 
 /* Шапка */
 .site-header {
-    background: var(--primary);
-    color: white;
-    padding: 16px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: #ffffff;
+    padding: 14px 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid #e2e8f0;
 }
-.site-header .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-.logo { color: white; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
-.tagline { font-size: 0.9rem; opacity: 0.9; }
 
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo img {
+    height: 52px;
+    width: auto;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.03);
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .logo img { height: 40px; }
+    .tagline { font-size: 0.8rem; }
+}
 /* Головна */
 .intro { padding: 40px 0 20px; }
 .intro h1 { font-size: 1.8rem; margin-bottom: 12px; color: var(--primary-dark); }
@@ -213,4 +247,52 @@ body {
     .intro h1 { font-size: 1.4rem; }
     .section h2 { font-size: 1.15rem; }
     .lesson-nav a { max-width: 100%; }
+}
+
+
+/* ===== Завдання на відповідність ===== */
+.matching-help {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0 8px;
+    border: 1px solid var(--border);
+}
+
+.matching-help h4 {
+    font-size: 0.95rem;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.matching-help ol,
+.matching-help ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.matching-help ol li,
+.matching-help ul li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.matching-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.matching-list li {
+    padding-left: 0;
+}
+
+@media (max-width: 600px) {
+    .matching-help {
+        grid-template-columns: 1fr;
+    }
 }
