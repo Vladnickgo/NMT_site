@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 </head>
+
 <body>
     <header class="site-header">
         <div class="container">
@@ -34,59 +36,394 @@
         <article class="lesson-content">
 
             <h2>Мета заняття</h2>
-            <p><em>Тут буде мета уроку.</em></p>
+            <p>Повторити поняття дробово-раціонального виразу, навчитися знаходити його ОДЗ, скорочувати дроби,
+                виконувати додавання, віднімання, множення та ділення дробово-раціональних виразів.</p>
 
-            <h2>Теоретична довідка</h2>
-            <p><em>Тут буде теорія. Формули записуються в LaTeX між знаками $ ... $.</em></p>
-            <p>Наприклад: $a^2 + b^2 = c^2$</p>
+            <h2>1. Дробово-раціональні вирази</h2>
+
+            <p><strong>Раціональний вираз</strong> — це вираз, складений зі чисел і змінних за допомогою дій додавання,
+                віднімання, множення, піднесення до степеня з натуральним показником та ділення на вираз зі змінною (або
+                без нього).</p>
+
+            <p><strong>Дробово-раціональний вираз</strong> — це дріб, чисельник і знаменник якого — многочлени.
+                Наприклад:</p>
+            <p>$$\dfrac{x + 3}{x - 2}, \qquad \dfrac{x^2 - 1}{x^2 + 4x + 4}, \qquad \dfrac{5}{a^2 + b^2}$$</p>
+
+            <h3>Область допустимих значень (ОДЗ)</h3>
+
+            <p>Дріб має зміст тоді і тільки тоді, коли його <strong>знаменник не дорівнює нулю</strong>.</p>
+
+            <p>Щоб знайти ОДЗ дробово-раціонального виразу, треба:</p>
+            <ol>
+                <li>Прирівняти знаменник (або кожен знаменник, якщо їх декілька) до нуля.</li>
+                <li>Розв'язати отримане рівняння.</li>
+                <li>Виключити знайдені значення змінної з множини всіх дійсних чисел.</li>
+            </ol>
 
             <div class="example">
-                <div class="example-title">Приклад 1</div>
-                <p><em>Умова прикладу.</em></p>
+                <div class="example-title">Приклад 1. Знаходження ОДЗ</div>
+                <p>Знайдіть ОДЗ виразу: $\dfrac{x + 5}{x - 3}$</p>
+
+                <figure class="example-figure">
+                    <svg width="600" height="140" viewBox="0 0 600 140" xmlns="http://www.w3.org/2000/svg">
+
+                        <!-- ===== Ліва гілка (червона) ===== -->
+                        <!-- Апроксимація гіперболи y = 1/(x-3) + 50 -->
+                        <path d="M 10 90
+                                 C 80 90, 150 90, 200 90
+                                 C 240 90, 290 95, 295 115" fill="none" stroke="#1e293b" stroke-width="1.5"
+                            stroke-linecap="round" />
+
+                        <!-- ===== Права гілка (чорна) ===== -->
+
+                        <path d="M 305 115
+                            C 310 95, 340 90, 400 90
+                            C 450 90, 520 90, 590 90" fill="none" stroke="#1e293b" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        
+                        <!-- ===== Числова пряма (вісь Ox) ===== -->
+                        <line x1="10" y1="120" x2="590" y2="120" stroke="#1e293b" stroke-width="1.5" />
+                        
+                        <!-- ===== Виколота точка x = 3 ===== -->
+                        <circle cx="300" cy="119" r="6" fill="white" stroke="#dc2626" stroke-width="2" />
+                        
+                        <!-- Стрелка -->
+                        <polygon points="600,120 592,116 592,124" fill="#1e293b" />
+
+                        <!-- Позначки на осі -->
+                        <line x1="120" y1="115" x2="120" y2="125" stroke="#1e293b" stroke-width="1.5" />
+                        <text x="120" y="138" text-anchor="middle" font-size="12" fill="#1e293b">1</text>
+
+                        <line x1="210" y1="115" x2="210" y2="125" stroke="#1e293b" stroke-width="1.5" />
+                        <text x="210" y="138" text-anchor="middle" font-size="12" fill="#1e293b">2</text>
+
+                        <text x="300" y="138" text-anchor="middle" font-size="12" font-weight="700"
+                            fill="#16a34a">3</text>
+
+                        <line x1="390" y1="115" x2="390" y2="125" stroke="#1e293b" stroke-width="1.5" />
+                        <text x="390" y="138" text-anchor="middle" font-size="12" fill="#1e293b">4</text>
+
+                        <line x1="480" y1="115" x2="480" y2="125" stroke="#1e293b" stroke-width="1.5" />
+                        <text x="480" y="138" text-anchor="middle" font-size="12" fill="#1e293b">5</text>
+                    </svg>
+
+                </figure>
+
                 <p><strong>Розв'язання:</strong></p>
-                <p><em>Покрокове розв'язання.</em></p>
-                <p><strong>Відповідь:</strong> ...</p>
+                <p>Знаменник дорівнює нулю при $x - 3 = 0$, тобто $x = 3$.</p>
+                <p>Отже, ОДЗ: $x \neq 3$, або $x \in (-\infty; 3) \cup (3; +\infty)$.</p>
+                <p><strong>Відповідь:</strong> $x \neq 3$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 2. ОДЗ із квадратним тричленом</div>
+                <p>Знайдіть ОДЗ виразу: $\dfrac{2x}{x^2 - 9}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$x^2 - 9 = 0 \Rightarrow (x - 3)(x + 3) = 0 \Rightarrow x = 3$ або $x = -3$.</p>
+                <div style="text-align:center; margin: 30px 0;">
+                    <svg width="400" height="55" viewBox="0 0 400 55" xmlns="http://www.w3.org/2000/svg">
+                        <!-- 1. Ліва дуга: від -∞ (30) до -3 (100) -->
+                        <path d="M 30 5 C 45 5, 85 5, 100 30" fill="none" stroke="#1e293b" stroke-width="1.5"
+                            stroke-linecap="round" />
+
+                        <!-- 2.Центральна дуга: від -3 (100) до 3 (300) -->
+                        <path d="M 100 30 C 140 -6, 250 -6, 300 30" fill="none" stroke="#1e293b" stroke-width="1.5"
+                            stroke-linecap="round" />
+
+                        <!-- 3. Права дуга: від 3 (300) до +∞ (360) -->
+                        <path d="M 300 30 C 315 5, 355 5, 360 5" fill="none" stroke="#1e293b" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <!-- Ось -->
+                        <line x1="20" y1="30" x2="380" y2="30" stroke="#1e293b" stroke-width="2" />
+                        <!-- Стрелка -->
+                        <polygon points="380,30 372,26 372,34" fill="#1e293b" />
+                        <text x="365" y="20" font-size="16">x</text>
+                        <!-- Выколотая точка -->
+                        <circle cx="100" cy="30" r="6" fill="white" stroke="#dc2626" stroke-width="2" />
+                        <!-- Подпись -->
+                        <text x="100" y="55" text-anchor="middle" font-size="14" fill="#dc2626">-3</text>
+
+                        <circle cx="300" cy="30" r="6" fill="white" stroke="#dc2626" stroke-width="2" />
+                        <!-- Подпись -->
+                        <text x="300" y="55" text-anchor="middle" font-size="14" fill="#dc2626">3</text>
+                        <!-- Подписи концов -->
+                        <text x="30" y="50" font-size="14">-∞</text>
+                        <text x="360" y="50" font-size="14">+∞</text>
+                    </svg>
+                    <p style="font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 4px;">
+                        Точки $x = 3$ та $x=-3$ виколоті — тут знаменник дорівнює нулю
+                    </p>
+
+                </div>
+
+                <p><strong>Відповідь:</strong> $x \neq 3$ і $x \neq -3$.</p>
+            </div>
+
+            <h2>2. Скорочення дробово-раціональних виразів</h2>
+
+            <p>Скоротити дріб — означає поділити чисельник і знаменник на їх спільний множник. Для цього треба
+                <strong>розкласти і чисельник, і знаменник на множники</strong> та скоротити однакові.
+            </p>
+
+            <p><strong>Основна властивість дробу:</strong></p>
+            <p>$$\dfrac{a \cdot c}{b \cdot c} = \dfrac{a}{b}, \qquad b \neq 0, \; c \neq 0$$</p>
+
+            <div class="example">
+                <div class="example-title">Приклад 3. Скорочення дробу</div>
+                <p>Скоротіть дріб: $\dfrac{x^2 - 9}{x^2 + 6x + 9}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Розкладемо чисельник і знаменник на множники:</p>
+                <p>$x^2 - 9 = (x - 3)(x + 3)$ — різниця квадратів.</p>
+                <p>$x^2 + 6x + 9 = (x + 3)^2$ — квадрат суми.</p>
+                <p>Тоді:</p>
+                <p>$$\dfrac{x^2 - 9}{x^2 + 6x + 9} = \dfrac{(x - 3)(x + 3)}{(x + 3)^2} = \dfrac{x - 3}{x + 3}$$</p>
+                <p><strong>Відповідь:</strong> $\dfrac{x - 3}{x + 3}$, при $x \neq -3$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 4. Скорочення з винесенням спільного множника</div>
+                <p>Скоротіть дріб: $\dfrac{3x^2 + 6x}{x^2 + 4x + 4}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Чисельник: $3x^2 + 6x = 3x(x + 2)$.</p>
+                <p>Знаменник: $x^2 + 4x + 4 = (x + 2)^2$.</p>
+                <p>$$\dfrac{3x(x + 2)}{(x + 2)^2} = \dfrac{3x}{x + 2}$$</p>
+                <p><strong>Відповідь:</strong> $\dfrac{3x}{x + 2}$, при $x \neq -2$.</p>
+            </div>
+
+            <h2>3. Додавання та віднімання дробів</h2>
+
+            <h3>З однаковими знаменниками</h3>
+            <p>$$\dfrac{a}{c} + \dfrac{b}{c} = \dfrac{a + b}{c}, \qquad \dfrac{a}{c} - \dfrac{b}{c} = \dfrac{a - b}{c}$$
+            </p>
+
+            <h3>З різними знаменниками</h3>
+            <p>Зводимо до спільного знаменника (найкраще — до найменшого спільного):</p>
+            <p>$$\dfrac{a}{b} + \dfrac{c}{d} = \dfrac{a \cdot d + c \cdot b}{b \cdot d}$$</p>
+
+            <div class="example">
+                <div class="example-title">Приклад 5. Додавання з різними знаменниками</div>
+                <p>Обчисліть: $\dfrac{3}{x} + \dfrac{2}{x + 1}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Спільний знаменник: $x(x + 1)$.</p>
+                <p>$$\dfrac{3(x + 1)}{x(x + 1)} + \dfrac{2x}{x(x + 1)} = \dfrac{3x + 3 + 2x}{x(x + 1)} = \dfrac{5x +
+                    3}{x(x + 1)}$$</p>
+                <p><strong>Відповідь:</strong> $\dfrac{5x + 3}{x(x + 1)}$, при $x \neq 0$, $x \neq -1$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 6. Віднімання дробів</div>
+                <p>Обчисліть: $\dfrac{5}{x - 2} - \dfrac{3}{x + 2}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Спільний знаменник: $(x - 2)(x + 2) = x^2 - 4$.</p>
+                <p>$$\dfrac{5(x + 2) - 3(x - 2)}{(x - 2)(x + 2)} = \dfrac{5x + 10 - 3x + 6}{x^2 - 4} = \dfrac{2x +
+                    16}{x^2 - 4}$$</p>
+                <p><strong>Відповідь:</strong> $\dfrac{2x + 16}{x^2 - 4}$, при $x \neq \pm 2$.</p>
+            </div>
+
+            <h2>4. Множення та ділення дробів</h2>
+
+            <p><strong>Множення:</strong> чисельник на чисельник, знаменник на знаменник:</p>
+            <p>$$\dfrac{a}{b} \cdot \dfrac{c}{d} = \dfrac{a \cdot c}{b \cdot d}$$</p>
+
+            <p><strong>Ділення:</strong> множимо на «перевернутий» дріб:</p>
+            <p>$$\dfrac{a}{b} : \dfrac{c}{d} = \dfrac{a}{b} \cdot \dfrac{d}{c} = \dfrac{a \cdot d}{b \cdot c}, \qquad c
+                \neq 0$$</p>
+
+            <div class="example">
+                <div class="example-title">Приклад 7. Множення дробів</div>
+                <p>Обчисліть: $\dfrac{x + 1}{x - 1} \cdot \dfrac{x^2 - 1}{x^2 + 2x + 1}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Розкладемо на множники:</p>
+                <p>$x^2 - 1 = (x - 1)(x + 1)$</p>
+                <p>$x^2 + 2x + 1 = (x + 1)^2$</p>
+                <p>$$\dfrac{x + 1}{x - 1} \cdot \dfrac{(x - 1)(x + 1)}{(x + 1)^2} = \dfrac{(x + 1)^2 (x - 1)}{(x - 1)(x
+                    + 1)^2} = 1$$</p>
+                <p><strong>Відповідь:</strong> $1$, при $x \neq \pm 1$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 8. Ділення дробів</div>
+                <p>Обчисліть: $\dfrac{x}{x + 3} : \dfrac{x^2}{x^2 - 9}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Перевертаємо другий дріб і множимо:</p>
+                <p>$$\dfrac{x}{x + 3} \cdot \dfrac{x^2 - 9}{x^2} = \dfrac{x \cdot (x - 3)(x + 3)}{(x + 3) \cdot x^2}$$
+                </p>
+                <p>Скорочуємо $(x + 3)$ та $x$:</p>
+                <p>$$= \dfrac{x - 3}{x}$$</p>
+                <p><strong>Відповідь:</strong> $\dfrac{x - 3}{x}$, при $x \neq 0, \pm 3$.</p>
+            </div>
+
+            <h2>5. Спрощення складних дробово-раціональних виразів</h2>
+
+            <p>Для спрощення складних виразів використовують <strong>порядок дій</strong>:</p>
+            <ol>
+                <li>Дії в дужках.</li>
+                <li>Множення і ділення.</li>
+                <li>Додавання і віднімання.</li>
+            </ol>
+
+            <div class="example">
+                <div class="example-title">Приклад 9. Спрощення складного виразу</div>
+                <p>Спростіть вираз: $\left(\dfrac{1}{a} + \dfrac{1}{b}\right) \cdot \dfrac{ab}{a + b}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Спочатку виконаємо дію в дужках:</p>
+                <p>$$\dfrac{1}{a} + \dfrac{1}{b} = \dfrac{b + a}{ab}$$</p>
+                <p>Тепер множимо:</p>
+                <p>$$\dfrac{a + b}{ab} \cdot \dfrac{ab}{a + b} = 1$$</p>
+                <p><strong>Відповідь:</strong> $1$, при $a \neq 0, b \neq 0, a \neq -b$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 10. Спрощення виразу з дужками</div>
+                <p>Спростіть вираз: $\dfrac{x^2 - 4}{x + 3} \cdot \left(1 - \dfrac{1}{x + 2}\right)$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Спростимо вираз у дужках:</p>
+                <p>$$1 - \dfrac{1}{x + 2} = \dfrac{(x + 2) - 1}{x + 2} = \dfrac{x + 1}{x + 2}$$</p>
+                <p>Тепер множимо:</p>
+                <p>$$\dfrac{(x - 2)(x + 2)}{x + 3} \cdot \dfrac{x + 1}{x + 2} = \dfrac{(x - 2)(x + 1)}{x + 3}$$</p>
+                <p><strong>Відповідь:</strong> $\dfrac{(x - 2)(x + 1)}{x + 3}$, при $x \neq -3, -2$.</p>
             </div>
 
             <!-- ===== ТЕСТ ===== -->
             <div class="test">
                 <div class="test-title">📝 Перевірте себе</div>
 
-                <!-- Питання 1: вибір варіанта -->
                 <div class="question">
-                    <p class="question-text">1. Текст питання?</p>
+                    <p class="question-text">1. Знайдіть ОДЗ виразу: $\dfrac{5}{x - 7}$</p>
                     <div class="options">
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант A</button>
-                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">Варіант B (правильний)</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант C</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант D</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x \neq
+                            5$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$x \neq 7$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x \neq
+                            -7$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x \neq
+                            0$</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
 
-                <!-- Питання 2: введення відповіді -->
                 <div class="question">
-                    <p class="question-text">2. Текст питання? У відповідь запишіть число.</p>
-                    <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                    <p class="question-text">2. Знайдіть ОДЗ виразу: $\dfrac{3x}{x^2 - 16}$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x \neq
+                            4$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x \neq
+                            -4$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$x \neq \pm
+                            4$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x \neq
+                            16$</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
 
-                <!-- Питання 3: введення + показати розв'язок -->
                 <div class="question">
-                    <p class="question-text">3. Текст питання?</p>
+                    <p class="question-text">3. Скоротіть дріб: $\dfrac{x^2 - 4}{x + 2}$</p>
                     <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <input type="text" placeholder="Наприклад: x-2">
+                        <button class="btn" onclick="checkInput(this, 'x-2')">Перевірити</button>
                         <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
                     </div>
                     <p class="feedback"></p>
                     <div class="solution">
                         <div class="solution-title">Розв'язання:</div>
-                        <p><em>Тут буде розв'язання.</em></p>
+                        <p>$x^2 - 4 = (x - 2)(x + 2)$</p>
+                        <p>$\dfrac{(x - 2)(x + 2)}{x + 2} = x - 2$</p>
+                        <p><strong>Відповідь:</strong> $x - 2$, при $x \neq -2$.</p>
                     </div>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">4. Скоротіть дріб: $\dfrac{x^2 + 6x + 9}{x + 3}$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x + 9$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$x + 3$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x - 3$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x^2 +
+                            3$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">5. Обчисліть: $\dfrac{2}{x} + \dfrac{3}{x}$</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Наприклад: 5/x">
+                        <button class="btn" onclick="checkInput(this, '5/x')">Перевірити</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">6. Обчисліть: $\dfrac{1}{x - 1} - \dfrac{1}{x + 1}$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{2}{x^2 -
+                            1}$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$\dfrac{2}{x^2 -
+                            1}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{1}{x^2 -
+                            1}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{2x}{x^2 -
+                            1}$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">7. Обчисліть: $\dfrac{x}{x + 2} \cdot \dfrac{x + 2}{x^2}$</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Наприклад: 1/x">
+                        <button class="btn" onclick="checkInput(this, '1/x')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>$\dfrac{x}{x + 2} \cdot \dfrac{x + 2}{x^2} = \dfrac{x \cdot (x + 2)}{(x + 2) \cdot x^2} =
+                            \dfrac{1}{x}$</p>
+                        <p><strong>Відповідь:</strong> $\dfrac{1}{x}$, при $x \neq 0, -2$.</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">8. Обчисліть: $\dfrac{x^2}{x - 3} : \dfrac{x}{x - 3}$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x^2$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$x$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x - 3$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{x^3}{(x -
+                            3)^2}$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">9. Спростіть вираз: $\left(\dfrac{1}{a} - \dfrac{1}{b}\right) \cdot
+                        \dfrac{ab}{b - a}$</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Наприклад: -1">
+                        <button class="btn" onclick="checkInput(this, '-1')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>$\dfrac{1}{a} - \dfrac{1}{b} = \dfrac{b - a}{ab}$</p>
+                        <p>$\dfrac{b - a}{ab} \cdot \dfrac{ab}{b - a} = 1$</p>
+                        <p>Чекайте — тут знак: $\dfrac{1}{a} - \dfrac{1}{b} = \dfrac{b - a}{ab}$, а множимо на
+                            $\dfrac{ab}{b - a}$.</p>
+                        <p>$\dfrac{b - a}{ab} \cdot \dfrac{ab}{b - a} = 1$.</p>
+                        <p><strong>Відповідь:</strong> $1$, при $a \neq 0, b \neq 0, a \neq b$.</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">10. Знайдіть значення виразу $\dfrac{x^2 - 1}{x + 1}$ при $x = 5$.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '4')">Перевірити</button>
+                    </div>
+                    <p class="feedback"></p>
                 </div>
 
             </div>
@@ -106,4 +443,5 @@
 
     <script src="../script.js"></script>
 </body>
+
 </html>
