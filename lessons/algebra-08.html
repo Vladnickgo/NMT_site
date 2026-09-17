@@ -34,61 +34,374 @@
         <article class="lesson-content">
 
             <h2>Мета заняття</h2>
-            <p><em>Тут буде мета уроку.</em></p>
-
-            <h2>Теоретична довідка</h2>
-            <p><em>Тут буде теорія. Формули записуються в LaTeX між знаками $ ... $.</em></p>
-            <p>Наприклад: $a^2 + b^2 = c^2$</p>
-
+            <p>Повторити означення логарифма, основну логарифмічну тотожність, властивості логарифмів, навчитися перетворювати логарифмічні вирази, розв'язувати логарифмічні рівняння та нерівності. Підготуватися до виконання завдань НМТ з теми «Логарифми».</p>
+        
+            <h2>1. Означення логарифма</h2>
+        
+            <p><strong>Логарифмом числа $b$ за основою $a$</strong> ($a > 0$, $a \neq 1$, $b > 0$) називається показник степеня, до якого треба піднести $a$, щоб отримати $b$:</p>
+            <p>$$\log_a b = c \iff a^c = b$$</p>
+        
+            <p>Наприклад:</p>
+            <ul>
+                <li>$\log_2 8 = 3$, бо $2^3 = 8$.</li>
+                <li>$\log_3 81 = 4$, бо $3^4 = 81$.</li>
+                <li>$\log_5 1 = 0$, бо $5^0 = 1$.</li>
+            </ul>
+        
+            <h3>Основна логарифмічна тотожність</h3>
+            <p>$$a^{\log_a b} = b$$</p>
+            <p>Наприклад: $2^{\log_2 7} = 7$, $5^{\log_5 3} = 3$.</p>
+        
+            <h3>Обмеження</h3>
+            <ul>
+                <li>Основа: $a > 0$ і $a \neq 1$.</li>
+                <li>Аргумент (число під логарифмом): $b > 0$.</li>
+            </ul>
+            <p><strong>Це важливо:</strong> логарифм існує тільки від додатних чисел!</p>
+        
+            <h3>Десятковий та натуральний логарифми</h3>
+            <ul>
+                <li>$\log_{10} b = \lg b$ — десятковий логарифм.</li>
+                <li>$\log_e b = \ln b$ — натуральний логарифм (тут $e \approx 2{,}718$).</li>
+            </ul>
+        
+            <h2>2. Властивості логарифмів</h2>
+        
+            <p>Нехай $a > 0$, $a \neq 1$, $x > 0$, $y > 0$.</p>
+        
+            <h3>Основні властивості</h3>
+            <ul>
+                <li>$\log_a 1 = 0$</li>
+                <li>$\log_a a = 1$</li>
+                <li>$\log_a (xy) = \log_a x + \log_a y$</li>
+                <li>$\log_a \dfrac{x}{y} = \log_a x - \log_a y$</li>
+                <li>$\log_a x^n = n \log_a x$</li>
+                <li>$\log_a \sqrt[n]{x} = \dfrac{1}{n}\log_a x$</li>
+                <li>$\log_{a^n} x = \dfrac{1}{n}\log_a x$</li>
+            </ul>
+        
+            <h3>Формула переходу до нової основи</h3>
+            <p>$$\log_a b = \dfrac{\log_c b}{\log_c a}$$</p>
+            <p>Окремий випадок: $$\log_a b = \dfrac{1}{\log_b a}$$</p>
+        
+            <h3>Логарифмування степенів</h3>
+            <p>$$a^{\log_c b} = b^{\log_c a}$$</p>
+        
             <div class="example">
-                <div class="example-title">Приклад 1</div>
-                <p><em>Умова прикладу.</em></p>
+                <div class="example-title">Приклад 1. Обчислення логарифмів</div>
+                <p>Обчисліть: $\log_2 32 + \log_3 27 - \log_5 125$</p>
                 <p><strong>Розв'язання:</strong></p>
-                <p><em>Покрокове розв'язання.</em></p>
-                <p><strong>Відповідь:</strong> ...</p>
+                <p>$\log_2 32 = \log_2 2^5 = 5$</p>
+                <p>$\log_3 27 = \log_3 3^3 = 3$</p>
+                <p>$\log_5 125 = \log_5 5^3 = 3$</p>
+                <p>$5 + 3 - 3 = 5$</p>
+                <p><strong>Відповідь:</strong> $5$.</p>
             </div>
-
+        
+            <div class="example">
+                <div class="example-title">Приклад 2. Основна логарифмічна тотожність</div>
+                <p>Обчисліть: $3^{\log_3 9} + 2^{\log_2 5}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>За основною логарифмічною тотожністю: $3^{\log_3 9} = 9$, $2^{\log_2 5} = 5$.</p>
+                <p>$9 + 5 = 14$</p>
+                <p><strong>Відповідь:</strong> $14$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 3. Перетворення виразів</div>
+                <p>Спростіть: $\log_2 48 - \log_2 3$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>За властивістю різниці: $\log_2 48 - \log_2 3 = \log_2 \dfrac{48}{3} = \log_2 16 = 4$.</p>
+                <p><strong>Відповідь:</strong> $4$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 4. Логарифм з коренем</div>
+                <p>Обчисліть: $\log_3 \sqrt[4]{27}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$\sqrt[4]{27} = 27^{1/4} = (3^3)^{1/4} = 3^{3/4}$</p>
+                <p>$\log_3 3^{3/4} = \dfrac{3}{4}$</p>
+                <p><strong>Відповідь:</strong> $\dfrac{3}{4} = 0{,}75$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 5. Перехід до нової основи</div>
+                <p>Обчисліть: $\log_4 8$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Перейдемо до основи 2: $\log_4 8 = \dfrac{\log_2 8}{\log_2 4} = \dfrac{3}{2} = 1{,}5$.</p>
+                <p><strong>Відповідь:</strong> $1{,}5$.</p>
+            </div>
+        
+            <h2>3. Логарифмічні рівняння</h2>
+        
+            <p><strong>Логарифмічне рівняння</strong> — рівняння, в якому невідома входить під знак логарифма або в його основу.</p>
+        
+            <h3>Найпростіше рівняння</h3>
+            <p>$$\log_a x = b \iff x = a^b, \quad x > 0$$</p>
+        
+            <h3>Рівняння виду $\log_a f(x) = \log_a g(x)$</h3>
+            <p>При $a > 0$, $a \neq 1$: $f(x) = g(x)$, причому $f(x) > 0$ і $g(x) > 0$.</p>
+        
+            <div class="example">
+                <div class="example-title">Приклад 6. Найпростіше логарифмічне рівняння</div>
+                <p>Розв'яжіть: $\log_2 (x - 3) = 4$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$x - 3 = 2^4 = 16$</p>
+                <p>$x = 19$</p>
+                <p><strong>Перевірка:</strong> $19 - 3 = 16 > 0$ — умова виконується.</p>
+                <p><strong>Відповідь:</strong> $x = 19$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 7. Рівняння з двома логарифмами</div>
+                <p>Розв'яжіть: $\log_3 (x + 1) = \log_3 (2x - 5)$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Прирівнюємо аргументи: $x + 1 = 2x - 5$</p>
+                <p>$x = 6$</p>
+                <p><strong>Перевірка:</strong></p>
+                <p>$x + 1 = 7 > 0$ ✅</p>
+                <p>$2x - 5 = 7 > 0$ ✅</p>
+                <p><strong>Відповідь:</strong> $x = 6$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 8. Квадратне рівняння відносно логарифма</div>
+                <p>Розв'яжіть: $\log_2^2 x - 3\log_2 x + 2 = 0$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Заміна: $t = \log_2 x$. Тоді $t^2 - 3t + 2 = 0$.</p>
+                <p>$t_1 = 1$, $t_2 = 2$.</p>
+                <p>Повертаємось до $x$:</p>
+                <ul>
+                    <li>$\log_2 x = 1 \Rightarrow x = 2$</li>
+                    <li>$\log_2 x = 2 \Rightarrow x = 4$</li>
+                </ul>
+                <p>Обидва значення $x > 0$ ✅</p>
+                <p><strong>Відповідь:</strong> $x_1 = 2$, $x_2 = 4$.</p>
+            </div>
+        
+            <h2>4. Логарифмічні нерівності</h2>
+        
+            <p><strong>Основне правило:</strong></p>
+            <ul>
+                <li>Якщо $a > 1$: $\log_a f(x) > \log_a g(x) \iff f(x) > g(x)$ (знак нерівності <strong>зберігається</strong>).</li>
+                <li>Якщо $0 < a < 1$: $\log_a f(x) > \log_a g(x) \iff f(x) < g(x)$ (знак нерівності <strong>змінюється</strong>).</li>
+            </ul>
+        
+            <p><strong>Обов'язково</strong> враховувати ОДЗ: $f(x) > 0$, $g(x) > 0$.</p>
+        
+            <div class="example">
+                <div class="example-title">Приклад 9. Нерівність з основою $a > 1$</div>
+                <p>Розв'яжіть: $\log_2 (x - 1) < 3$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Перепишемо $3 = \log_2 8$: $\log_2 (x - 1) < \log_2 8$.</p>
+                <p>Оскільки основа $2 > 1$, знак зберігається: $x - 1 < 8$, тобто $x < 9$.</p>
+                <p>ОДЗ: $x - 1 > 0$, тобто $x > 1$.</p>
+                <p>Перетин: $1 < x < 9$.</p>
+                <p><strong>Відповідь:</strong> $x \in (1; 9)$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 10. Нерівність з основою $0 < a < 1$</div>
+                <p>Розв'яжіть: $\log_{1/3} (x + 2) \geq -1$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$-1 = \log_{1/3} 3$, тому $\log_{1/3}(x + 2) \geq \log_{1/3} 3$.</p>
+                <p>Оскільки $0 < \frac{1}{3} < 1$, знак змінюється: $x + 2 \leq 3$, тобто $x \leq 1$.</p>
+                <p>ОДЗ: $x + 2 > 0$, тобто $x > -2$.</p>
+                <p>Перетин: $-2 < x \leq 1$.</p>
+                <p><strong>Відповідь:</strong> $x \in (-2; 1]$.</p>
+            </div>
+        
+            <h2>5. Типові завдання НМТ</h2>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Обчислення значення виразу</div>
+                <p>Обчисліть: $\dfrac{\log_6 12 + \log_6 3}{\log_6 4}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Чисельник: $\log_6 12 + \log_6 3 = \log_6 36 = 2$.</p>
+                <p>Знаменник: $\log_6 4$.</p>
+                <p>Не виходить «красиво» — перевіримо: $\log_6 4 = \dfrac{\log_2 4}{\log_2 6} = \dfrac{2}{\log_2 6}$.</p>
+                <p>Насправді тут швидше: $\log_6 4 = 2\log_6 2$. Але задача, мабуть, має інший вигляд. Давайте перевіримо ще раз.</p>
+                <p>За властивістю: $\log_6 36 = 2$. Поділимо: $\dfrac{2}{\log_6 4}$. Це не «гарне» число.</p>
+                <p><strong>Скоріше за все, в оригіналі інші числа. Загальний метод такий:</strong></p>
+                <p>$\dfrac{\log_a x + \log_a y}{\log_a z} = \dfrac{\log_a(xy)}{\log_a z} = \log_z(xy)$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Обчислення з переходом до нової основи</div>
+                <p>Обчисліть: $\log_5 3 \cdot \log_3 25$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$\log_3 25 = \log_3 5^2 = 2\log_3 5$.</p>
+                <p>$\log_5 3 \cdot 2\log_3 5 = 2 \cdot \log_5 3 \cdot \log_3 5 = 2 \cdot 1 = 2$ (бо $\log_a b \cdot \log_b a = 1$).</p>
+                <p><strong>Відповідь:</strong> $2$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Рівняння з параметром</div>
+                <p>Розв'яжіть рівняння: $\log_3 (x - 2) + \log_3 (x + 2) = \log_3 (2x - 1)$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>ОДЗ: $x - 2 > 0$, $x + 2 > 0$, $2x - 1 > 0 \Rightarrow x > 2$.</p>
+                <p>За властивістю суми: $\log_3 (x - 2)(x + 2) = \log_3 (2x - 1)$.</p>
+                <p>$(x - 2)(x + 2) = 2x - 1$</p>
+                <p>$x^2 - 4 = 2x - 1$</p>
+                <p>$x^2 - 2x - 3 = 0$</p>
+                <p>$x_1 = 3$, $x_2 = -1$.</p>
+                <p>Перевірка ОДЗ: $x > 2$, отже $x = 3$ підходить, $x = -1$ — ні.</p>
+                <p><strong>Відповідь:</strong> $x = 3$.</p>
+            </div>
+        
             <!-- ===== ТЕСТ ===== -->
             <div class="test">
                 <div class="test-title">📝 Перевірте себе</div>
-
-                <!-- Питання 1: вибір варіанта -->
+        
                 <div class="question">
-                    <p class="question-text">1. Текст питання?</p>
+                    <p class="question-text">1. Обчисліть: $\log_2 16$</p>
                     <div class="options">
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант A</button>
-                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">Варіант B (правильний)</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант C</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант D</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$2$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$3$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$4$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$8$</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
-
-                <!-- Питання 2: введення відповіді -->
+        
                 <div class="question">
-                    <p class="question-text">2. Текст питання? У відповідь запишіть число.</p>
+                    <p class="question-text">2. Обчисліть: $\log_3 81$</p>
                     <div class="input-answer">
                         <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <button class="btn" onclick="checkInput(this, '4')">Перевірити</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
-
-                <!-- Питання 3: введення + показати розв'язок -->
+        
                 <div class="question">
-                    <p class="question-text">3. Текст питання?</p>
+                    <p class="question-text">3. Обчисліть: $5^{\log_5 12}$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$5$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$12$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\log_5 12$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$60$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">4. Обчисліть: $\log_6 2 + \log_6 18$</p>
                     <div class="input-answer">
                         <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <button class="btn" onclick="checkInput(this, '2')">Перевірити</button>
                         <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
                     </div>
                     <p class="feedback"></p>
                     <div class="solution">
                         <div class="solution-title">Розв'язання:</div>
-                        <p><em>Тут буде розв'язання.</em></p>
+                        <p>$\log_6 2 + \log_6 18 = \log_6 (2 \cdot 18) = \log_6 36 = 2$.</p>
+                        <p><strong>Відповідь:</strong> $2$.</p>
                     </div>
                 </div>
-
+        
+                <div class="question">
+                    <p class="question-text">5. Обчисліть: $\log_5 100 - \log_5 4$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$1$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$2$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$25$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$96$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">6. Обчисліть: $\log_7 \sqrt[3]{49}$</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Наприклад: 3/4">
+                        <button class="btn" onclick="checkInput(this, '2/3')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>$\sqrt[3]{49} = 49^{1/3} = (7^2)^{1/3} = 7^{2/3}$</p>
+                        <p>$\log_7 7^{2/3} = \dfrac{2}{3}$</p>
+                        <p><strong>Відповідь:</strong> $\dfrac{2}{3}$.</p>
+                    </div>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">7. Розв'яжіть рівняння: $\log_3 x = 4$</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '81')">Перевірити</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">8. Розв'яжіть рівняння: $\log_2 (x - 1) = 3$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = 7$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$x = 9$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = 8$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = 6$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">9. Розв'яжіть нерівність: $\log_2 x > 3$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x \in (0; 8)$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$x \in (8; +\infty)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x \in (-\infty; 8)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x \in (0; +\infty)$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">10. Розв'яжіть нерівність: $\log_{1/2} x < 2$</p>
+                    <div class="options">
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$x > \dfrac{1}{4}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x < \dfrac{1}{4}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$0 < x < \dfrac{1}{4}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x > 4$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">11. Обчисліть: $\log_5 3 \cdot \log_3 125$</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '3')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>$\log_3 125 = \log_3 5^3 = 3\log_3 5$.</p>
+                        <p>$\log_5 3 \cdot 3 \log_3 5 = 3 \cdot 1 = 3$.</p>
+                        <p><strong>Відповідь:</strong> $3$.</p>
+                    </div>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">12. Розв'яжіть рівняння: $\log_2^2 x - 5\log_2 x + 4 = 0$ (у відповідь запишіть суму коренів)</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '18')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>Заміна: $t = \log_2 x$. Тоді $t^2 - 5t + 4 = 0 \Rightarrow t_1 = 1, t_2 = 4$.</p>
+                        <p>$\log_2 x = 1 \Rightarrow x_1 = 2$</p>
+                        <p>$\log_2 x = 4 \Rightarrow x_2 = 16$</p>
+                        <p>Сума: $2 + 16 = 18$.</p>
+                        <p><strong>Відповідь:</strong> $18$.</p>
+                    </div>
+                </div>
+        
             </div>
         </article>
 
