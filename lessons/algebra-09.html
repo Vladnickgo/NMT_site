@@ -1,9 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Урок 09: Системи рівнянь. Лінійні, квадратні, дробово-раціональні рівняння; рівняння з модулем — Optima</title>
+    <title>Урок 09: Системи рівнянь. Лінійні, квадратні, дробово-раціональні рівняння; рівняння з модулем — Optima
+    </title>
     <link rel="stylesheet" href="../style.css">
     <script>
         MathJax = {
@@ -13,6 +15,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 </head>
+
 <body>
     <header class="site-header">
         <div class="container">
@@ -34,67 +37,499 @@
         <article class="lesson-content">
 
             <h2>Мета заняття</h2>
-            <p><em>Тут буде мета уроку.</em></p>
+            <p>Повторити методи розв'язування систем рівнянь (підстановка, додавання, графічний), навчитися розв'язувати
+                лінійні, квадратні та дробово-раціональні рівняння, а також рівняння з модулем. Підготуватися до
+                виконання завдань НМТ.</p>
 
-            <h2>Теоретична довідка</h2>
-            <p><em>Тут буде теорія. Формули записуються в LaTeX між знаками $ ... $.</em></p>
-            <p>Наприклад: $a^2 + b^2 = c^2$</p>
+            <h2>1. Рівняння з модулем</h2>
 
-            <div class="example">
-                <div class="example-title">Приклад 1</div>
-                <p><em>Умова прикладу.</em></p>
-                <p><strong>Розв'язання:</strong></p>
-                <p><em>Покрокове розв'язання.</em></p>
-                <p><strong>Відповідь:</strong> ...</p>
-            </div>
+            <p><strong>Модуль числа</strong> $|x|$ — це відстань від точки $x$ до нуля на координатній прямій:</p>
+            <p>$$|x| = \begin{cases} x, & \text{якщо } x \geq 0 \\ -x, & \text{якщо } x < 0 \end{cases}$$</p>
 
-            <!-- ===== ТЕСТ ===== -->
-            <div class="test">
-                <div class="test-title">📝 Перевірте себе</div>
-
-                <!-- Питання 1: вибір варіанта -->
-                <div class="question">
-                    <p class="question-text">1. Текст питання?</p>
-                    <div class="options">
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант A</button>
-                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">Варіант B (правильний)</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант C</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант D</button>
+                    <h3>Основні правила</h3>
+                    <ul>
+                        <li>$|x| = a$ (при $a > 0$) $\iff$ $x = a$ або $x = -a$.</li>
+                        <li>$|x| = 0$ $\iff$ $x = 0$.</li>
+                        <li>$|x| = a$ (при $a < 0$) — розв'язків немає.</li>
+                        <li>$|f(x)| = |g(x)|$ $\iff$ $f(x) = g(x)$ або $f(x) = -g(x)$.</li>
+                    </ul>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        contentStyleType="text/css" data-diagram-type="ACTIVITY" height="242px"
+                        preserveAspectRatio="none" style="width:461px;height:242px;background:#FFFFFF;" version="1.1"
+                        viewBox="0 0 461 242" width="461px" zoomAndPan="magnify">
+                        <defs />
+                        <g>
+                            <rect fill="#F1F1F1" height="46.6016" style="stroke:#181818;stroke-width:0.5;"
+                                width="74.3066" x="193.4609" y="11" /><text fill="#000000" font-family="sans-serif"
+                                font-size="20" lengthAdjust="spacing" textLength="54.3066" x="203.4609" y="42.582">|x| =
+                                a</text>
+                            <line style="stroke:#181818;stroke-width:1.5;" x1="97.2305" x2="364.0078" y1="77.6016"
+                                y2="77.6016" />
+                            <rect fill="#F1F1F1" height="46.6016" style="stroke:#181818;stroke-width:0.5;"
+                                width="65.0391" x="64.7109" y="97.6016" /><text fill="#000000" font-family="sans-serif"
+                                font-size="20" lengthAdjust="spacing" textLength="45.0391" x="74.7109" y="129.1836">a
+                                &gt; 0</text>
+                            <rect fill="#98FB98" height="46.6016" rx="12.5" ry="12.5"
+                                style="stroke:#181818;stroke-width:0.5;" width="172.4609" x="11" y="164.2031" /><text
+                                fill="#000000" font-family="sans-serif" font-size="20" font-weight="bold"
+                                lengthAdjust="spacing" textLength="45.0391" x="21" y="195.7852">x = a</text><text
+                                fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing"
+                                textLength="11.1133" x="66.0391" y="195.7852">&#160;&#160;</text><text fill="#000000"
+                                font-family="sans-serif" font-size="20" font-style="italic" lengthAdjust="spacing"
+                                textLength="33.4961" x="77.1523" y="195.7852">&#1072;&#1073;&#1086;</text><text
+                                fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing"
+                                textLength="11.1133" x="110.6484" y="195.7852">&#160;&#160;</text><text fill="#000000"
+                                font-family="sans-serif" font-size="20" font-weight="bold" lengthAdjust="spacing"
+                                textLength="51.6992" x="121.7617" y="195.7852">x = -a</text>
+                            <rect fill="#F1F1F1" height="46.6016" style="stroke:#181818;stroke-width:0.5;"
+                                width="65.0391" x="198.085" y="97.6016" /><text fill="#000000" font-family="sans-serif"
+                                font-size="20" lengthAdjust="spacing" textLength="45.0391" x="208.085" y="129.1836">a =
+                                0</text>
+                            <rect fill="#98FB98" height="46.6016" rx="12.5" ry="12.5"
+                                style="stroke:#181818;stroke-width:0.5;" width="59.4824" x="200.8633" y="164.2031" />
+                            <text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing"
+                                textLength="5.5566" x="210.8633" y="195.7852">&#160;</text><text fill="#000000"
+                                font-family="sans-serif" font-size="20" font-weight="bold" lengthAdjust="spacing"
+                                textLength="33.9258" x="216.4199" y="195.7852">x=0</text>
+                            <rect fill="#F1F1F1" height="46.6016" style="stroke:#181818;stroke-width:0.5;"
+                                width="65.0391" x="331.4883" y="97.6016" /><text fill="#000000" font-family="sans-serif"
+                                font-size="20" lengthAdjust="spacing" textLength="45.0391" x="341.4883" y="129.1836">a
+                                &lt; 0</text>
+                            <rect fill="#98FB98" height="46.6016" rx="12.5" ry="12.5"
+                                style="stroke:#181818;stroke-width:0.5;" width="172.4805" x="277.7676" y="164.2031" />
+                            <text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing"
+                                textLength="152.4805" x="287.7676"
+                                y="195.7852">&#1088;&#1086;&#1079;&#1074;'&#1103;&#1079;&#1082;&#1110;&#1074;
+                                &#1085;&#1077;&#1084;&#1072;&#1108;</text>
+                            <line style="stroke:#181818;stroke-width:1.5;" x1="97.2305" x2="364.0078" y1="230.8047"
+                                y2="230.8047" />
+                            <line style="stroke:#181818;stroke-width:1;" x1="97.2305" x2="97.2305" y1="144.2031"
+                                y2="164.2031" />
+                            <polygon fill="#181818"
+                                points="93.2305,154.2031,97.2305,164.2031,101.2305,154.2031,97.2305,158.2031"
+                                style="stroke:#181818;stroke-width:1;" />
+                            <line style="stroke:#181818;stroke-width:1;" x1="230.6045" x2="230.6045" y1="144.2031"
+                                y2="164.2031" />
+                            <polygon fill="#181818"
+                                points="226.6045,154.2031,230.6045,164.2031,234.6045,154.2031,230.6045,158.2031"
+                                style="stroke:#181818;stroke-width:1;" />
+                            <line style="stroke:#181818;stroke-width:1;" x1="364.0078" x2="364.0078" y1="144.2031"
+                                y2="164.2031" />
+                            <polygon fill="#181818"
+                                points="360.0078,154.2031,364.0078,164.2031,368.0078,154.2031,364.0078,158.2031"
+                                style="stroke:#181818;stroke-width:1;" />
+                            <line style="stroke:#181818;stroke-width:1;" x1="97.2305" x2="97.2305" y1="79.1016"
+                                y2="97.6016" />
+                            <polygon fill="#181818"
+                                points="93.2305,87.6016,97.2305,97.6016,101.2305,87.6016,97.2305,91.6016"
+                                style="stroke:#181818;stroke-width:1;" />
+                            <line style="stroke:#181818;stroke-width:1;" x1="230.6045" x2="230.6045" y1="79.1016"
+                                y2="97.6016" />
+                            <polygon fill="#181818"
+                                points="226.6045,87.6016,230.6045,97.6016,234.6045,87.6016,230.6045,91.6016"
+                                style="stroke:#181818;stroke-width:1;" />
+                            <line style="stroke:#181818;stroke-width:1;" x1="364.0078" x2="364.0078" y1="79.1016"
+                                y2="97.6016" />
+                            <polygon fill="#181818"
+                                points="360.0078,87.6016,364.0078,97.6016,368.0078,87.6016,364.0078,91.6016"
+                                style="stroke:#181818;stroke-width:1;" />
+                            <line style="stroke:#181818;stroke-width:1;" x1="97.2305" x2="97.2305" y1="210.8047"
+                                y2="230.8047" />
+                            <polygon fill="#181818"
+                                points="93.2305,220.8047,97.2305,230.8047,101.2305,220.8047,97.2305,224.8047"
+                                style="stroke:#181818;stroke-width:1;" />
+                            <line style="stroke:#181818;stroke-width:1;" x1="230.6045" x2="230.6045" y1="210.8047"
+                                y2="230.8047" />
+                            <polygon fill="#181818"
+                                points="226.6045,220.8047,230.6045,230.8047,234.6045,220.8047,230.6045,224.8047"
+                                style="stroke:#181818;stroke-width:1;" />
+                            <line style="stroke:#181818;stroke-width:1;" x1="364.0078" x2="364.0078" y1="210.8047"
+                                y2="230.8047" />
+                            <polygon fill="#181818"
+                                points="360.0078,220.8047,364.0078,230.8047,368.0078,220.8047,364.0078,224.8047"
+                                style="stroke:#181818;stroke-width:1;" />
+                            <line style="stroke:#181818;stroke-width:1;" x1="230.6143" x2="230.6143" y1="57.6016"
+                                y2="77.6016" />
+                            <polygon fill="#181818"
+                                points="226.6143,67.6016,230.6143,77.6016,234.6143,67.6016,230.6143,71.6016"
+                                style="stroke:#181818;stroke-width:1;" />
+                            <!--SRC=[Kr1GiB8fpgnAjJ8oiAkfg56mLKYqjh79JyfAJIwni-CgBiZ9BE5IG5QLg62dO82i1YYhN92OavfUb9gQXr1dasHN0JBEHZ_9Ja719jFkmeOB6o_iiz7F174XahfWMMk8DGg9wOcPUUYMsH9b6TX0MmE2fjaGPTh5XWlxBco_i4dzOZ-GsdLnseLD2XVsNjXwOS-53HUdM7EbvgKeG4860000]-->
+                        </g>
+                    </svg>
+                    <div class="example">
+                        <div class="example-title">Приклад 1. Найпростіше рівняння з модулем</div>
+                        <p>Розв'яжіть рівняння: $|x - 3| = 5$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$x - 3 = 5$ або $x - 3 = -5$.</p>
+                        <p>$x = 8$ або $x = -2$.</p>
+                        <p><strong>Відповідь:</strong> $x_1 = 8$, $x_2 = -2$.</p>
                     </div>
-                    <p class="feedback"></p>
-                </div>
 
-                <!-- Питання 2: введення відповіді -->
-                <div class="question">
-                    <p class="question-text">2. Текст питання? У відповідь запишіть число.</p>
-                    <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                    <div class="example">
+                        <div class="example-title">Приклад 2. Рівняння з двома модулями</div>
+                        <p>Розв'яжіть рівняння: $|2x - 1| = |x + 3|$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>Розглянемо два випадки:</p>
+                        <ul>
+                            <li>$2x - 1 = x + 3 \Rightarrow x = 4$.</li>
+                            <li>$2x - 1 = -(x + 3) \Rightarrow 2x - 1 = -x - 3 \Rightarrow 3x = -2 \Rightarrow x =
+                                -\dfrac{2}{3}$.</li>
+                        </ul>
+                        <p><strong>Відповідь:</strong> $x_1 = 4$, $x_2 = -\dfrac{2}{3}$.</p>
                     </div>
-                    <p class="feedback"></p>
-                </div>
 
-                <!-- Питання 3: введення + показати розв'язок -->
-                <div class="question">
-                    <p class="question-text">3. Текст питання?</p>
-                    <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
-                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    <div class="example">
+                        <div class="example-title">Приклад 3. Модуль з виразом, що містить змінну в обох частинах</div>
+                        <p>Розв'яжіть рівняння: $|x^2 - 4| = 5$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$x^2 - 4 = 5$ або $x^2 - 4 = -5$.</p>
+                        <ul>
+                            <li>$x^2 = 9 \Rightarrow x = \pm 3$.</li>
+                            <li>$x^2 = -1$ — розв'язків немає (квадрат не може бути від'ємним).</li>
+                        </ul>
+                        <p><strong>Відповідь:</strong> $x_1 = 3$, $x_2 = -3$.</p>
                     </div>
-                    <p class="feedback"></p>
-                    <div class="solution">
-                        <div class="solution-title">Розв'язання:</div>
-                        <p><em>Тут буде розв'язання.</em></p>
-                    </div>
-                </div>
 
-            </div>
+                    <div class="example">
+                        <div class="example-title">Приклад 4. Метод інтервалів для модуля</div>
+                        <p>Розв'яжіть рівняння: $|x - 1| + |x + 2| = 5$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>Розглянемо три проміжки:</p>
+                        <ul>
+                            <li><strong>$x < -2$:</strong> обидва вирази від'ємні: $(1 - x) + (-x - 2) = 5 \Rightarrow
+                                        -2x - 1 = 5 \Rightarrow x = -3$. ✅ ($-3 < -2$)</li>
+                            <li><strong>$-2 \leq x \leq 1$:</strong> $(1 - x) + (x + 2) = 5 \Rightarrow 3 = 5$ — хибно,
+                                розв'язків немає.</li>
+                            <li><strong>$x > 1$:</strong> $(x - 1) + (x + 2) = 5 \Rightarrow 2x + 1 = 5 \Rightarrow x =
+                                2$. ✅ ($2 > 1$)</li>
+                        </ul>
+                        <p><strong>Відповідь:</strong> $x_1 = -3$, $x_2 = 2$.</p>
+                    </div>
+
+                    <h2>2. Квадратні рівняння</h2>
+
+                    <p><strong>Квадратне рівняння</strong> — це рівняння виду $ax^2 + bx + c = 0$, де $a \neq 0$.</p>
+
+                    <p><strong>Дискримінант:</strong> $D = b^2 - 4ac$.</p>
+                    <ul>
+                        <li>Якщо $D > 0$ — два різних корені: $x_{1,2} = \dfrac{-b \pm \sqrt{D}}{2a}$.</li>
+                        <li>Якщо $D = 0$ — один корінь: $x = \dfrac{-b}{2a}$.</li>
+                        <li>Якщо $D < 0$ — коренів немає.</li>
+                    </ul>
+
+                    <h3>Теорема Вієта (для $x^2 + px + q = 0$)</h3>
+                    <p>$$x_1 + x_2 = -p, \qquad x_1 \cdot x_2 = q$$</p>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 5. Квадратне рівняння</div>
+                        <p>Розв'яжіть: $2x^2 - 5x + 3 = 0$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$D = 25 - 24 = 1$, $\sqrt{D} = 1$.</p>
+                        <p>$x_1 = \dfrac{5 + 1}{4} = \dfrac{3}{2} = 1{,}5$, $x_2 = \dfrac{5 - 1}{4} = 1$.</p>
+                        <p><strong>Відповідь:</strong> $x_1 = 1{,}5$, $x_2 = 1$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 6. Неповне квадратне рівняння</div>
+                        <p>Розв'яжіть: $3x^2 - 12 = 0$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$3x^2 = 12 \Rightarrow x^2 = 4 \Rightarrow x = \pm 2$.</p>
+                        <p><strong>Відповідь:</strong> $x_1 = 2$, $x_2 = -2$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 7. Теорема Вієта</div>
+                        <p>Розв'яжіть: $x^2 - 7x + 10 = 0$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>За теоремою Вієта: $x_1 + x_2 = 7$, $x_1 \cdot x_2 = 10$.</p>
+                        <p>Підбираємо: $x_1 = 2$, $x_2 = 5$.</p>
+                        <p><strong>Відповідь:</strong> $x_1 = 2$, $x_2 = 5$.</p>
+                    </div>
+
+                    <h2>3. Дробово-раціональні рівняння</h2>
+
+                    <p><strong>Дробово-раціональне рівняння</strong> — рівняння, що містить дроби зі змінною у
+                        знаменнику.</p>
+
+                    <h3>Алгоритм розв'язування</h3>
+                    <ol>
+                        <li>Знайти ОДЗ (знаменники $\neq 0$).</li>
+                        <li>Помножити обидві частини на спільний знаменник.</li>
+                        <li>Розв'язати отримане рівняння.</li>
+                        <li>Перевірити, чи входять знайдені корені в ОДЗ.</li>
+                    </ol>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 8. Дробово-раціональне рівняння</div>
+                        <p>Розв'яжіть: $\dfrac{x + 1}{x - 2} = 3$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>ОДЗ: $x \neq 2$.</p>
+                        <p>$x + 1 = 3(x - 2)$</p>
+                        <p>$x + 1 = 3x - 6$</p>
+                        <p>$7 = 2x \Rightarrow x = 3{,}5$.</p>
+                        <p>Перевірка: $3{,}5 \neq 2$ ✅</p>
+                        <p><strong>Відповідь:</strong> $x = 3{,}5$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 9. Рівняння з двома дробами</div>
+                        <p>Розв'яжіть: $\dfrac{2}{x} + \dfrac{3}{x + 1} = 1$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>ОДЗ: $x \neq 0$, $x \neq -1$.</p>
+                        <p>Спільний знаменник: $x(x + 1)$.</p>
+                        <p>$2(x + 1) + 3x = x(x + 1)$</p>
+                        <p>$2x + 2 + 3x = x^2 + x$</p>
+                        <p>$x^2 - 4x - 2 = 0$</p>
+                        <p>$D = 16 + 8 = 24$, $\sqrt{D} = 2\sqrt{6}$.</p>
+                        <p>$x_{1,2} = \dfrac{4 \pm 2\sqrt{6}}{2} = 2 \pm \sqrt{6}$.</p>
+                        <p>Обидва корені входять в ОДЗ (бо $\sqrt{6} \approx 2{,}45$, тому $2 + \sqrt{6} \approx 4{,}45
+                            \neq 0, -1$; $2 - \sqrt{6} \approx -0{,}45 \neq 0, -1$).</p>
+                        <p><strong>Відповідь:</strong> $x_1 = 2 + \sqrt{6}$, $x_2 = 2 - \sqrt{6}$.</p>
+                    </div>
+
+                    <h2>4. Системи рівнянь</h2>
+
+                    <p><strong>Система рівнянь</strong> — це декілька рівнянь, об'єднаних фігурною дужкою. Розв'язок
+                        системи — це пара (або набір) значень змінних, які задовольняють **усі** рівняння системи.</p>
+
+                    <h3>Методи розв'язування</h3>
+                    <ul>
+                        <li><strong>Метод підстановки</strong> — виражаємо одну змінну через іншу і підставляємо.</li>
+                        <li><strong>Метод додавання</strong> — додаємо/віднімаємо рівняння, щоб виключити одну змінну.
+                        </li>
+                        <li><strong>Графічний метод</strong> — будуємо графіки і шукаємо точки перетину.</li>
+                    </ul>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 10. Система лінійних рівнянь (підстановка)</div>
+                        <p>Розв'яжіть систему: $\begin{cases} 2x + y = 7 \\ x - y = 2 \end{cases}$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>З другого рівняння: $y = x - 2$.</p>
+                        <p>Підставимо в перше: $2x + (x - 2) = 7 \Rightarrow 3x = 9 \Rightarrow x = 3$.</p>
+                        <p>Тоді $y = 3 - 2 = 1$.</p>
+                        <p><strong>Відповідь:</strong> $(x; y) = (3; 1)$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 11. Система лінійних рівнянь (додавання)</div>
+                        <p>Розв'яжіть систему: $\begin{cases} 3x + 2y = 12 \\ 2x - 2y = 8 \end{cases}$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>Додамо рівняння почленно:</p>
+                        <p>$(3x + 2y) + (2x - 2y) = 12 + 8$</p>
+                        <p>$5x = 20 \Rightarrow x = 4$.</p>
+                        <p>Підставимо в перше: $3 \cdot 4 + 2y = 12 \Rightarrow 12 + 2y = 12 \Rightarrow y = 0$.</p>
+                        <p><strong>Відповідь:</strong> $(x; y) = (4; 0)$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 12. Система з квадратним рівнянням</div>
+                        <p>Розв'яжіть систему: $\begin{cases} x + y = 5 \\ xy = 6 \end{cases}$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>З першого рівняння: $y = 5 - x$.</p>
+                        <p>Підставимо в друге: $x(5 - x) = 6$</p>
+                        <p>$5x - x^2 = 6$</p>
+                        <p>$x^2 - 5x + 6 = 0$</p>
+                        <p>$x_1 = 2$, $x_2 = 3$.</p>
+                        <p>Тоді:</p>
+                        <ul>
+                            <li>при $x = 2$: $y = 3$;</li>
+                            <li>при $x = 3$: $y = 2$.</li>
+                        </ul>
+                        <p><strong>Відповідь:</strong> $(2; 3)$ і $(3; 2)$.</p>
+                    </div>
+
+                    <h2>5. Завдання з НМТ</h2>
+
+                    <div class="example">
+                        <div class="example-title">НМТ. Рівняння з модулем</div>
+                        <p>Розв'яжіть рівняння $|2x - 6| = 4$. У відповідь запишіть суму коренів.</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$2x - 6 = 4 \Rightarrow 2x = 10 \Rightarrow x = 5$.</p>
+                        <p>$2x - 6 = -4 \Rightarrow 2x = 2 \Rightarrow x = 1$.</p>
+                        <p>Сума: $5 + 1 = 6$.</p>
+                        <p><strong>Відповідь:</strong> $6$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">НМТ. Добуток коренів</div>
+                        <p>Знайдіть добуток коренів рівняння $2x^2 + 5x - 3 = 0$.</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>За теоремою Вієта: $x_1 \cdot x_2 = \dfrac{c}{a} = \dfrac{-3}{2} = -1{,}5$.</p>
+                        <p><strong>Відповідь:</strong> $-1{,}5$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">НМТ. Система</div>
+                        <p>Розв'яжіть систему: $\begin{cases} x + y = 7 \\ x^2 - y^2 = 21 \end{cases}$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$x^2 - y^2 = (x - y)(x + y) = 21$.</p>
+                        <p>Оскільки $x + y = 7$, то $x - y = 3$.</p>
+                        <p>Маємо систему: $\begin{cases} x + y = 7 \\ x - y = 3 \end{cases}$</p>
+                        <p>Додамо: $2x = 10 \Rightarrow x = 5$, тоді $y = 2$.</p>
+                        <p><strong>Відповідь:</strong> $(5; 2)$.</p>
+                    </div>
+
+                    <!-- ===== ТЕСТ ===== -->
+                    <div class="test">
+                        <div class="test-title">📝 Перевірте себе</div>
+
+                        <div class="question">
+                            <p class="question-text">1. Розв'яжіть рівняння: $|x - 4| = 7$</p>
+                            <div class="options">
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x =
+                                    11$</button>
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x =
+                                    -3$</button>
+                                <button class="option" data-correct="true" onclick="checkChoice(this, true)">$x_1 = 11,
+                                    x_2 = -3$</button>
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x_1 = 7,
+                                    x_2 = -7$</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">2. Розв'яжіть рівняння: $|2x| = 10$</p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Сума коренів">
+                                <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                                <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
+                                    розв'язок</button>
+                            </div>
+                            <p class="feedback"></p>
+                            <div class="solution">
+                                <div class="solution-title">Розв'язання:</div>
+                                <p>$2x = 10 \Rightarrow x = 5$ або $2x = -10 \Rightarrow x = -5$.</p>
+                                <p>Сума: $5 + (-5) = 0$.</p>
+                                <p><strong>Відповідь:</strong> $0$.</p>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">3. Розв'яжіть рівняння: $x^2 - 3x - 4 = 0$. У відповідь запишіть
+                                більший корінь.</p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Ваша відповідь">
+                                <button class="btn" onclick="checkInput(this, '4')">Перевірити</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">4. Знайдіть суму коренів рівняння $x^2 + 5x - 6 = 0$.</p>
+                            <div class="options">
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$5$</button>
+                                <button class="option" data-correct="true"
+                                    onclick="checkChoice(this, true)">$-5$</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$6$</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$-6$</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">5. Розв'яжіть дробово-раціональне рівняння: $\dfrac{x + 3}{x - 1} =
+                                2$</p>
+                            <div class="options">
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x =
+                                    1$</button>
+                                <button class="option" data-correct="true" onclick="checkChoice(this, true)">$x =
+                                    5$</button>
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x =
+                                    -5$</button>
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x =
+                                    3$</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">6. Розв'яжіть систему: $\begin{cases} x + y = 6 \\ x - y = 2
+                                \end{cases}$</p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Наприклад: (4;2)">
+                                <button class="btn" onclick="checkInput(this, '(4;2)')">Перевірити</button>
+                                <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
+                                    розв'язок</button>
+                            </div>
+                            <p class="feedback"></p>
+                            <div class="solution">
+                                <div class="solution-title">Розв'язання:</div>
+                                <p>Додамо рівняння: $2x = 8 \Rightarrow x = 4$.</p>
+                                <p>Тоді $y = 6 - 4 = 2$.</p>
+                                <p><strong>Відповідь:</strong> $(4; 2)$.</p>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">7. Розв'яжіть систему: $\begin{cases} xy = 12 \\ x + y = 7
+                                \end{cases}$. У відповідь запишіть добуток усіх $x$ (з обох розв'язків).</p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Ваша відповідь">
+                                <button class="btn" onclick="checkInput(this, '12')">Перевірити</button>
+                                <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
+                                    розв'язок</button>
+                            </div>
+                            <p class="feedback"></p>
+                            <div class="solution">
+                                <div class="solution-title">Розв'язання:</div>
+                                <p>З другого рівняння: $y = 7 - x$.</p>
+                                <p>Підставимо: $x(7 - x) = 12 \Rightarrow 7x - x^2 = 12 \Rightarrow x^2 - 7x + 12 = 0$.
+                                </p>
+                                <p>$x_1 = 3$, $x_2 = 4$.</p>
+                                <p>Добуток: $3 \cdot 4 = 12$.</p>
+                                <p><strong>Відповідь:</strong> $12$.</p>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">8. Розв'яжіть рівняння: $|x + 1| = |2x - 3|$</p>
+                            <div class="options">
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x_1 = 4,
+                                    x_2 = 2/3$</button>
+                                <button class="option" data-correct="true" onclick="checkChoice(this, true)">$x_1 = 4,
+                                    x_2 = 2/3$</button>
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x_1 = 2,
+                                    x_2 = -1/3$</button>
+                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x =
+                                    4$</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">9. Розв'яжіть рівняння: $\dfrac{3}{x - 2} = 1$</p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Ваша відповідь">
+                                <button class="btn" onclick="checkInput(this, '5')">Перевірити</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">10. Скільки розв'язків має система $\begin{cases} x^2 + y^2 = 25 \\
+                                y = x \end{cases}$?</p>
+                            <div class="options">
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">Один</button>
+                                <button class="option" data-correct="true"
+                                    onclick="checkChoice(this, true)">Два</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">Три</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">Жодного</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                    </div>
         </article>
-
         <nav class="lesson-nav">
-            <a href="algebra-08.html">← Логарифм числа. Перетворення виразів. Ло</a>
-            <a href="algebra-10.html">Степеневі вирази. Перетворення цілих вир →</a>
+            <a href="algebra-08.html">← Логарифм числа. Перетворення виразів.</a>
+            <a href="algebra-10.html">Степеневі вирази. →</a>
         </nav>
     </main>
 
@@ -106,4 +541,5 @@
 
     <script src="../script.js"></script>
 </body>
+
 </html>
