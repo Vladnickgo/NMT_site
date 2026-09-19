@@ -12,6 +12,8 @@
         };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
     <header class="site-header">
@@ -34,64 +36,647 @@
         <article class="lesson-content">
 
             <h2>Мета заняття</h2>
-            <p><em>Тут буде мета уроку.</em></p>
-
-            <h2>Теоретична довідка</h2>
-            <p><em>Тут буде теорія. Формули записуються в LaTeX між знаками $ ... $.</em></p>
-            <p>Наприклад: $a^2 + b^2 = c^2$</p>
-
+            <p>Повторити поняття функції, області визначення та значень, властивості функцій (монотонність, парність, нулі, знакосталість). Розглянути основні види функцій та їхні графіки. Навчитися виконувати геометричні перетворення графіків. Підготуватися до виконання завдань НМТ.</p>
+        
+            <h2>1. Поняття функції</h2>
+        
+            <p><strong>Функція</strong> — це правило, за яким кожному значенню незалежної змінної $x$ (з деякої множини) ставиться у відповідність єдине значення залежної змінної $y$.</p>
+        
+            <p>Позначення: $y = f(x)$.</p>
+        
+            <ul>
+                <li>$x$ — <strong>аргумент</strong> (незалежна змінна).</li>
+                <li>$y$ — <strong>значення функції</strong> (залежна змінна).</li>
+                <li><strong>Область визначення</strong> $D(f)$ — множина всіх допустимих значень $x$.</li>
+                <li><strong>Область значень</strong> $E(f)$ — множина всіх значень $y$, яких набуває функція.</li>
+            </ul>
+        
             <div class="example">
-                <div class="example-title">Приклад 1</div>
-                <p><em>Умова прикладу.</em></p>
+                <div class="example-title">Приклад 1. Область визначення</div>
+                <p>Знайдіть $D(f)$ для функції $f(x) = \dfrac{1}{x - 2}$.</p>
                 <p><strong>Розв'язання:</strong></p>
-                <p><em>Покрокове розв'язання.</em></p>
-                <p><strong>Відповідь:</strong> ...</p>
+                <p>Знаменник не може дорівнювати нулю: $x - 2 \neq 0 \Rightarrow x \neq 2$.</p>
+                <p><strong>Відповідь:</strong> $D(f) = (-\infty; 2) \cup (2; +\infty)$.</p>
             </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 2. Область визначення з коренем</div>
+                <p>Знайдіть $D(f)$ для функції $f(x) = \sqrt{x - 3}$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Підкореневий вираз має бути невід'ємним: $x - 3 \geq 0 \Rightarrow x \geq 3$.</p>
+                <p><strong>Відповідь:</strong> $D(f) = [3; +\infty)$.</p>
+            </div>
+        
+            <h2>2. Властивості функцій</h2>
+        
+            <h3>Нулі функції</h3>
+            <p><strong>Нулі функції</strong> — значення $x$, при яких $f(x) = 0$. На графіку — точки перетину з віссю $Ox$.</p>
+        
+            <h3>Проміжки знакосталості</h3>
+            <p>Проміжки, де $f(x) > 0$ (графік вище осі $Ox$) та де $f(x) < 0$ (графік нижче).</p>
+        
+            <h3>Монотонність</h3>
+            <ul>
+                <li><strong>Зростає</strong> на проміжку, якщо більшому $x$ відповідає більше $y$.</li>
+                <li><strong>Спадає</strong> на проміжку, якщо більшому $x$ відповідає менше $y$.</li>
+            </ul>
+        
+            <h3>Парність і непарність</h3>
+            <ul>
+                <li><strong>Парна:</strong> $f(-x) = f(x)$ для всіх $x \in D(f)$. Графік симетричний відносно осі $Oy$. Приклади: $y = x^2$, $y = |x|$, $y = \cos x$.</li>
+                <li><strong>Непарна:</strong> $f(-x) = -f(x)$ для всіх $x \in D(f)$. Графік симетричний відносно початку координат. Приклади: $y = x^3$, $y = \sin x$.</li>
+            </ul>
+        
+            <h2>3. Основні види функцій</h2>
+        
+            <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+                <tr style="background: #f1f5f9;">
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Функція</strong></td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Формула</strong></td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Графік</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Лінійна</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = kx + b$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">пряма</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Квадратична</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = ax^2 + bx + c$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">парабола</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Степенева</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = x^n$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">залежить від $n$</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Обернена пропорційність</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = \dfrac{k}{x}$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">гіпербола</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Показникова</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = a^x$, $a > 0$, $a \neq 1$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">експонента</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Логарифмічна</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = \log_a x$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">логарифмічна крива</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Тригонометричні</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = \sin x$, $\cos x$, $\text{tg}\,x$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">синусоїда, тангенсоїда</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Модуль</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = |x|$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">«галочка»</td>
+                </tr>
+            </table>
+        
+            <h3>Квадратична функція (парабола)</h3>
+            <p>$y = ax^2 + bx + c$, $a \neq 0$.</p>
+            <ul>
+                <li>Якщо $a > 0$ — гілки вгору, якщо $a < 0$ — вниз.</li>
+                <li>Вершина параболи: $x_0 = -\dfrac{b}{2a}$, $y_0 = f(x_0)$.</li>
+                <li>Нулі: $x_{1,2} = \dfrac{-b \pm \sqrt{D}}{2a}$ (якщо $D \geq 0$).</li>
+            </ul>
+        
+            <section>
+        
+                <section>
+                    <h2>3. Квадратне рівняння</h2>
+                    <p><strong>Квадратне рівняння</strong> — це рівняння виду:</p>
+                    $$ ax^2 + bx + c = 0 $$
+        
+                    <h3>Графік квадратичної функції</h3>
+                    <p>Графіком функції \( y = ax^2 + bx + c \) є <strong>парабола</strong>.</p>
+                    <div
+                        style="background: #f1f5f9; padding: 15px; border-radius: 6px; margin-bottom: 15px; max-width: 400px; margin: 0 auto 15px auto;">
+                        <div style="margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+                            <label for="aSlider">Коефіцієнт <strong>a</strong>: <span id="aVal"
+                                    style="font-weight:bold; color:#ef4444;">1</span></label>
+                            <input type="range" id="aSlider" min="-4" max="4" step="0.5" value="1" style="width: 150px;">
+                        </div>
+                        <div style="margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+                            <label for="bQuadSlider">Коефіцієнт <strong>b</strong>: <span id="bQuadVal"
+                                    style="font-weight:bold; color:#ef4444;">-2</span></label>
+                            <input type="range" id="bQuadSlider" min="-5" max="5" step="0.5" value="-2" style="width: 150px;">
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="cSlider">Коефіцієнт <strong>c</strong>: <span id="cVal"
+                                    style="font-weight:bold; color:#ef4444;">-3</span></label>
+                            <input type="range" id="cSlider" min="-5" max="5" step="0.5" value="-3" style="width: 150px;">
+                        </div>
+                    </div>
+        
+                    <div class="graph-container">
+                        <canvas id="quadraticCanvas" width="400" height="300"></canvas>
+                        <p><small>Графік функції: <span id="dynamicQuadEq" style="font-style: italic; font-weight: bold;">y = x²
+                                    - 2x - 3</span></small></p>
+                    </div>
+        
+                    
+                </section>
+        
+                <script>
+                    /**
+                     * ========================================
+                     * ГЛОБАЛЬНІ КОНСТАНТИ
+                     * ========================================
+                     */
+                    const SCALE = 30; // Масштаб: 1 одиниця = 30 пікселів
+        
+                    /**
+                     * ========================================
+                     * ДОПОМІЖНІ ФУНКЦІЇ ДЛЯ МАЛЮВАННЯ
+                     * ========================================
+                     */
+        
+                    /**
+                     * Малює координатну сітку та осі на canvas
+                     * @param {CanvasRenderingContext2D} ctx - Контекст canvas
+                     * @param {number} width - Ширина canvas
+                     * @param {number} height - Висота canvas
+                     * @param {number} scale - Масштаб (пікселі на одиницю)
+                     */
+                    function drawGrid(ctx, width, height, scale) {
+                        const originX = width / 2;
+                        const originY = height / 2;
+        
+                        // Очищення canvas
+                        ctx.clearRect(0, 0, width, height);
+        
+                        // Малювання сітки
+                        ctx.strokeStyle = '#e2e8f0';
+                        ctx.lineWidth = 1;
+        
+                        // Вертикальні лінії сітки
+                        for (let x = originX % scale; x < width; x += scale) {
+                            ctx.beginPath();
+                            ctx.moveTo(x, 0);
+                            ctx.lineTo(x, height);
+                            ctx.stroke();
+                        }
+        
+                        // Горизонтальні лінії сітки
+                        for (let y = originY % scale; y < height; y += scale) {
+                            ctx.beginPath();
+                            ctx.moveTo(0, y);
+                            ctx.lineTo(width, y);
+                            ctx.stroke();
+                        }
+        
+                        // Малювання осей координат
+                        ctx.strokeStyle = '#334155';
+                        ctx.lineWidth = 2;
+        
+                        // Вісь X
+                        ctx.beginPath();
+                        ctx.moveTo(0, originY);
+                        ctx.lineTo(width, originY);
+                        ctx.stroke();
+        
+                        // Вісь Y
+                        ctx.beginPath();
+                        ctx.moveTo(originX, 0);
+                        ctx.lineTo(originX, height);
+                        ctx.stroke();
+        
+                        // Підписи осей
+                        ctx.fillStyle = '#334155';
+                        ctx.font = '12px Arial';
+                        ctx.fillText('X', width - 15, originY - 5);
+                        ctx.fillText('Y', originX + 5, 15);
+                        ctx.fillText('0', originX - 12, originY + 15);
+                    }
+        
+                    /**
+                     * Форматує коефіцієнт для відображення в рівнянні
+                     * @param {number} coeff - Коефіцієнт
+                     * @param {string} variable - Змінна (наприклад, 'x' або 'x²')
+                     * @param {boolean} isFirst - Чи це перший доданок
+                     * @returns {string} Відформатований рядок
+                     */
+                    function formatCoefficient(coeff, variable, isFirst = false) {
+                        if (coeff === 0) return '';
+        
+                        let result = '';
+        
+                        // Обробка знаку
+                        if (isFirst) {
+                            if (coeff < 0) result += '-';
+                        } else {
+                            result += coeff > 0 ? ' + ' : ' - ';
+                        }
+        
+                        // Обробка абсолютного значення
+                        const absCoeff = Math.abs(coeff);
+                        if (absCoeff === 1 && variable) {
+                            result += variable;
+                        } else {
+                            result += absCoeff + variable;
+                        }
+        
+                        return result;
+                    }
+        
 
+        
+                    /**
+                     * ========================================
+                     * КВАДРАТИЧНА ФУНКЦІЯ: y = ax² + bx + c
+                     * ========================================
+                     */
+        
+                    // Отримання елементів DOM
+                    const quadraticCanvas = document.getElementById('quadraticCanvas');
+                    const quadraticCtx = quadraticCanvas.getContext('2d');
+                    const aSlider = document.getElementById('aSlider');
+                    const bQuadSlider = document.getElementById('bQuadSlider');
+                    const cSlider = document.getElementById('cSlider');
+                    const aValueDisplay = document.getElementById('aVal');
+                    const bQuadValueDisplay = document.getElementById('bQuadVal');
+                    const cValueDisplay = document.getElementById('cVal');
+                    const quadraticEquationDisplay = document.getElementById('dynamicQuadEq');
+        
+                    /**
+                     * Оновлює графік квадратичної функції та відображення рівняння
+                     */
+                    function updateQuadraticGraph() {
+                        // Отримання значень з повзунків
+                        const a = parseFloat(aSlider.value);
+                        const b = parseFloat(bQuadSlider.value);
+                        const c = parseFloat(cSlider.value);
+        
+                        // Оновлення відображення значень
+                        aValueDisplay.textContent = a;
+                        bQuadValueDisplay.textContent = b;
+                        cValueDisplay.textContent = c;
+        
+                        // Формування тексту рівняння
+                        let equation = 'y = ';
+                        let hasTerms = false;
+        
+                        // Доданок x²
+                        if (a !== 0) {
+                            equation += formatCoefficient(a, 'x²', true);
+                            hasTerms = true;
+                        }
+        
+                        // Доданок x
+                        if (b !== 0) {
+                            equation += formatCoefficient(b, 'x', !hasTerms);
+                            hasTerms = true;
+                        }
+        
+                        // Вільний член
+                        if (c !== 0) {
+                            equation += formatCoefficient(c, '', !hasTerms);
+                            hasTerms = true;
+                        }
+        
+                        // Якщо всі коефіцієнти нульові
+                        if (!hasTerms) {
+                            equation += '0';
+                        }
+        
+                        quadraticEquationDisplay.textContent = equation;
+        
+                        // Малювання сітки
+                        drawGrid(quadraticCtx, quadraticCanvas.width, quadraticCanvas.height, SCALE);
+        
+                        // Особливий випадок: всі коефіцієнти нульові
+                        if (a === 0 && b === 0 && c === 0) {
+                            quadraticCtx.fillStyle = '#ef4444';
+                            quadraticCtx.beginPath();
+                            quadraticCtx.arc(quadraticCanvas.width / 2, quadraticCanvas.height / 2, 4, 0, 2 * Math.PI);
+                            quadraticCtx.fill();
+                            return;
+                        }
+        
+                        // Малювання графіка функції
+                        quadraticCtx.strokeStyle = '#ef4444';
+                        quadraticCtx.lineWidth = 3;
+                        quadraticCtx.beginPath();
+        
+                        for (let pixelX = 0; pixelX < quadraticCanvas.width; pixelX++) {
+                            const x = (pixelX - quadraticCanvas.width / 2) / SCALE;
+                            const y = a * x * x + b * x + c;
+                            const pixelY = quadraticCanvas.height / 2 - (y * SCALE);
+        
+                            if (pixelX === 0) {
+                                quadraticCtx.moveTo(pixelX, pixelY);
+                            } else {
+                                quadraticCtx.lineTo(pixelX, pixelY);
+                            }
+                        }
+        
+                        quadraticCtx.stroke();
+                    }
+        
+                    // Реєстрація обробників подій для квадратичної функції
+                    aSlider.addEventListener('input', updateQuadraticGraph);
+                    bQuadSlider.addEventListener('input', updateQuadraticGraph);
+                    cSlider.addEventListener('input', updateQuadraticGraph);
+        
+                    // Початкове малювання
+                    updateQuadraticGraph();
+                </script>
+        
+    
+            
+
+
+
+            <h2>4. Геометричні перетворення графіків</h2>
+        
+            <p>Маючи графік $y = f(x)$, можна легко побудувати графіки функцій з перетвореннями.</p>
+        
+            <h3>Зсуви (перенесення)</h3>
+            <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+                <tr style="background: #f1f5f9;">
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Функція</strong></td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Перетворення</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = f(x) + a$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">паралельне перенесення вгору на $a$ (якщо $a > 0$) або вниз (якщо $a < 0$)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = f(x - a)$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">паралельне перенесення <strong>вправо</strong> на $a$ (якщо $a > 0$)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = f(x + a)$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">паралельне перенесення <strong>вліво</strong> на $a$</td>
+                </tr>
+            </table>
+        
+            <p><strong>Увага:</strong> $y = f(x - a)$ зсуває графік <strong>вправо</strong> — протилежно до знака всередині дужок! Це типова помилка.</p>
+        
+            <h3>Розтяг/стиснення</h3>
+            <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+                <tr style="background: #f1f5f9;">
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Функція</strong></td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Перетворення</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = k \cdot f(x)$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">розтяг уздовж $Oy$ у $k$ разів (якщо $k > 1$)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = f(kx)$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">стиснення уздовж $Ox$ у $k$ разів (якщо $k > 1$)</td>
+                </tr>
+            </table>
+        
+            <h3>Симетрія (відображення)</h3>
+            <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+                <tr style="background: #f1f5f9;">
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Функція</strong></td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Перетворення</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = -f(x)$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">симетрія відносно осі $Ox$</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = f(-x)$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">симетрія відносно осі $Oy$</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = |f(x)|$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">частина графіка нижче осі $Ox$ відображається вгору</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$y = f(|x|)$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">частина графіка при $x \geq 0$ відображається вліво</td>
+                </tr>
+            </table>
+        
+            <h3>Порядок перетворень</h3>
+            <p>Якщо функція має вигляд $y = k \cdot f(m(x - a)) + b$, то порядок такий:</p>
+            <ol>
+                <li><strong>Стиснення/розтяг</strong> уздовж $Ox$ (коефіцієнт $m$).</li>
+                <li><strong>Зсув уздовж $Ox$</strong> на $a$ (вправо, якщо $a > 0$).</li>
+                <li><strong>Розтяг/стиснення</strong> уздовж $Oy$ (коефіцієнт $k$).</li>
+                <li><strong>Зсув уздовж $Oy$</strong> на $b$ (вгору, якщо $b > 0$).</li>
+            </ol>
+        
+            <div class="example">
+                <div class="example-title">Приклад 3. Побудова графіка зі зсувом</div>
+                <p>Побудуйте графік функції $y = (x - 2)^2$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Базовий графік — парабола $y = x^2$ з вершиною в $(0; 0)$.</p>
+                <p>Формула $y = (x - 2)^2 = f(x - 2)$ — зсув <strong>вправо на 2</strong>.</p>
+                <p>Вершина переміщується в точку $(2; 0)$.</p>
+                <p><strong>Відповідь:</strong> парабола з вершиною в $(2; 0)$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 4. Комбінований зсув</div>
+                <p>Побудуйте графік функції $y = (x + 1)^2 - 3$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Базовий графік: $y = x^2$.</p>
+                <ul>
+                    <li>$(x + 1)^2 = f(x + 1)$ — зсув <strong>вліво на 1</strong>.</li>
+                    <li>Потім $-3$ — зсув <strong>вниз на 3</strong>.</li>
+                </ul>
+                <p>Вершина: $(-1; -3)$.</p>
+                <p><strong>Відповідь:</strong> парабола з вершиною в $(-1; -3)$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 5. Модуль функції</div>
+                <p>Побудуйте графік $y = |x - 1|$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Базовий графік: $y = |x|$ — «галочка» з вершиною в $(0; 0)$.</p>
+                <p>$y = |x - 1|$ — зсув <strong>вправо на 1</strong>.</p>
+                <p>Вершина в точці $(1; 0)$.</p>
+                <p><strong>Відповідь:</strong> «галочка» з вершиною в $(1; 0)$.</p>
+            </div>
+        
+            <h2>5. Завдання з НМТ</h2>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Нулі функції</div>
+                <p>На рисунку зображено графік функції $y = f(x)$, визначеної на проміжку $[-3; 3]$. Укажіть нуль цієї функції.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Нулі функції — це точки, де графік перетинає вісь $Ox$.</p>
+                <p>На графіку видно, що крива перетинає вісь $Ox$ у точці $x = -1$.</p>
+                <p><strong>Відповідь:</strong> $x = -1$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Область значень</div>
+                <p>Знайдіть область значень функції $y = x^2 + 2$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$x^2 \geq 0$ для будь-якого $x$, отже $x^2 + 2 \geq 2$.</p>
+                <p><strong>Відповідь:</strong> $E(y) = [2; +\infty)$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Парність функції</div>
+                <p>Яка з функцій є парною?</p>
+                <ul>
+                    <li>а) $y = x^3$</li>
+                    <li>б) $y = x^2 + 1$</li>
+                    <li>в) $y = x + 1$</li>
+                    <li>г) $y = \sqrt{x}$</li>
+                </ul>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Перевіримо $f(-x) = f(x)$:</p>
+                <ul>
+                    <li>а) $(-x)^3 = -x^3 \neq x^3$ — непарна.</li>
+                    <li>б) $(-x)^2 + 1 = x^2 + 1$ ✅ — парна.</li>
+                    <li>в) $-x + 1 \neq x + 1$ — ні парна, ні непарна.</li>
+                    <li>г) $\sqrt{-x}$ не визначена при $x > 0$ — не підходить.</li>
+                </ul>
+                <p><strong>Відповідь:</strong> б) $y = x^2 + 1$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Перетворення графіка</div>
+                <p>Графік функції $y = f(x)$ перенесли на 3 одиниці вправо. Яка формула нової функції?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Зсув вправо на 3: $y = f(x - 3)$.</p>
+                <p><strong>Відповідь:</strong> $y = f(x - 3)$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Вершина параболи</div>
+                <p>Знайдіть координати вершини параболи $y = x^2 - 4x + 5$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$x_0 = -\dfrac{b}{2a} = \dfrac{4}{2} = 2$.</p>
+                <p>$y_0 = 2^2 - 4 \cdot 2 + 5 = 4 - 8 + 5 = 1$.</p>
+                <p><strong>Відповідь:</strong> $(2; 1)$.</p>
+            </div>
+        
             <!-- ===== ТЕСТ ===== -->
             <div class="test">
                 <div class="test-title">📝 Перевірте себе</div>
-
-                <!-- Питання 1: вибір варіанта -->
+        
                 <div class="question">
-                    <p class="question-text">1. Текст питання?</p>
+                    <p class="question-text">1. Знайдіть область визначення функції $f(x) = \dfrac{1}{x - 5}$.</p>
                     <div class="options">
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант A</button>
-                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">Варіант B (правильний)</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант C</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант D</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x \neq 0$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$x \neq 5$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x \neq -5$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x > 5$</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
-
-                <!-- Питання 2: введення відповіді -->
+        
                 <div class="question">
-                    <p class="question-text">2. Текст питання? У відповідь запишіть число.</p>
+                    <p class="question-text">2. Знайдіть $f(3)$, якщо $f(x) = 2x^2 - 5$.</p>
                     <div class="input-answer">
                         <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <button class="btn" onclick="checkInput(this, '13')">Перевірити</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
-
-                <!-- Питання 3: введення + показати розв'язок -->
+        
                 <div class="question">
-                    <p class="question-text">3. Текст питання?</p>
+                    <p class="question-text">3. Яка з функцій є парною?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$y = x^3$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$y = x^4 - 2x^2$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$y = x + 3$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$y = \sin x$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">4. Знайдіть нулі функції $y = x^2 - 9$.</p>
                     <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <input type="text" placeholder="Наприклад: -3;3">
+                        <button class="btn" onclick="checkInput(this, '-3;3')">Перевірити</button>
                         <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
                     </div>
                     <p class="feedback"></p>
                     <div class="solution">
                         <div class="solution-title">Розв'язання:</div>
-                        <p><em>Тут буде розв'язання.</em></p>
+                        <p>$x^2 - 9 = 0 \Rightarrow x^2 = 9 \Rightarrow x = \pm 3$.</p>
+                        <p><strong>Відповідь:</strong> $x_1 = -3$, $x_2 = 3$.</p>
                     </div>
                 </div>
-
+        
+                <div class="question">
+                    <p class="question-text">5. Графік функції $y = x^2$ перенесли на 4 одиниці вліво. Яка формула нової функції?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$y = x^2 + 4$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$y = x^2 - 4$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$y = (x + 4)^2$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$y = (x - 4)^2$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">6. Знайдіть координати вершини параболи $y = x^2 - 6x + 8$.</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(3; 8)$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$(3; -1)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(-3; 8)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(6; -1)$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">7. Функція $y = -x^2 + 4$. Яке найбільше значення функції?</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '4')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>$-x^2 \leq 0$ для будь-якого $x$, отже $-x^2 + 4 \leq 4$.</p>
+                        <p>Найбільше значення — $4$ (при $x = 0$).</p>
+                        <p><strong>Відповідь:</strong> $4$.</p>
+                    </div>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">8. Знайдіть область значень функції $y = \sqrt{x} + 3$.</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$[0; +\infty)$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$[3; +\infty)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(-\infty; +\infty)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$[0; 3]$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">9. Функція задана формулою $y = 2x - 3$. Знайдіть значення $x$, при якому $y = 7$.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '5')">Перевірити</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">10. Графік функції $y = f(x)$ відобразили симетрично відносно осі $Ox$. Яка формула нової функції?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$y = f(-x)$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$y = -f(x)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$y = f(x) + 1$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$y = |f(x)|$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
             </div>
         </article>
-
         <nav class="lesson-nav">
             <a href="algebra-14.html">← Степінь з натуральним, цілим та раціонал</a>
             <a href="algebra-16.html">Арифметична та геометрична прогресії →</a>
