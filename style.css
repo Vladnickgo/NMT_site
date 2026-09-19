@@ -296,3 +296,44 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== Блок «Увага» ===== */
+.warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 20px 0;
+    color: #78350f;
+}
+
+.warning-icon {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    flex-shrink: 0;
+}
+
+.warning-text {
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.warning-text strong {
+    color: #b45309;
+}
+
+@media (max-width: 600px) {
+    .warning {
+        padding: 12px 14px;
+        gap: 8px;
+    }
+    .warning-icon {
+        font-size: 1.1rem;
+    }
+    .warning-text {
+        font-size: 0.92rem;
+    }
+}

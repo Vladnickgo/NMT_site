@@ -34,61 +34,369 @@
         <article class="lesson-content">
 
             <h2>Мета заняття</h2>
-            <p><em>Тут буде мета уроку.</em></p>
-
-            <h2>Теоретична довідка</h2>
-            <p><em>Тут буде теорія. Формули записуються в LaTeX між знаками $ ... $.</em></p>
-            <p>Наприклад: $a^2 + b^2 = c^2$</p>
-
-            <div class="example">
-                <div class="example-title">Приклад 1</div>
-                <p><em>Умова прикладу.</em></p>
-                <p><strong>Розв'язання:</strong></p>
-                <p><em>Покрокове розв'язання.</em></p>
-                <p><strong>Відповідь:</strong> ...</p>
+            <p>Повторити означення степеня з натуральним, цілим та раціональним показником, властивості степенів, навчитися перетворювати вирази зі степенями та коренями. Підготуватися до виконання завдань НМТ.</p>
+        
+            <h2>1. Степінь з натуральним показником</h2>
+        
+            <p>Нехай $a$ — довільне число, $n$ — натуральне число ($n \geq 2$). Тоді:</p>
+            <p>$$a^n = \underbrace{a \cdot a \cdot \ldots \cdot a}_{n \text{ разів}}$$</p>
+        
+            <p>$a$ — <strong>основа</strong>, $n$ — <strong>показник степеня</strong>.</p>
+        
+            <h3>Окремі випадки</h3>
+            <ul>
+                <li>$a^1 = a$</li>
+                <li>$a^0 = 1$, якщо $a \neq 0$ (вираз $0^0$ не визначений)</li>
+                <li>$1^n = 1$ для будь-якого $n$</li>
+                <li>$0^n = 0$ для $n \in \mathbb{N}$</li>
+            </ul>
+        
+            <h3>Знак степеня</h3>
+            <ul>
+                <li>Додатне число в будь-якому степені — додатне.</li>
+                <li>Від'ємне число в <strong>парному</strong> степені — додатне: $(-2)^4 = 16$.</li>
+                <li>Від'ємне число в <strong>непарному</strong> степені — від'ємне: $(-2)^3 = -8$.</li>
+            </ul>
+        
+            <h2>2. Степінь з цілим показником</h2>
+        
+            <p>Для $a \neq 0$ і $n \in \mathbb{N}$:</p>
+            <p>$$a^{-n} = \dfrac{1}{a^n}$$</p>
+        
+            <p>Наприклад:</p>
+            <ul>
+                <li>$2^{-3} = \dfrac{1}{2^3} = \dfrac{1}{8}$</li>
+                <li>$\left(\dfrac{2}{3}\right)^{-2} = \left(\dfrac{3}{2}\right)^{2} = \dfrac{9}{4}$</li>
+                <li>$10^{-1} = \dfrac{1}{10} = 0{,}1$</li>
+            </ul>
+        
+            <h2>3. Степінь з раціональним показником</h2>
+        
+            <p>Для $a > 0$, $m \in \mathbb{Z}$, $n \in \mathbb{N}$ ($n \geq 2$):</p>
+            <p>$$a^{m/n} = \sqrt[n]{a^m}$$</p>
+        
+            <p>Окремий випадок:</p>
+            <p>$$a^{1/n} = \sqrt[n]{a}$$</p>
+        
+            <p>Наприклад:</p>
+            <ul>
+                <li>$8^{1/3} = \sqrt[3]{8} = 2$</li>
+                <li>$27^{2/3} = \sqrt[3]{27^2} = \sqrt[3]{729} = 9$</li>
+                <li>$16^{3/4} = \sqrt[4]{16^3} = \sqrt[4]{4096} = 8$</li>
+            </ul>
+        
+            <h2>4. Властивості степенів</h2>
+        
+            <p>Для $a > 0$, $b > 0$ та будь-яких $x, y \in \mathbb{R}$:</p>
+        
+            <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+                <tr style="background: #f1f5f9;">
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Властивість</strong></td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Формула</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Множення</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$a^x \cdot a^y = a^{x+y}$</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Ділення</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$\dfrac{a^x}{a^y} = a^{x-y}$</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Степінь у степені</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$(a^x)^y = a^{xy}$</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Степінь добутку</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$(ab)^x = a^x \cdot b^x$</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Степінь частки</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$\left(\dfrac{a}{b}\right)^x = \dfrac{a^x}{b^x}$</td>
+                </tr>
+            </table>
+        
+            <div class="warning">
+                <span class="warning-icon">⚠️</span>
+                <div class="warning-text">
+                    <strong>Увага!</strong> $a^x + b^x \neq (a+b)^x$ і $a^x - b^x \neq (a-b)^x$.
+                </div>
             </div>
-
+        
+            <h2>5. Порівняння степенів</h2>
+        
+            <ul>
+                <li>Якщо $a > 1$ і $x < y$, то $a^x < a^y$ (зростання).</li>
+                <li>Якщо $0 < a < 1$ і $x < y$, то $a^x > a^y$ (спадання).</li>
+                <li>Якщо $a > b > 0$ і $n > 0$, то $a^n > b^n$.</li>
+            </ul>
+        
+            <div class="example">
+                <div class="example-title">Приклад 1. Обчислення степеня з від'ємним показником</div>
+                <p>Обчисліть: $3^{-2} + 2^{-3}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$3^{-2} = \dfrac{1}{9}$, $2^{-3} = \dfrac{1}{8}$</p>
+                <p>$\dfrac{1}{9} + \dfrac{1}{8} = \dfrac{8 + 9}{72} = \dfrac{17}{72}$</p>
+                <p><strong>Відповідь:</strong> $\dfrac{17}{72}$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 2. Множення степенів з однаковою основою</div>
+                <p>Спростіть: $2^5 \cdot 2^{-3}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$2^5 \cdot 2^{-3} = 2^{5 + (-3)} = 2^2 = 4$</p>
+                <p><strong>Відповідь:</strong> $4$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 3. Ділення степенів</div>
+                <p>Спростіть: $\dfrac{5^{-2}}{5^{-5}}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$\dfrac{5^{-2}}{5^{-5}} = 5^{-2 - (-5)} = 5^{-2 + 5} = 5^3 = 125$</p>
+                <p><strong>Відповідь:</strong> $125$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 4. Степінь у степені</div>
+                <p>Обчисліть: $(2^3)^2 \cdot 2^{-4}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$(2^3)^2 = 2^{3 \cdot 2} = 2^6$</p>
+                <p>$2^6 \cdot 2^{-4} = 2^{6 - 4} = 2^2 = 4$</p>
+                <p><strong>Відповідь:</strong> $4$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 5. Степінь з дробовим показником</div>
+                <p>Обчисліть: $27^{2/3}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$27^{2/3} = (\sqrt[3]{27})^2 = 3^2 = 9$</p>
+                <p><strong>Відповідь:</strong> $9$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 6. Степінь з від'ємним дробовим показником</div>
+                <p>Обчисліть: $16^{-3/4}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$16^{-3/4} = \dfrac{1}{16^{3/4}} = \dfrac{1}{(\sqrt[4]{16})^3} = \dfrac{1}{2^3} = \dfrac{1}{8}$</p>
+                <p><strong>Відповідь:</strong> $\dfrac{1}{8}$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 7. Спрощення зі степенями</div>
+                <p>Спростіть: $\dfrac{a^5 \cdot a^{-3}}{a^4}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$\dfrac{a^5 \cdot a^{-3}}{a^4} = \dfrac{a^{5 - 3}}{a^4} = \dfrac{a^2}{a^4} = a^{2 - 4} = a^{-2} = \dfrac{1}{a^2}$</p>
+                <p><strong>Відповідь:</strong> $\dfrac{1}{a^2}$, при $a \neq 0$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 8. Приведення до однієї основи</div>
+                <p>Обчисліть: $\dfrac{2^{15} \cdot 4^{10}}{8^8}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Приведемо все до основи 2:</p>
+                <p>$4^{10} = (2^2)^{10} = 2^{20}$, $8^8 = (2^3)^8 = 2^{24}$</p>
+                <p>$\dfrac{2^{15} \cdot 2^{20}}{2^{24}} = \dfrac{2^{35}}{2^{24}} = 2^{11} = 2048$</p>
+                <p><strong>Відповідь:</strong> $2048$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 9. Степінь добутку</div>
+                <p>Обчисліть: $\dfrac{6^5}{2^5 \cdot 3^4}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$6^5 = (2 \cdot 3)^5 = 2^5 \cdot 3^5$</p>
+                <p>$\dfrac{2^5 \cdot 3^5}{2^5 \cdot 3^4} = \dfrac{3^5}{3^4} = 3$</p>
+                <p><strong>Відповідь:</strong> $3$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 10. Спрощення виразу зі змінною</div>
+                <p>Спростіть: $\dfrac{(a^2)^{-3} \cdot a^5}{a^{-1}}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$(a^2)^{-3} = a^{-6}$</p>
+                <p>$\dfrac{a^{-6} \cdot a^5}{a^{-1}} = \dfrac{a^{-1}}{a^{-1}} = a^{-1 - (-1)} = a^0 = 1$</p>
+                <p><strong>Відповідь:</strong> $1$, при $a \neq 0$.</p>
+            </div>
+        
+            <h2>6. Завдання з НМТ</h2>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Обчислення виразу</div>
+                <p>Обчисліть: $\dfrac{3^5 \cdot 5^4}{15^3}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$15^3 = 3^3 \cdot 5^3$</p>
+                <p>$\dfrac{3^5 \cdot 5^4}{3^3 \cdot 5^3} = 3^{5-3} \cdot 5^{4-3} = 3^2 \cdot 5 = 45$</p>
+                <p><strong>Відповідь:</strong> $45$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Степінь з від'ємним дробовим показником</div>
+                <p>Обчисліть: $\dfrac{2^{-1{,}6} \cdot 4^{4{,}8}}{8^3}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Приведемо все до основи 2:</p>
+                <p>$4^{4{,}8} = (2^2)^{4{,}8} = 2^{9{,}6}$</p>
+                <p>$8^3 = (2^3)^3 = 2^9$</p>
+                <p>$\dfrac{2^{-1{,}6} \cdot 2^{9{,}6}}{2^9} = \dfrac{2^{8}}{2^9} = 2^{-1} = 0{,}5$</p>
+                <p><strong>Відповідь:</strong> $0{,}5$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Порівняння чисел</div>
+                <p>Розташуйте числа $2^{15}$, $4^{10}$, $10^5$ у порядку зростання.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Обчислимо наближено:</p>
+                <ul>
+                    <li>$2^{15} = 32768$</li>
+                    <li>$4^{10} = 2^{20} = 1048576$</li>
+                    <li>$10^5 = 100000$</li>
+                </ul>
+                <p>Порядок: $2^{15} < 10^5 < 4^{10}$.</p>
+                <p><strong>Відповідь:</strong> $2^{15}, 10^5, 4^{10}$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Рівняння зі степенями</div>
+                <p>Розв'яжіть рівняння $2^{x+1} = 16$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$16 = 2^4$, тому $2^{x+1} = 2^4$.</p>
+                <p>$x + 1 = 4 \Rightarrow x = 3$.</p>
+                <p><strong>Відповідь:</strong> $x = 3$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Порівняння степенів з різними основами</div>
+                <p>Порівняйте: $3^{40}$ і $5^{30}$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Приведемо до спільного показника: НСК(40, 30) = 120.</p>
+                <p>$3^{40} = (3^3)^{40/3} = (3^{1/3})^{120}$ — не зручно.</p>
+                <p>Простіше: $3^{40} = (3^4)^{10} = 81^{10}$, $5^{30} = (5^3)^{10} = 125^{10}$.</p>
+                <p>$81 < 125$, отже $3^{40} < 5^{30}$.</p>
+                <p><strong>Відповідь:</strong> $3^{40} < 5^{30}$.</p>
+            </div>
+        
             <!-- ===== ТЕСТ ===== -->
             <div class="test">
                 <div class="test-title">📝 Перевірте себе</div>
-
-                <!-- Питання 1: вибір варіанта -->
+        
                 <div class="question">
-                    <p class="question-text">1. Текст питання?</p>
+                    <p class="question-text">1. Обчисліть: $2^{-4}$</p>
                     <div class="options">
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант A</button>
-                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">Варіант B (правильний)</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант C</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант D</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$-16$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$-8$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$\dfrac{1}{16}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{1}{8}$</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
-
-                <!-- Питання 2: введення відповіді -->
+        
                 <div class="question">
-                    <p class="question-text">2. Текст питання? У відповідь запишіть число.</p>
+                    <p class="question-text">2. Обчисліть: $5^0 + 3^{-1}$</p>
                     <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
-                    </div>
-                    <p class="feedback"></p>
-                </div>
-
-                <!-- Питання 3: введення + показати розв'язок -->
-                <div class="question">
-                    <p class="question-text">3. Текст питання?</p>
-                    <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <input type="text" placeholder="Наприклад: 4/3">
+                        <button class="btn" onclick="checkInput(this, '4/3')">Перевірити</button>
                         <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
                     </div>
                     <p class="feedback"></p>
                     <div class="solution">
                         <div class="solution-title">Розв'язання:</div>
-                        <p><em>Тут буде розв'язання.</em></p>
+                        <p>$5^0 = 1$, $3^{-1} = \dfrac{1}{3}$.</p>
+                        <p>$1 + \dfrac{1}{3} = \dfrac{4}{3}$.</p>
+                        <p><strong>Відповідь:</strong> $\dfrac{4}{3}$.</p>
                     </div>
                 </div>
-
+        
+                <div class="question">
+                    <p class="question-text">3. Спростіть: $a^5 \cdot a^{-3}$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a^{-15}$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$a^2$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a^{-2}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a^8$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">4. Обчисліть: $8^{2/3}$</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '4')">Перевірити</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">5. Спростіть: $(a^3)^4 \cdot a^{-10}$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a^{2}$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$a^{2}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a^{12}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a^{-120}$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">6. Обчисліть: $27^{-\frac{2}{3}}$</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Наприклад: 2/3">
+                        <button class="btn" onclick="checkInput(this, '1/9')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>$27^{-2/3} = \dfrac{1}{27^{2/3}} = \dfrac{1}{(\sqrt[3]{27})^2} = \dfrac{1}{3^2} = \dfrac{1}{9}$.</p>
+                        <p><strong>Відповідь:</strong> $\dfrac{1}{9}$.</p>
+                    </div>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">7. Обчисліть: $\dfrac{10^8}{5^8 \cdot 2^6}$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$2^2$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$4$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$10^2$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$25$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">8. Обчисліть: $\left(\dfrac{2}{3}\right)^{-2}$</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Наприклад: 5/3">
+                        <button class="btn" onclick="checkInput(this, '9/4')">Перевірити</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">9. Розв'яжіть рівняння: $3^{x-2} = 27$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = 3$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$x = 5$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = 4$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = 6$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">10. Обчисліть значення виразу $a^3 - b^3$, якщо $a - b = 2$ і $a^2 + ab + b^2 = 5$.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '10')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>За формулою різниці кубів: $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$.</p>
+                        <p>Підставляємо: $a^3 - b^3 = 2 \cdot 5 = 10$.</p>
+                        <p><strong>Відповідь:</strong> $10$.</p>
+                    </div>
+                </div>
+        
             </div>
         </article>
 
