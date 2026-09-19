@@ -34,49 +34,279 @@
         <article class="lesson-content">
 
             <h2>Мета заняття</h2>
-            <p><em>Тут буде мета уроку.</em></p>
-
-            <h2>Теоретична довідка</h2>
-            <p><em>Тут буде теорія. Формули записуються в LaTeX між знаками $ ... $.</em></p>
-            <p>Наприклад: $a^2 + b^2 = c^2$</p>
-
+            <p>Навчитися розв'язувати рівняння, що зводяться до квадратних, методом заміни змінної. Опанувати біквадратні рівняння, дробово-раціональні та ірраціональні рівняння, що зводяться до квадратних. Підготуватися до виконання завдань НМТ.</p>
+        
+            <h2>1. Ідея методу заміни змінної</h2>
+        
+            <p>Багато рівнянь вищого степеня можна звести до квадратного, якщо ввести нову змінну. Ідея методу:</p>
+            <ol>
+                <li>Помітити в рівнянні повторюваний вираз (або степінь змінної).</li>
+                <li>Позначити цей вираз новою змінною $t$.</li>
+                <li>Отримати квадратне рівняння відносно $t$.</li>
+                <li>Розв'язати його та повернутися до початкової змінної.</li>
+            </ol>
+        
+            <p><strong>Головне правило:</strong> після знаходження $t$ обов'язково повертаємося до $x$ і перевіряємо, чи задовольняють корені початкове рівняння.</p>
+        
+            <h2>2. Біквадратні рівняння</h2>
+        
+            <p><strong>Біквадратне рівняння</strong> — це рівняння виду:</p>
+            <p>$$ax^4 + bx^2 + c = 0, \quad a \neq 0$$</p>
+        
+            <h3>Алгоритм розв'язування</h3>
+            <ol>
+                <li>Заміна: $t = x^2$, причому $t \geq 0$.</li>
+                <li>Отримуємо квадратне рівняння: $at^2 + bt + c = 0$.</li>
+                <li>Знаходимо корені $t_1$, $t_2$.</li>
+                <li>Відкидаємо від'ємні значення $t$ (бо $x^2 \geq 0$).</li>
+                <li>Для кожного додатного $t$: $x = \pm\sqrt{t}$.</li>
+            </ol>
+        
             <div class="example">
-                <div class="example-title">Приклад 1</div>
-                <p><em>Умова прикладу.</em></p>
+                <div class="example-title">Приклад 1. Біквадратне рівняння (чотири корені)</div>
+                <p>Розв'яжіть: $x^4 - 5x^2 + 4 = 0$</p>
                 <p><strong>Розв'язання:</strong></p>
-                <p><em>Покрокове розв'язання.</em></p>
-                <p><strong>Відповідь:</strong> ...</p>
+                <p>Заміна: $t = x^2$, $t \geq 0$.</p>
+                <p>$t^2 - 5t + 4 = 0$</p>
+                <p>За теоремою Вієта: $t_1 = 1$, $t_2 = 4$. Обидва додатні ✅</p>
+                <p>Повертаємось до $x$:</p>
+                <ul>
+                    <li>$x^2 = 1 \Rightarrow x = \pm 1$</li>
+                    <li>$x^2 = 4 \Rightarrow x = \pm 2$</li>
+                </ul>
+                <p><strong>Відповідь:</strong> $x_1 = 1$, $x_2 = -1$, $x_3 = 2$, $x_4 = -2$.</p>
             </div>
-
+        
+            <div class="example">
+                <div class="example-title">Приклад 2. Біквадратне рівняння (два корені)</div>
+                <p>Розв'яжіть: $x^4 + 3x^2 - 4 = 0$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Заміна: $t = x^2$, $t \geq 0$.</p>
+                <p>$t^2 + 3t - 4 = 0$</p>
+                <p>$t_1 = 1$, $t_2 = -4$ (відкидаємо, бо $t < 0$).</p>
+                <p>$x^2 = 1 \Rightarrow x = \pm 1$</p>
+                <p><strong>Відповідь:</strong> $x_1 = 1$, $x_2 = -1$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 3. Біквадратне рівняння з кратним коренем</div>
+                <p>Розв'яжіть: $x^4 - 6x^2 + 9 = 0$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Заміна: $t = x^2$, $t \geq 0$.</p>
+                <p>$t^2 - 6t + 9 = 0$</p>
+                <p>$(t - 3)^2 = 0 \Rightarrow t = 3$</p>
+                <p>$x^2 = 3 \Rightarrow x = \pm\sqrt{3}$</p>
+                <p><strong>Відповідь:</strong> $x_1 = \sqrt{3}$, $x_2 = -\sqrt{3}$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 4. Біквадратне рівняння без коренів</div>
+                <p>Розв'яжіть: $x^4 + 5x^2 + 4 = 0$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Заміна: $t = x^2$, $t \geq 0$.</p>
+                <p>$t^2 + 5t + 4 = 0$</p>
+                <p>$t_1 = -1$, $t_2 = -4$. Обидва від'ємні — <strong>відкидаємо обидва</strong>.</p>
+                <p><strong>Відповідь:</strong> розв'язків немає.</p>
+            </div>
+        
+            <h2>3. Рівняння з повторюваним виразом</h2>
+        
+            <p>Часто в рівнянні повторюється цілий вираз, наприклад $(x^2 - 3x)$. Тоді заміна $t = x^2 - 3x$ спрощує рівняння.</p>
+        
+            <div class="example">
+                <div class="example-title">Приклад 5. Заміна цілого виразу</div>
+                <p>Розв'яжіть: $(x^2 - 3x)^2 - 2(x^2 - 3x) - 8 = 0$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Заміна: $t = x^2 - 3x$.</p>
+                <p>$t^2 - 2t - 8 = 0$</p>
+                <p>$t_1 = 4$, $t_2 = -2$ (за теоремою Вієта).</p>
+                <p>Повертаємось до $x$:</p>
+                <ul>
+                    <li>$x^2 - 3x = 4 \Rightarrow x^2 - 3x - 4 = 0 \Rightarrow x_1 = 4$, $x_2 = -1$.</li>
+                    <li>$x^2 - 3x = -2 \Rightarrow x^2 - 3x + 2 = 0 \Rightarrow x_3 = 1$, $x_4 = 2$.</li>
+                </ul>
+                <p><strong>Відповідь:</strong> $x_1 = 4$, $x_2 = -1$, $x_3 = 1$, $x_4 = 2$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 6. Заміна $(x - 1)^2$</div>
+                <p>Розв'яжіть: $(x^2 - 2x + 1)^2 - 5(x^2 - 2x + 1) + 4 = 0$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Помічаємо: $x^2 - 2x + 1 = (x - 1)^2 \geq 0$.</p>
+                <p>Заміна: $t = (x - 1)^2$, $t \geq 0$.</p>
+                <p>$t^2 - 5t + 4 = 0 \Rightarrow t_1 = 1$, $t_2 = 4$.</p>
+                <p>Повертаємось:</p>
+                <ul>
+                    <li>$(x - 1)^2 = 1 \Rightarrow x - 1 = \pm 1 \Rightarrow x_1 = 2$, $x_2 = 0$.</li>
+                    <li>$(x - 1)^2 = 4 \Rightarrow x - 1 = \pm 2 \Rightarrow x_3 = 3$, $x_4 = -1$.</li>
+                </ul>
+                <p><strong>Відповідь:</strong> $x_1 = 2$, $x_2 = 0$, $x_3 = 3$, $x_4 = -1$.</p>
+            </div>
+        
+            <h2>4. Дробово-раціональні рівняння, що зводяться до квадратних</h2>
+        
+            <p>Якщо в рівнянні є дроби зі змінною в знаменнику — спочатку знаходимо ОДЗ, а потім вводимо заміну.</p>
+        
+            <div class="example">
+                <div class="example-title">Приклад 7. Дробово-раціональне рівняння</div>
+                <p>Розв'яжіть: $\dfrac{1}{x^2} - \dfrac{3}{x} + 2 = 0$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>ОДЗ: $x \neq 0$.</p>
+                <p>Заміна: $t = \dfrac{1}{x}$. Тоді $\dfrac{1}{x^2} = t^2$.</p>
+                <p>$t^2 - 3t + 2 = 0 \Rightarrow t_1 = 1$, $t_2 = 2$.</p>
+                <p>Повертаємось:</p>
+                <ul>
+                    <li>$\dfrac{1}{x} = 1 \Rightarrow x_1 = 1$.</li>
+                    <li>$\dfrac{1}{x} = 2 \Rightarrow x_2 = \dfrac{1}{2}$.</li>
+                </ul>
+                <p>Обидва корені входять в ОДЗ ✅</p>
+                <p><strong>Відповідь:</strong> $x_1 = 1$, $x_2 = \dfrac{1}{2}$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 8. Симетричне рівняння</div>
+                <p>Розв'яжіть: $x^2 + \dfrac{1}{x^2} + x + \dfrac{1}{x} = 4$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>ОДЗ: $x \neq 0$.</p>
+                <p>Позначимо $t = x + \dfrac{1}{x}$. Тоді:</p>
+                <p>$$t^2 = x^2 + 2 + \dfrac{1}{x^2} \Rightarrow x^2 + \dfrac{1}{x^2} = t^2 - 2$$</p>
+                <p>Рівняння набуває вигляду:</p>
+                <p>$t^2 - 2 + t = 4 \Rightarrow t^2 + t - 6 = 0$</p>
+                <p>$t_1 = 2$, $t_2 = -3$.</p>
+                <p>Повертаємось:</p>
+                <ul>
+                    <li>$x + \dfrac{1}{x} = 2 \Rightarrow x^2 - 2x + 1 = 0 \Rightarrow (x-1)^2 = 0 \Rightarrow x = 1$.</li>
+                    <li>$x + \dfrac{1}{x} = -3 \Rightarrow x^2 + 3x + 1 = 0 \Rightarrow x = \dfrac{-3 \pm \sqrt{5}}{2}$.</li>
+                </ul>
+                <p><strong>Відповідь:</strong> $x_1 = 1$, $x_{2,3} = \dfrac{-3 \pm \sqrt{5}}{2}$.</p>
+            </div>
+        
+            <h2>5. Ірраціональні рівняння, що зводяться до квадратних</h2>
+        
+            <div class="example">
+                <div class="example-title">Приклад 9. Рівняння з квадратним коренем</div>
+                <p>Розв'яжіть: $x + \sqrt{x} - 6 = 0$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>ОДЗ: $x \geq 0$.</p>
+                <p>Заміна: $t = \sqrt{x}$, $t \geq 0$. Тоді $x = t^2$.</p>
+                <p>$t^2 + t - 6 = 0 \Rightarrow t_1 = 2$, $t_2 = -3$ (відкидаємо, бо $t \geq 0$).</p>
+                <p>$\sqrt{x} = 2 \Rightarrow x = 4$.</p>
+                <p><strong>Перевірка:</strong> $4 + \sqrt{4} - 6 = 4 + 2 - 6 = 0$ ✅</p>
+                <p><strong>Відповідь:</strong> $x = 4$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 10. Рівняння з $\sqrt[4]{x}$</div>
+                <p>Розв'яжіть: $\sqrt{x} - 3\sqrt[4]{x} + 2 = 0$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>ОДЗ: $x \geq 0$.</p>
+                <p>Помічаємо: $\sqrt{x} = (\sqrt[4]{x})^2$.</p>
+                <p>Заміна: $t = \sqrt[4]{x}$, $t \geq 0$.</p>
+                <p>$t^2 - 3t + 2 = 0 \Rightarrow t_1 = 1$, $t_2 = 2$.</p>
+                <p>Повертаємось:</p>
+                <ul>
+                    <li>$\sqrt[4]{x} = 1 \Rightarrow x_1 = 1$.</li>
+                    <li>$\sqrt[4]{x} = 2 \Rightarrow x_2 = 2^4 = 16$.</li>
+                </ul>
+                <p><strong>Відповідь:</strong> $x_1 = 1$, $x_2 = 16$.</p>
+            </div>
+        
+            <h2>6. Завдання з НМТ</h2>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Сума коренів біквадратного рівняння</div>
+                <p>Знайдіть суму коренів рівняння $x^4 - 10x^2 + 9 = 0$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Заміна: $t = x^2$, $t \geq 0$.</p>
+                <p>$t^2 - 10t + 9 = 0 \Rightarrow t_1 = 1$, $t_2 = 9$.</p>
+                <p>Корені: $x = \pm 1, \pm 3$.</p>
+                <p>Сума: $1 + (-1) + 3 + (-3) = 0$.</p>
+                <p><strong>Відповідь:</strong> $0$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Добуток коренів біквадратного рівняння</div>
+                <p>Знайдіть добуток коренів рівняння $x^4 - 8x^2 + 16 = 0$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Заміна: $t = x^2$, $t \geq 0$.</p>
+                <p>$t^2 - 8t + 16 = 0 \Rightarrow (t - 4)^2 = 0 \Rightarrow t = 4$.</p>
+                <p>$x^2 = 4 \Rightarrow x = \pm 2$.</p>
+                <p>Добуток: $2 \cdot (-2) = -4$.</p>
+                <p><strong>Відповідь:</strong> $-4$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Скільки коренів має рівняння</div>
+                <p>Скільки дійсних коренів має рівняння $x^4 - 3x^2 - 4 = 0$?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Заміна: $t = x^2$, $t \geq 0$.</p>
+                <p>$t^2 - 3t - 4 = 0 \Rightarrow t_1 = 4$, $t_2 = -1$ (відкидаємо).</p>
+                <p>$x^2 = 4 \Rightarrow x = \pm 2$ — <strong>два корені</strong>.</p>
+                <p><strong>Відповідь:</strong> $2$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Рівняння з повторюваним виразом</div>
+                <p>Розв'яжіть рівняння $(x^2 + x - 1)(x^2 + x + 2) = 40$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Заміна: $t = x^2 + x$. Тоді:</p>
+                <p>$(t - 1)(t + 2) = 40$</p>
+                <p>$t^2 + t - 2 = 40$</p>
+                <p>$t^2 + t - 42 = 0$</p>
+                <p>$t_1 = 6$, $t_2 = -7$.</p>
+                <p>Повертаємось:</p>
+                <ul>
+                    <li>$x^2 + x = 6 \Rightarrow x^2 + x - 6 = 0 \Rightarrow x_1 = 2$, $x_2 = -3$.</li>
+                    <li>$x^2 + x = -7 \Rightarrow x^2 + x + 7 = 0 \Rightarrow D = -27 < 0$, коренів немає.</li>
+                </ul>
+                <p><strong>Відповідь:</strong> $x_1 = 2$, $x_2 = -3$.</p>
+            </div>
+        
             <!-- ===== ТЕСТ ===== -->
             <div class="test">
                 <div class="test-title">📝 Перевірте себе</div>
-
-                <!-- Питання 1: вибір варіанта -->
+        
                 <div class="question">
-                    <p class="question-text">1. Текст питання?</p>
+                    <p class="question-text">1. Розв'яжіть рівняння: $x^4 - 5x^2 + 4 = 0$</p>
                     <div class="options">
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант A</button>
-                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">Варіант B (правильний)</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант C</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант D</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x_1 = 1, x_2 = -1$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x_1 = 2, x_2 = -2$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$x = \pm 1, \pm 2$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = 1, 4$</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
-
-                <!-- Питання 2: введення відповіді -->
+        
                 <div class="question">
-                    <p class="question-text">2. Текст питання? У відповідь запишіть число.</p>
+                    <p class="question-text">2. Розв'яжіть рівняння: $x^4 + 4x^2 - 5 = 0$. Скільки коренів має рівняння?</p>
                     <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <input type="text" placeholder="Кількість коренів">
+                        <button class="btn" onclick="checkInput(this, '2')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>Заміна: $t = x^2$, $t \geq 0$.</p>
+                        <p>$t^2 + 4t - 5 = 0 \Rightarrow t_1 = 1$, $t_2 = -5$ (відкидаємо).</p>
+                        <p>$x^2 = 1 \Rightarrow x = \pm 1$ — два корені.</p>
+                        <p><strong>Відповідь:</strong> $2$.</p>
+                    </div>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">3. Скільки коренів має рівняння $x^4 + x^2 + 1 = 0$?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$1$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$2$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$4$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$0$</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
-
-                <!-- Питання 3: введення + показати розв'язок -->
+        
                 <div class="question">
-                    <p class="question-text">3. Текст питання?</p>
+                    <p class="question-text">4. Розв'яжіть рівняння: $x^4 - 6x^2 + 9 = 0$. Знайдіть суму коренів.</p>
                     <div class="input-answer">
                         <input type="text" placeholder="Ваша відповідь">
                         <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
@@ -85,10 +315,101 @@
                     <p class="feedback"></p>
                     <div class="solution">
                         <div class="solution-title">Розв'язання:</div>
-                        <p><em>Тут буде розв'язання.</em></p>
+                        <p>Заміна: $t = x^2$, $t \geq 0$.</p>
+                        <p>$t^2 - 6t + 9 = 0 \Rightarrow (t - 3)^2 = 0 \Rightarrow t = 3$.</p>
+                        <p>$x^2 = 3 \Rightarrow x = \pm\sqrt{3}$.</p>
+                        <p>Сума: $\sqrt{3} + (-\sqrt{3}) = 0$.</p>
+                        <p><strong>Відповідь:</strong> $0$.</p>
                     </div>
                 </div>
-
+        
+                <div class="question">
+                    <p class="question-text">5. Розв'яжіть рівняння: $(x^2 - 3x)^2 - 2(x^2 - 3x) - 8 = 0$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x_1 = 4, x_2 = -1$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x_1 = 1, x_2 = 2$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$x_1 = 4, x_2 = -1, x_3 = 1, x_4 = 2$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Коренів немає</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">6. Розв'яжіть рівняння: $\dfrac{1}{x^2} - \dfrac{3}{x} + 2 = 0$. У відповідь запишіть суму коренів.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Наприклад: 3/4">
+                        <button class="btn" onclick="checkInput(this, '3/2')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>ОДЗ: $x \neq 0$. Заміна: $t = \dfrac{1}{x}$.</p>
+                        <p>$t^2 - 3t + 2 = 0 \Rightarrow t_1 = 1$, $t_2 = 2$.</p>
+                        <p>$x_1 = 1$, $x_2 = \dfrac{1}{2}$.</p>
+                        <p>Сума: $1 + \dfrac{1}{2} = \dfrac{3}{2}$.</p>
+                        <p><strong>Відповідь:</strong> $\dfrac{3}{2}$.</p>
+                    </div>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">7. Розв'яжіть рівняння: $x + \sqrt{x} - 6 = 0$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = 9$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$x = 4$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = 2$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = -9$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">8. Розв'яжіть рівняння: $\sqrt{x} - 3\sqrt[4]{x} + 2 = 0$. Знайдіть добуток коренів.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '16')">Перевірити</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">9. Розв'яжіть рівняння: $x^4 - 13x^2 + 36 = 0$. Знайдіть суму коренів.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>Заміна: $t = x^2$, $t \geq 0$.</p>
+                        <p>$t^2 - 13t + 36 = 0 \Rightarrow t_1 = 4$, $t_2 = 9$.</p>
+                        <p>Корені: $x = \pm 2, \pm 3$.</p>
+                        <p>Сума: $2 + (-2) + 3 + (-3) = 0$.</p>
+                        <p><strong>Відповідь:</strong> $0$.</p>
+                    </div>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">10. Розв'яжіть рівняння: $(x^2 + x - 1)(x^2 + x + 2) = 40$. У відповідь запишіть більший корінь.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '2')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>Заміна: $t = x^2 + x$.</p>
+                        <p>$(t - 1)(t + 2) = 40 \Rightarrow t^2 + t - 42 = 0$.</p>
+                        <p>$t_1 = 6$, $t_2 = -7$.</p>
+                        <p>$x^2 + x = 6 \Rightarrow x^2 + x - 6 = 0 \Rightarrow x_1 = 2$, $x_2 = -3$.</p>
+                        <p>$x^2 + x = -7$ — коренів немає.</p>
+                        <p>Більший корінь: $2$.</p>
+                        <p><strong>Відповідь:</strong> $2$.</p>
+                    </div>
+                </div>
+        
             </div>
         </article>
 
