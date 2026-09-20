@@ -34,61 +34,313 @@
         <article class="lesson-content">
 
             <h2>Мета заняття</h2>
-            <p><em>Тут буде мета уроку.</em></p>
-
-            <h2>Теоретична довідка</h2>
-            <p><em>Тут буде теорія. Формули записуються в LaTeX між знаками $ ... $.</em></p>
-            <p>Наприклад: $a^2 + b^2 = c^2$</p>
-
-            <div class="example">
-                <div class="example-title">Приклад 1</div>
-                <p><em>Умова прикладу.</em></p>
-                <p><strong>Розв'язання:</strong></p>
-                <p><em>Покрокове розв'язання.</em></p>
-                <p><strong>Відповідь:</strong> ...</p>
+            <p>Повторити основні поняття комбінаторики (перестановки, розміщення, комбінації), навчитися обчислювати класичну ймовірність випадкової події. Ознайомитися з елементами математичної статистики (середнє, мода, медіана). Підготуватися до виконання завдань НМТ.</p>
+        
+            <h2>1. Комбінаторика</h2>
+        
+            <p><strong>Комбінаторика</strong> — розділ математики, що вивчає способи підрахунку кількості різних комбінацій елементів.</p>
+        
+            <h3>Правило добутку (основне правило комбінаторики)</h3>
+            <p>Якщо першу дію можна виконати $m$ способами, а другу — $n$ способами, то обидві дії разом можна виконати $m \cdot n$ способами.</p>
+        
+            <h3>Факторіал</h3>
+            <p><strong>Факторіал</strong> числа $n$ — це добуток усіх натуральних чисел від 1 до $n$:</p>
+            <p>$$n! = 1 \cdot 2 \cdot 3 \cdot \ldots \cdot n$$</p>
+            <p>Окремо: $0! = 1$, $1! = 1$.</p>
+            <p>Наприклад: $5! = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 = 120$.</p>
+        
+            <h3>Перестановки</h3>
+            <p><strong>Перестановки</strong> — упорядковані набори з $n$ елементів, де використовуються всі елементи. Число перестановок:</p>
+            <p>$$P_n = n!$$</p>
+        
+            <h3>Розміщення</h3>
+            <p><strong>Розміщення</strong> — вибір $k$ елементів з $n$, де порядок важливий. Число розміщень:</p>
+            <p>$$A_n^k = \dfrac{n!}{(n - k)!}$$</p>
+        
+            <h3>Комбінації</h3>
+            <p><strong>Комбінації</strong> — вибір $k$ елементів з $n$, де порядок НЕ важливий. Число комбінацій:</p>
+            <p>$$C_n^k = \dfrac{n!}{k! \cdot (n - k)!}$$</p>
+        
+            <div class="theory-example">
+                <div class="theory-example-title">
+                    <span class="theory-example-icon">📌</span>
+                    Приклади
+                </div>
+                <ul>
+                    <li>$5! = 120$, $4! = 24$, $0! = 1$.</li>
+                    <li>$A_5^2 = \dfrac{5!}{3!} = 5 \cdot 4 = 20$.</li>
+                    <li>$C_5^2 = \dfrac{5!}{2! \cdot 3!} = \dfrac{120}{2 \cdot 6} = 10$.</li>
+                    <li>$C_n^0 = C_n^n = 1$, $C_n^1 = n$.</li>
+                </ul>
             </div>
-
+        
+            <div class="example">
+                <div class="example-title">Приклад 1. Скільки чисел можна скласти?</div>
+                <p>Скільки трицифрових чисел можна скласти з цифр $1, 2, 3, 4, 5$ без повторень?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Порядок цифр важливий, обираємо 3 з 5. Це розміщення:</p>
+                <p>$A_5^3 = \dfrac{5!}{2!} = 5 \cdot 4 \cdot 3 = 60$.</p>
+                <p><strong>Відповідь:</strong> $60$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 2. Скільки способів?</div>
+                <p>Скількома способами можна вибрати 2 книжки з 6?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Порядок НЕ важливий, тому це комбінації:</p>
+                <p>$C_6^2 = \dfrac{6!}{2! \cdot 4!} = \dfrac{6 \cdot 5}{2} = 15$.</p>
+                <p><strong>Відповідь:</strong> $15$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 3. Правило добутку</div>
+                <p>У кафе є 4 види супу, 5 видів основної страви та 3 види напою. Скількома способами можна скласти обід з 3 страв (суп + основна + напій)?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$4 \cdot 5 \cdot 3 = 60$ способів.</p>
+                <p><strong>Відповідь:</strong> $60$.</p>
+            </div>
+        
+            <h2>2. Теорія ймовірності</h2>
+        
+            <p><strong>Класичне означення ймовірності:</strong></p>
+            <p>$$P(A) = \dfrac{m}{n}$$</p>
+            <p>де $n$ — загальна кількість рівноможливих результатів, $m$ — кількість сприятливих результатів для події $A$.</p>
+        
+            <h3>Властивості ймовірності</h3>
+            <ul>
+                <li>$0 \leq P(A) \leq 1$ — ймовірність завжди в межах від 0 до 1.</li>
+                <li>$P(\text{достовірна подія}) = 1$.</li>
+                <li>$P(\text{неможлива подія}) = 0$.</li>
+                <li>$P(\overline{A}) = 1 - P(A)$ — ймовірність протилежної події.</li>
+            </ul>
+        
+            <div class="remember">
+                <span class="remember-icon">💡</span>
+                <div class="remember-text">
+                    <strong>Як знайти ймовірність:</strong>
+                    <ul style="margin-top: 8px;">
+                        <li>Порахуйте <strong>усі</strong> можливі результати — це $n$.</li>
+                        <li>Порахуйте, скільки з них <strong>сприятливі</strong> — це $m$.</li>
+                        <li>Поділіть: $P(A) = \dfrac{m}{n}$.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 4. Кидання кубика</div>
+                <p>Кидають гральний кубик. Знайдіть імовірність того, що випаде парне число.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Усього результатів $n = 6$ (числа $1, 2, 3, 4, 5, 6$).</p>
+                <p>Парні числа: $2, 4, 6$ — сприятливих $m = 3$.</p>
+                <p>$P = \dfrac{3}{6} = \dfrac{1}{2} = 0{,}5$.</p>
+                <p><strong>Відповідь:</strong> $0{,}5$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 5. Витягування кульок</div>
+                <p>У ящику 5 білих і 3 чорні кульки. Навмання витягують одну. Знайдіть імовірність того, що вона біла.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Усього $n = 5 + 3 = 8$. Сприятливих $m = 5$.</p>
+                <p>$P = \dfrac{5}{8} = 0{,}625$.</p>
+                <p><strong>Відповідь:</strong> $0{,}625$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 6. Задача з НМТ</div>
+                <p>На полиці стоять 10 книжок, з яких 3 — детективи. Навмання беруть одну книжку. Знайдіть імовірність того, що це НЕ детектив.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$P(\text{детектив}) = \dfrac{3}{10} = 0{,}3$.</p>
+                <p>$P(\text{не детектив}) = 1 - 0{,}3 = 0{,}7$.</p>
+                <p><strong>Відповідь:</strong> $0{,}7$.</p>
+            </div>
+        
+            <h2>3. Елементи статистики</h2>
+        
+            <p><strong>Середнє арифметичне</strong> — сума всіх значень, поділена на їх кількість:</p>
+            <p>$$\overline{x} = \dfrac{x_1 + x_2 + \ldots + x_n}{n}$$</p>
+        
+            <p><strong>Мода</strong> — значення, яке зустрічається найчастіше.</p>
+        
+            <p><strong>Медіана</strong> — центральне значення впорядкованого ряду. Якщо кількість значень парна — середнє двох центральних.</p>
+        
+            <p><strong>Розмах</strong> — різниця між найбільшим і найменшим значенням:</p>
+            <p>$$R = x_{max} - x_{min}$$</p>
+        
+            <div class="example">
+                <div class="example-title">Приклад 7. Середнє і мода</div>
+                <p>Знайдіть середнє арифметичне, моду, медіану та розмах ряду: $3, 5, 7, 5, 5, 9, 1$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Упорядкуємо: $1, 3, 5, 5, 5, 7, 9$.</p>
+                <p><strong>Середнє:</strong> $\dfrac{3 + 5 + 7 + 5 + 5 + 9 + 1}{7} = \dfrac{35}{7} = 5$.</p>
+                <p><strong>Мода:</strong> $5$ (зустрічається 3 рази).</p>
+                <p><strong>Медіана:</strong> $5$ (центральний елемент).</p>
+                <p><strong>Розмах:</strong> $9 - 1 = 8$.</p>
+                <p><strong>Відповідь:</strong> середнє $= 5$, мода $= 5$, медіана $= 5$, розмах $= 8$.</p>
+            </div>
+        
+            <h2>4. Завдання з НМТ</h2>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Імовірність</div>
+                <p>У коробці 12 червоних і 8 зелених олівців. Навмання витягують один олівець. Яка ймовірність того, що він зелений?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Усього: $12 + 8 = 20$. Сприятливих: $8$.</p>
+                <p>$P = \dfrac{8}{20} = 0{,}4$.</p>
+                <p><strong>Відповідь:</strong> $0{,}4$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Двічі кидають кубик</div>
+                <p>Двічі кидають гральний кубик. Яка ймовірність того, що обидва рази випаде $6$?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Кожен кидок має 6 результатів. Усього варіантів: $6 \cdot 6 = 36$.</p>
+                <p>Сприятливий результат один: $(6; 6)$.</p>
+                <p>$P = \dfrac{1}{36}$.</p>
+                <p><strong>Відповідь:</strong> $\dfrac{1}{36}$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Комбінаторика</div>
+                <p>Скількома способами можна розставити 4 різні книжки на полиці?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Це перестановки з 4 елементів: $P_4 = 4! = 24$.</p>
+                <p><strong>Відповідь:</strong> $24$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Статистика</div>
+                <p>Знайдіть медіану ряду чисел: $2, 5, 8, 9, 12, 15$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Ряд уже впорядкований, кількість чисел — парна (6).</p>
+                <p>Медіана — середнє двох центральних: $\dfrac{8 + 9}{2} = 8{,}5$.</p>
+                <p><strong>Відповідь:</strong> $8{,}5$.</p>
+            </div>
+        
             <!-- ===== ТЕСТ ===== -->
             <div class="test">
                 <div class="test-title">📝 Перевірте себе</div>
-
-                <!-- Питання 1: вибір варіанта -->
+        
                 <div class="question">
-                    <p class="question-text">1. Текст питання?</p>
+                    <p class="question-text">1. Обчисліть: $4!$</p>
                     <div class="options">
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант A</button>
-                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">Варіант B (правильний)</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант C</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант D</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$4$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$12$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$24$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$16$</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
-
-                <!-- Питання 2: введення відповіді -->
+        
                 <div class="question">
-                    <p class="question-text">2. Текст питання? У відповідь запишіть число.</p>
+                    <p class="question-text">2. Обчисліть: $C_6^2$</p>
                     <div class="input-answer">
                         <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <button class="btn" onclick="checkInput(this, '15')">Перевірити</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
-
-                <!-- Питання 3: введення + показати розв'язок -->
+        
                 <div class="question">
-                    <p class="question-text">3. Текст питання?</p>
+                    <p class="question-text">3. Обчисліть: $A_5^2$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$10$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$20$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$25$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$120$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">4. Кидають гральний кубик. Яка ймовірність випадання числа, більшого за 4?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{1}{6}$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$\dfrac{1}{3}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{1}{2}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{2}{3}$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">5. У ящику 15 червоних і 5 білих кульок. Яка ймовірність витягнути білу?</p>
                     <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <input type="text" placeholder="Наприклад: 1/4">
+                        <button class="btn" onclick="checkInput(this, '1/4')">Перевірити</button>
                         <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
                     </div>
                     <p class="feedback"></p>
                     <div class="solution">
                         <div class="solution-title">Розв'язання:</div>
-                        <p><em>Тут буде розв'язання.</em></p>
+                        <p>Усього $n = 15 + 5 = 20$. Сприятливих $m = 5$.</p>
+                        <p>$P = \dfrac{5}{20} = \dfrac{1}{4} = 0{,}25$.</p>
+                        <p><strong>Відповідь:</strong> $\dfrac{1}{4}$.</p>
                     </div>
                 </div>
-
+        
+                <div class="question">
+                    <p class="question-text">6. Скількома способами можна вибрати 3 учні з 10 для участі в олімпіаді?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$30$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$720$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$120$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$1000$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">7. Знайдіть середнє арифметичне чисел: $4, 7, 9, 12, 8$.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '8')">Перевірити</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">8. У ящику 4 сині, 6 червоних і 10 зелених кульок. Яка ймовірність витягнути синю або червону?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{4}{20}$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$\dfrac{10}{20}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{6}{20}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\dfrac{16}{20}$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">9. Знайдіть медіану ряду: $5, 3, 8, 1, 9$.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '5')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>Упорядкуємо: $1, 3, 5, 8, 9$.</p>
+                        <p>Кількість чисел — непарна (5). Медіана — центральний елемент: $5$.</p>
+                        <p><strong>Відповідь:</strong> $5$.</p>
+                    </div>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">10. Скільки різних трицифрових чисел можна скласти з цифр $1, 2, 3$ без повторень?</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '6')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>Це перестановки з 3 елементів: $P_3 = 3! = 6$.</p>
+                        <p>Числа: $123, 132, 213, 231, 312, 321$.</p>
+                        <p><strong>Відповідь:</strong> $6$.</p>
+                    </div>
+                </div>
+        
             </div>
         </article>
 
