@@ -34,61 +34,326 @@
         <article class="lesson-content">
 
             <h2>Мета заняття</h2>
-            <p><em>Тут буде мета уроку.</em></p>
-
-            <h2>Теоретична довідка</h2>
-            <p><em>Тут буде теорія. Формули записуються в LaTeX між знаками $ ... $.</em></p>
-            <p>Наприклад: $a^2 + b^2 = c^2$</p>
-
-            <div class="example">
-                <div class="example-title">Приклад 1</div>
-                <p><em>Умова прикладу.</em></p>
-                <p><strong>Розв'язання:</strong></p>
-                <p><em>Покрокове розв'язання.</em></p>
-                <p><strong>Відповідь:</strong> ...</p>
+            <p>Навчитися розв'язувати рівняння, нерівності та системи з параметром. Ознайомитися з основними методами: аналітичним, графічним, методом дослідження дискримінанта. Підготуватися до виконання завдань НМТ високого рівня складності.</p>
+        
+            <h2>1. Що таке параметр</h2>
+        
+            <p><strong>Параметр</strong> — це змінна (зазвичай позначається $a$, $b$, $k$, $m$), значення якої фіксоване для кожного конкретного випадку, але може змінюватися від задачі до задачі.</p>
+        
+            <p>Розв'язати рівняння з параметром — означає:</p>
+            <ol>
+                <li>Знайти всі значення параметра, при яких рівняння має розв'язки.</li>
+                <li>Для кожного такого значення параметра знайти відповідні розв'язки.</li>
+            </ol>
+        
+            <div class="remember">
+                <span class="remember-icon">💡</span>
+                <div class="remember-text">
+                    <strong>Головний принцип:</strong> у задачах з параметром не можна ділити на вираз, який може дорівнювати нулю, не розглянувши окремо випадок, коли він дорівнює нулю.
+                </div>
             </div>
-
+        
+            <h2>2. Лінійні рівняння з параметром</h2>
+        
+            <p>Рівняння виду $ax = b$. Розв'язок залежить від значень $a$ та $b$:</p>
+        
+            <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+                <tr style="background: #f1f5f9;">
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Умова</strong></td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Розв'язки</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">$a \neq 0$</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">єдиний розв'язок $x = \dfrac{b}{a}$</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">$a = 0$, $b = 0$</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">безліч розв'язків ($x$ — будь-яке)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">$a = 0$, $b \neq 0$</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">розв'язків немає</td>
+                </tr>
+            </table>
+        
+            <div class="example">
+                <div class="example-title">Приклад 1. Лінійне рівняння з параметром</div>
+                <p>Розв'яжіть рівняння $(a - 2)x = 5$ відносно $x$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Розглянемо випадки:</p>
+                <ul>
+                    <li>Якщо $a \neq 2$: $x = \dfrac{5}{a - 2}$ — один корінь.</li>
+                    <li>Якщо $a = 2$: рівняння набуває вигляду $0 \cdot x = 5$ — коренів немає.</li>
+                </ul>
+                <p><strong>Відповідь:</strong> при $a \neq 2$ — $x = \dfrac{5}{a - 2}$; при $a = 2$ — коренів немає.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 2. Лінійне рівняння з дужками</div>
+                <p>Розв'яжіть рівняння $ax - 3 = 2x + 1$ відносно $x$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Перенесемо: $ax - 2x = 4 \Rightarrow (a - 2)x = 4$.</p>
+                <ul>
+                    <li>Якщо $a \neq 2$: $x = \dfrac{4}{a - 2}$.</li>
+                    <li>Якщо $a = 2$: $0 = 4$ — коренів немає.</li>
+                </ul>
+                <p><strong>Відповідь:</strong> при $a \neq 2$ — $x = \dfrac{4}{a - 2}$; при $a = 2$ — коренів немає.</p>
+            </div>
+        
+            <h2>3. Квадратні рівняння з параметром</h2>
+        
+            <p>Рівняння $ax^2 + bx + c = 0$. Кількість розв'язків залежить від $a$ та дискримінанта $D = b^2 - 4ac$:</p>
+        
+            <ul>
+                <li>$a = 0$ — рівняння стає лінійним (розглядаємо окремо!).</li>
+                <li>$a \neq 0$ і $D > 0$ — два корені.</li>
+                <li>$a \neq 0$ і $D = 0$ — один корінь (дворазовий).</li>
+                <li>$a \neq 0$ і $D < 0$ — коренів немає.</li>
+            </ul>
+        
+            <div class="warning">
+                <span class="warning-icon">⚠️</span>
+                <div class="warning-text">
+                    <strong>Увага!</strong> Завжди перевіряйте випадок $a = 0$ окремо — багато учнів про нього забувають і втрачають розв'язки.
+                </div>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 3. Квадратне рівняння з параметром</div>
+                <p>Розв'яжіть рівняння $ax^2 - 4x + 4 = 0$ залежно від $a$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p><strong>Випадок 1:</strong> $a = 0$ — рівняння $-4x + 4 = 0 \Rightarrow x = 1$.</p>
+                <p><strong>Випадок 2:</strong> $a \neq 0$ — квадратне. $D = 16 - 16a$.</p>
+                <ul>
+                    <li>Якщо $D > 0$, тобто $a < 1$: два корені $x_{1,2} = \dfrac{4 \pm \sqrt{16 - 16a}}{2a}$.</li>
+                    <li>Якщо $D = 0$, тобто $a = 1$: один корінь $x = \dfrac{4}{2} = 2$.</li>
+                    <li>Якщо $D < 0$, тобто $a > 1$: коренів немає.</li>
+                </ul>
+                <p><strong>Відповідь:</strong></p>
+                <ul>
+                    <li>$a = 0$: $x = 1$.</li>
+                    <li>$a = 1$: $x = 2$.</li>
+                    <li>$0 < a < 1$ або $a < 0$: два корені.</li>
+                    <li>$a > 1$: коренів немає.</li>
+                </ul>
+            </div>
+        
+            <h2>4. Теорема Вієта та параметр</h2>
+        
+            <p>Для рівняння $x^2 + px + q = 0$ з коренями $x_1$ і $x_2$:</p>
+            <p>$$x_1 + x_2 = -p, \quad x_1 x_2 = q$$</p>
+        
+            <p>Часто в задачах НМТ вимагають:</p>
+            <ul>
+                <li>знайти $a$, при яких корені додатні: $D \geq 0$, $x_1 + x_2 > 0$, $x_1 x_2 > 0$;</li>
+                <li>знайти $a$, при яких корені від'ємні: $D \geq 0$, $x_1 + x_2 < 0$, $x_1 x_2 > 0$;</li>
+                <li>знайти $a$, при яких корені різних знаків: $x_1 x_2 < 0$.</li>
+            </ul>
+        
+            <div class="example">
+                <div class="example-title">Приклад 4. Корені різних знаків</div>
+                <p>При яких $a$ рівняння $x^2 - (a+1)x + a - 2 = 0$ має корені різних знаків?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Корені різних знаків $\Leftrightarrow$ $x_1 x_2 < 0$.</p>
+                <p>За теоремою Вієта: $x_1 x_2 = a - 2$.</p>
+                <p>$a - 2 < 0 \Rightarrow a < 2$.</p>
+                <p><strong>Відповідь:</strong> $a < 2$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 5. Обидва корені додатні</div>
+                <p>При яких $a$ рівняння $x^2 - 4x + a = 0$ має два додатних корені?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Умови:</p>
+                <ul>
+                    <li>$D \geq 0$: $16 - 4a \geq 0 \Rightarrow a \leq 4$.</li>
+                    <li>$x_1 + x_2 > 0$: $4 > 0$ ✅ виконується завжди.</li>
+                    <li>$x_1 x_2 > 0$: $a > 0$.</li>
+                </ul>
+                <p>Перетин: $0 < a \leq 4$.</p>
+                <p><strong>Відповідь:</strong> $a \in (0; 4]$.</p>
+            </div>
+        
+            <h2>5. Графічний метод</h2>
+        
+            <p>Ідея: переписати рівняння у вигляді $f(x) = g(a)$ і дослідити, при яких значеннях параметра графіки перетинаються.</p>
+        
+            <div class="example">
+                <div class="example-title">Приклад 6. Скільки коренів?</div>
+                <p>Скільки коренів має рівняння $x^2 - 2x = a$ залежно від $a$?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Будуємо графік $y = x^2 - 2x = (x - 1)^2 - 1$ — парабола з вершиною в $(1; -1)$.</p>
+                <p>Пряма $y = a$ перетинає параболу:</p>
+                <ul>
+                    <li>$a < -1$ — 0 точок.</li>
+                    <li>$a = -1$ — 1 точка (вершина).</li>
+                    <li>$a > -1$ — 2 точки.</li>
+                </ul>
+                <p><strong>Відповідь:</strong> $a < -1$ — коренів немає; $a = -1$ — один корінь; $a > -1$ — два корені.</p>
+            </div>
+        
+            <h2>6. Завдання з НМТ</h2>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Рівняння з параметром (тип 1)</div>
+                <p>При якому значенні $k$ рівняння $x^2 - 6x + k = 0$ має один корінь?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Один корінь, коли $D = 0$:</p>
+                <p>$36 - 4k = 0 \Rightarrow k = 9$.</p>
+                <p><strong>Відповідь:</strong> $k = 9$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Рівняння з параметром (тип 2)</div>
+                <p>При яких $a$ рівняння $x^2 + (a - 1)x + 1 = 0$ має два різних дійсних корені?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Умова: $D > 0$.</p>
+                <p>$D = (a - 1)^2 - 4 = a^2 - 2a + 1 - 4 = a^2 - 2a - 3$.</p>
+                <p>$a^2 - 2a - 3 > 0$</p>
+                <p>Корені: $a_1 = 3$, $a_2 = -1$.</p>
+                <p>$a \in (-\infty; -1) \cup (3; +\infty)$.</p>
+                <p><strong>Відповідь:</strong> $a \in (-\infty; -1) \cup (3; +\infty)$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Система з параметром</div>
+                <p>При якому значенні $a$ система $\begin{cases} x + y = 3 \\ x - y = a \end{cases}$ має єдиний розв'язок?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Додамо рівняння: $2x = 3 + a \Rightarrow x = \dfrac{3 + a}{2}$.</p>
+                <p>Віднімемо: $2y = 3 - a \Rightarrow y = \dfrac{3 - a}{2}$.</p>
+                <p>Система лінійних рівнянь завжди має єдиний розв'язок, якщо прямі не паралельні. Тут коефіцієнти при $x$ і $y$ не залежать від $a$, тому розв'язок єдиний при будь-якому $a$.</p>
+                <p><strong>Відповідь:</strong> при будь-якому $a \in \mathbb{R}$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Квадратична нерівність з параметром</div>
+                <p>При яких $a$ нерівність $x^2 - 2ax + 4 > 0$ виконується для всіх $x$?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Парабола з гілками вгору завжди додатна $\Leftrightarrow$ $D < 0$.</p>
+                <p>$D = 4a^2 - 16 < 0 \Rightarrow a^2 < 4 \Rightarrow -2 < a < 2$.</p>
+                <p><strong>Відповідь:</strong> $a \in (-2; 2)$.</p>
+            </div>
+        
             <!-- ===== ТЕСТ ===== -->
             <div class="test">
                 <div class="test-title">📝 Перевірте себе</div>
-
-                <!-- Питання 1: вибір варіанта -->
+        
                 <div class="question">
-                    <p class="question-text">1. Текст питання?</p>
+                    <p class="question-text">1. Розв'яжіть рівняння $(a - 3)x = 6$ відносно $x$. Який корінь при $a \neq 3$?</p>
                     <div class="options">
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант A</button>
-                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">Варіант B (правильний)</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант C</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант D</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = \dfrac{a - 3}{6}$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$x = \dfrac{6}{a - 3}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = 6(a - 3)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = a - 3$</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
-
-                <!-- Питання 2: введення відповіді -->
+        
                 <div class="question">
-                    <p class="question-text">2. Текст питання? У відповідь запишіть число.</p>
+                    <p class="question-text">2. При якому $k$ рівняння $x^2 - 8x + k = 0$ має один корінь?</p>
                     <div class="input-answer">
                         <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
-                    </div>
-                    <p class="feedback"></p>
-                </div>
-
-                <!-- Питання 3: введення + показати розв'язок -->
-                <div class="question">
-                    <p class="question-text">3. Текст питання?</p>
-                    <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <button class="btn" onclick="checkInput(this, '16')">Перевірити</button>
                         <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
                     </div>
                     <p class="feedback"></p>
                     <div class="solution">
                         <div class="solution-title">Розв'язання:</div>
-                        <p><em>Тут буде розв'язання.</em></p>
+                        <p>Один корінь при $D = 0$:</p>
+                        <p>$64 - 4k = 0 \Rightarrow k = 16$.</p>
+                        <p><strong>Відповідь:</strong> $k = 16$.</p>
                     </div>
                 </div>
-
+        
+                <div class="question">
+                    <p class="question-text">3. Скільки коренів має рівняння $x^2 - 4x = a$ при $a > -4$?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$0$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$1$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$2$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Залежить від $a$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">4. При яких $a$ рівняння $x^2 + (a+2)x + 1 = 0$ має два різних дійсних корені?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a \in (-4; 0)$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$a \in (-\infty; -4) \cup (0; +\infty)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a \in (0; 4)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a \in \mathbb{R}$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">5. При яких $a$ рівняння $x^2 - (a+1)x + a - 3 = 0$ має корені різних знаків?</p>
+                    <div class="options">
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$a < 3$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a > 3$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a \in (-3; 3)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a \in \mathbb{R}$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+                
+                        
+                <div class="question">
+                    <p class="question-text">6. При якому $a$ рівняння $ax^2 + 4x + 1 = 0$ має один корінь (не враховуючи випадок $a = 0$)?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a = 2$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$a = 4$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a = 1$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a = 8$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">7. При яких $a$ нерівність $x^2 - 2x + a > 0$ виконується для всіх $x$?</p>
+                    <div class="options">
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$a > 1$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a < 1$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a > -1$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a \in \mathbb{R}$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">8. При яких $a$ рівняння $x^2 - 2ax + a^2 - 1 = 0$ має корені різних знаків?</p>
+                    <div class="options">
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$a \in (-1; 1)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a > 1$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a < -1$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a \in \mathbb{R}$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">9. При якому значенні $a$ рівняння $x^2 + ax + 9 = 0$ має один корінь (дворазовий)?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a = 3$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$a = \pm 6$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a = 9$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$a = \pm 3$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">10. Розв'яжіть рівняння $(a^2 - 1)x = a - 1$ відносно $x$. Яке значення $x$ при $a \neq \pm 1$?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = a + 1$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$x = \dfrac{1}{a + 1}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = \dfrac{a - 1}{a^2 - 1}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x = a^2 - 1$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
             </div>
         </article>
 
