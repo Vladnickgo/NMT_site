@@ -34,61 +34,365 @@
         <article class="lesson-content">
 
             <h2>Мета заняття</h2>
-            <p><em>Тут буде мета уроку.</em></p>
-
-            <h2>Теоретична довідка</h2>
-            <p><em>Тут буде теорія. Формули записуються в LaTeX між знаками $ ... $.</em></p>
-            <p>Наприклад: $a^2 + b^2 = c^2$</p>
-
-            <div class="example">
-                <div class="example-title">Приклад 1</div>
-                <p><em>Умова прикладу.</em></p>
-                <p><strong>Розв'язання:</strong></p>
-                <p><em>Покрокове розв'язання.</em></p>
-                <p><strong>Відповідь:</strong> ...</p>
+            <p>Повторити означення похідної, таблицю похідних, правила диференціювання, геометричний та фізичний зміст похідної. Ознайомитися з поняттям первісної та інтеграла. Навчитися розв'язувати типові задачі НМТ на похідну й первісну.</p>
+        
+            <h2>1. Означення похідної</h2>
+        
+            <p><strong>Похідна функції</strong> $f(x)$ у точці $x_0$ — це границя відношення приросту функції до приросту аргументу, коли приріст аргументу прямує до нуля:</p>
+            <p>$$f'(x_0) = \lim_{\Delta x \to 0} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$$</p>
+        
+            <p>Позначення похідної: $f'(x)$, $y'$, $\dfrac{dy}{dx}$.</p>
+        
+            <h3>Геометричний зміст похідної</h3>
+            <p>$f'(x_0) = \text{tg}\, \alpha$ — кутовий коефіцієнт дотичної до графіка функції в точці $x_0$.</p>
+            <p>Рівняння дотичної:</p>
+            <p>$$y = f(x_0) + f'(x_0)(x - x_0)$$</p>
+        
+            <h3>Фізичний зміст похідної</h3>
+            <p>Якщо $s(t)$ — шлях, то $s'(t) = v(t)$ — швидкість. А $v'(t) = a(t)$ — прискорення.</p>
+        
+            <h2>2. Таблиця похідних</h2>
+        
+            <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+                <tr style="background: #f1f5f9;">
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Функція</strong></td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Похідна</strong></td>
+                </tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$C$ (стала)</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$0$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$x$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$1$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$x^n$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$n x^{n-1}$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$\sqrt{x}$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$\dfrac{1}{2\sqrt{x}}$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$\dfrac{1}{x}$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$-\dfrac{1}{x^2}$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$\sin x$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$\cos x$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$\cos x$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$-\sin x$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$\text{tg}\, x$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$\dfrac{1}{\cos^2 x}$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$\text{ctg}\, x$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$-\dfrac{1}{\sin^2 x}$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$e^x$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$e^x$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$a^x$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$a^x \ln a$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$\ln x$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$\dfrac{1}{x}$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$\log_a x$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$\dfrac{1}{x \ln a}$</td></tr>
+            </table>
+        
+            <h2>3. Правила диференціювання</h2>
+        
+            <ul>
+                <li>$(u + v)' = u' + v'$ — похідна суми.</li>
+                <li>$(u \cdot v)' = u'v + uv'$ — похідна добутку.</li>
+                <li>$\left(\dfrac{u}{v}\right)' = \dfrac{u'v - uv'}{v^2}$ — похідна частки.</li>
+                <li>$(C \cdot f)' = C \cdot f'$ — сталий множник.</li>
+                <li>$(f(g(x)))' = f'(g(x)) \cdot g'(x)$ — похідна складеної функції (ланцюгове правило).</li>
+            </ul>
+        
+            <div class="remember">
+                <span class="remember-icon">💡</span>
+                <div class="remember-text">
+                    <strong>Ланцюгове правило</strong> — найважливіше при диференціюванні складених функцій. Наприклад: $(\sin(3x))' = \cos(3x) \cdot 3 = 3\cos(3x)$.
+                </div>
             </div>
-
+        
+            <div class="example">
+                <div class="example-title">Приклад 1. Похідна многочлена</div>
+                <p>Знайдіть похідну функції $f(x) = 3x^4 - 2x^2 + 5x - 7$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$f'(x) = 3 \cdot 4x^3 - 2 \cdot 2x + 5 - 0 = 12x^3 - 4x + 5$.</p>
+                <p><strong>Відповідь:</strong> $f'(x) = 12x^3 - 4x + 5$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 2. Похідна з коренем</div>
+                <p>Знайдіть похідну $f(x) = \sqrt{x} + \dfrac{1}{x}$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$(\sqrt{x})' = \dfrac{1}{2\sqrt{x}}$, $\left(\dfrac{1}{x}\right)' = -\dfrac{1}{x^2}$.</p>
+                <p>$f'(x) = \dfrac{1}{2\sqrt{x}} - \dfrac{1}{x^2}$.</p>
+                <p><strong>Відповідь:</strong> $f'(x) = \dfrac{1}{2\sqrt{x}} - \dfrac{1}{x^2}$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 3. Похідна добутку</div>
+                <p>Знайдіть похідну $f(x) = x^2 \cdot \sin x$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>За правилом добутку: $(u \cdot v)' = u'v + uv'$.</p>
+                <p>$u = x^2$, $v = \sin x \Rightarrow u' = 2x$, $v' = \cos x$.</p>
+                <p>$f'(x) = 2x \sin x + x^2 \cos x$.</p>
+                <p><strong>Відповідь:</strong> $f'(x) = 2x \sin x + x^2 \cos x$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 4. Похідна частки</div>
+                <p>Знайдіть похідну $f(x) = \dfrac{x + 1}{x - 2}$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$u = x + 1$, $v = x - 2 \Rightarrow u' = 1$, $v' = 1$.</p>
+                <p>$f'(x) = \dfrac{1 \cdot (x - 2) - (x + 1) \cdot 1}{(x - 2)^2} = \dfrac{x - 2 - x - 1}{(x - 2)^2} = \dfrac{-3}{(x - 2)^2}$.</p>
+                <p><strong>Відповідь:</strong> $f'(x) = \dfrac{-3}{(x - 2)^2}$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 5. Похідна складеної функції</div>
+                <p>Знайдіть похідну $f(x) = (2x + 3)^5$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>За ланцюговим правилом: $f'(x) = 5(2x + 3)^4 \cdot (2x + 3)' = 5(2x + 3)^4 \cdot 2 = 10(2x + 3)^4$.</p>
+                <p><strong>Відповідь:</strong> $f'(x) = 10(2x + 3)^4$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 6. Рівняння дотичної</div>
+                <p>Складіть рівняння дотичної до графіка функції $f(x) = x^2 - 3x + 1$ у точці $x_0 = 2$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$f(x_0) = 4 - 6 + 1 = -1$.</p>
+                <p>$f'(x) = 2x - 3 \Rightarrow f'(2) = 4 - 3 = 1$.</p>
+                <p>Рівняння: $y = -1 + 1 \cdot (x - 2) = x - 3$.</p>
+                <p><strong>Відповідь:</strong> $y = x - 3$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 7. Кутовий коефіцієнт</div>
+                <p>Знайдіть кутовий коефіцієнт дотичної до графіка $f(x) = x^3 - 2x$ у точці $x_0 = 1$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$f'(x) = 3x^2 - 2 \Rightarrow f'(1) = 3 - 2 = 1$.</p>
+                <p><strong>Відповідь:</strong> $k = 1$.</p>
+            </div>
+        
+            <h2>4. Первісна та інтеграл</h2>
+        
+            <p><strong>Первісна</strong> функції $f(x)$ — це така функція $F(x)$, похідна якої дорівнює $f(x)$:</p>
+            <p>$$F'(x) = f(x)$$</p>
+        
+            <p>Первісна визначається з точністю до сталої: якщо $F(x)$ — первісна, то $F(x) + C$ — теж первісна.</p>
+        
+            <h3>Таблиця первісних</h3>
+        
+            <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+                <tr style="background: #f1f5f9;">
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Функція $f(x)$</strong></td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Первісна $F(x)$</strong></td>
+                </tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$k$ (стала)</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$kx + C$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$x^n$, $n \neq -1$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$\dfrac{x^{n+1}}{n+1} + C$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$\dfrac{1}{x}$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$\ln|x| + C$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$\sin x$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$-\cos x + C$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$\cos x$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$\sin x + C$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid #e2e8f0;">$e^x$</td><td style="padding: 8px; border: 1px solid #e2e8f0;">$e^x + C$</td></tr>
+            </table>
+        
+            <h3>Формула Ньютона-Лейбніца</h3>
+            <p>Для обчислення визначеного інтеграла:</p>
+            <p>$$\int_a^b f(x)\, dx = F(b) - F(a)$$</p>
+            <p>де $F(x)$ — первісна $f(x)$.</p>
+        
+            <div class="example">
+                <div class="example-title">Приклад 8. Знайти первісну</div>
+                <p>Знайдіть первісну функції $f(x) = 3x^2$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$F(x) = \dfrac{3x^3}{3} + C = x^3 + C$.</p>
+                <p>Перевірка: $(x^3)' = 3x^2$ ✅</p>
+                <p><strong>Відповідь:</strong> $F(x) = x^3 + C$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 9. Первісна з тригонометрії</div>
+                <p>Знайдіть первісну функції $f(x) = \cos x$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$F(x) = \sin x + C$.</p>
+                <p>Перевірка: $(\sin x)' = \cos x$ ✅</p>
+                <p><strong>Відповідь:</strong> $F(x) = \sin x + C$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">Приклад 10. Обчислення визначеного інтеграла</div>
+                <p>Обчисліть: $\displaystyle\int_1^3 2x\, dx$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$F(x) = x^2$.</p>
+                <p>$\displaystyle\int_1^3 2x\, dx = F(3) - F(1) = 9 - 1 = 8$.</p>
+                <p><strong>Відповідь:</strong> $8$.</p>
+            </div>
+        
+            <h2>5. Застосування похідної: дослідження функції</h2>
+        
+            <ul>
+                <li>Якщо $f'(x) > 0$ на проміжку — функція <strong>зростає</strong>.</li>
+                <li>Якщо $f'(x) < 0$ — функція <strong>спадає</strong>.</li>
+                <li>Точки, де $f'(x) = 0$ і похідна змінює знак, — точки <strong>екстремуму</strong> (максимум/мінімум).</li>
+            </ul>
+        
+            <div class="example">
+                <div class="example-title">Приклад 11. Точки екстремуму</div>
+                <p>Знайдіть точки екстремуму функції $f(x) = x^3 - 3x$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x - 1)(x + 1)$.</p>
+                <p>$f'(x) = 0$ при $x = 1$ або $x = -1$.</p>
+                <p>Перевіримо знаки похідної:</p>
+                <ul>
+                    <li>$x < -1$: $f'(x) > 0$ — зростання.</li>
+                    <li>$-1 < x < 1$: $f'(x) < 0$ — спадання.</li>
+                    <li>$x > 1$: $f'(x) > 0$ — зростання.</li>
+                </ul>
+                <p>$x = -1$ — точка максимуму, $x = 1$ — точка мінімуму.</p>
+                <p><strong>Відповідь:</strong> $x_{max} = -1$, $x_{min} = 1$.</p>
+            </div>
+        
+            <h2>6. Завдання з НМТ</h2>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Знайти похідну в точці</div>
+                <p>Знайдіть значення похідної функції $f(x) = x^2 + 3x$ у точці $x_0 = 2$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$f'(x) = 2x + 3 \Rightarrow f'(2) = 4 + 3 = 7$.</p>
+                <p><strong>Відповідь:</strong> $7$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Дотична</div>
+                <p>Знайдіть кутовий коефіцієнт дотичної до графіка $f(x) = x^2 - 4x + 5$ у точці $x_0 = 3$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$f'(x) = 2x - 4 \Rightarrow f'(3) = 6 - 4 = 2$.</p>
+                <p><strong>Відповідь:</strong> $k = 2$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Первісна</div>
+                <p>Для функції $f(x) = 2x$ знайдіть первісну $F(x)$, графік якої проходить через точку $(1; 3)$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Загальний вигляд: $F(x) = x^2 + C$.</p>
+                <p>$F(1) = 3 \Rightarrow 1 + C = 3 \Rightarrow C = 2$.</p>
+                <p>$F(x) = x^2 + 2$.</p>
+                <p><strong>Відповідь:</strong> $F(x) = x^2 + 2$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Обчислити інтеграл</div>
+                <p>Обчисліть: $\displaystyle\int_0^2 (3x^2 + 1)\, dx$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$F(x) = x^3 + x$.</p>
+                <p>$F(2) - F(0) = (8 + 2) - 0 = 10$.</p>
+                <p><strong>Відповідь:</strong> $10$.</p>
+            </div>
+        
+            <div class="example">
+                <div class="example-title">НМТ. Фізичний зміст</div>
+                <p>Тіло рухається за законом $s(t) = t^2 + 3t$. Знайдіть швидкість тіла в момент $t = 2$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$v(t) = s'(t) = 2t + 3$.</p>
+                <p>$v(2) = 4 + 3 = 7$.</p>
+                <p><strong>Відповідь:</strong> $v(2) = 7$ (од./с).</p>
+            </div>
+        
             <!-- ===== ТЕСТ ===== -->
             <div class="test">
                 <div class="test-title">📝 Перевірте себе</div>
-
-                <!-- Питання 1: вибір варіанта -->
+        
                 <div class="question">
-                    <p class="question-text">1. Текст питання?</p>
+                    <p class="question-text">1. Знайдіть похідну функції $f(x) = x^3$.</p>
                     <div class="options">
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант A</button>
-                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">Варіант B (правильний)</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант C</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант D</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$3x$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$3x^2$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x^2$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x^4/4$</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
-
-                <!-- Питання 2: введення відповіді -->
+        
                 <div class="question">
-                    <p class="question-text">2. Текст питання? У відповідь запишіть число.</p>
-                    <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                    <p class="question-text">2. Знайдіть похідну функції $f(x) = 5x^4 - 3x + 2$.</p>
+                    <div class="options">
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$20x^3 - 3$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$5x^3 - 3$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$20x^3 - 3x$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$20x^4 - 3$</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
-
-                <!-- Питання 3: введення + показати розв'язок -->
+                      
                 <div class="question">
-                    <p class="question-text">3. Текст питання?</p>
+                    <p class="question-text">3. Знайдіть похідну функції $f(x) = \sin x$.</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$-\cos x$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$\cos x$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$-\sin x$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\text{tg}\, x$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">4. Знайдіть похідну функції $f(x) = \cos x$.</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\sin x$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$-\sin x$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$\cos x$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$-\cos x$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">5. Знайдіть похідну функції $f(x) = e^x + \ln x$.</p>
+                    <div class="options">
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$e^x + \dfrac{1}{x}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$e^x + \ln x$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$xe^{x-1} + \dfrac{1}{x}$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$e^x - \dfrac{1}{x}$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">6. Знайдіть похідну функції $f(x) = (3x + 1)^4$.</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$4(3x+1)^3$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$12(3x+1)^3$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$12(3x+1)^4$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(3x+1)^3$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">7. Знайдіть первісну функції $f(x) = 4x^3$.</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$12x^2 + C$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$x^4 + C$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$4x^4 + C$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x^3 + C$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">8. Обчисліть: $\displaystyle\int_0^1 2x\, dx$</p>
                     <div class="input-answer">
                         <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <button class="btn" onclick="checkInput(this, '1')">Перевірити</button>
                         <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
                     </div>
                     <p class="feedback"></p>
                     <div class="solution">
                         <div class="solution-title">Розв'язання:</div>
-                        <p><em>Тут буде розв'язання.</em></p>
+                        <p>$F(x) = x^2$.</p>
+                        <p>$F(1) - F(0) = 1 - 0 = 1$.</p>
+                        <p><strong>Відповідь:</strong> $1$.</p>
                     </div>
                 </div>
-
+        
+                <div class="question">
+                    <p class="question-text">9. Знайдіть значення похідної $f(x) = x^3 - 2x$ у точці $x_0 = 1$.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '1')">Перевірити</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
+                <div class="question">
+                    <p class="question-text">10. Знайдіть похідну функції $f(x) = x^2 \cdot \sin x$.</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$2x\cos x$</button>
+                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">$2x\sin x + x^2\cos x$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$2x\sin x - x^2\cos x$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x^2\sin x + 2x\cos x$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+        
             </div>
         </article>
 
