@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 </head>
+
 <body>
     <header class="site-header">
         <div class="container">
@@ -34,62 +36,399 @@
         <article class="lesson-content">
 
             <h2>Мета заняття</h2>
-            <p><em>Тут буде мета уроку.</em></p>
+            <p>Повторити означення арифметичної та геометричної прогресій, їхні формули $n$-го члена, суми $n$ перших
+                членів, властивості. Навчитися розв'язувати задачі на прогресії. Підготуватися до виконання завдань НМТ.
+            </p>
 
-            <h2>Теоретична довідка</h2>
-            <p><em>Тут буде теорія. Формули записуються в LaTeX між знаками $ ... $.</em></p>
-            <p>Наприклад: $a^2 + b^2 = c^2$</p>
+            <h2>1. Арифметична прогресія</h2>
+
+            <p><strong>Арифметична прогресія</strong> — це послідовність, кожен наступний член якої дорівнює
+                попередньому, до якого додано одне й те саме число $d$ (різниця прогресії):</p>
+            <p>$$a_{n+1} = a_n + d$$</p>
+
+            <p>де $d$ — <strong>різниця</strong> арифметичної прогресії.</p>
+            <div class="theory-example">
+                <div class="theory-example-title">
+                    <span class="theory-example-icon">📌</span>
+                    Приклади
+                </div>
+                <ul>
+                    <li>$2, 5, 8, 11, \ldots$ — тут $a_1 = 2$, $d = 3$.</li>
+                    <li>$10, 7, 4, 1, \ldots$ — тут $a_1 = 10$, $d = -3$.</li>
+                    <li>$5, 5, 5, 5, \ldots$ — тут $a_1 = 5$, $d = 0$.</li>
+                </ul>
+            </div>
+            <h3>Формула $n$-го члена</h3>
+            <p>$$a_n = a_1 + (n - 1) \cdot d$$</p>
+
+            <h3>Властивість середнього (характеристична властивість)</h3>
+            <p>Кожен член арифметичної прогресії, починаючи з другого, є середнім арифметичним сусідніх:</p>
+            <p>$$a_n = \dfrac{a_{n-1} + a_{n+1}}{2}$$</p>
+
+            <h3>Сума $n$ перших членів</h3>
+            <p>$$S_n = \dfrac{a_1 + a_n}{2} \cdot n$$</p>
+            <p>або через $a_1$ і $d$:</p>
+            <p>$$S_n = \dfrac{2a_1 + (n-1)d}{2} \cdot n$$</p>
 
             <div class="example">
-                <div class="example-title">Приклад 1</div>
-                <p><em>Умова прикладу.</em></p>
+                <div class="example-title">Приклад 1. Знайти $n$-й член</div>
+                <p>Знайдіть $a_{10}$ арифметичної прогресії, якщо $a_1 = 3$, $d = 4$.</p>
                 <p><strong>Розв'язання:</strong></p>
-                <p><em>Покрокове розв'язання.</em></p>
-                <p><strong>Відповідь:</strong> ...</p>
+                <p>$a_{10} = a_1 + 9d = 3 + 9 \cdot 4 = 3 + 36 = 39$.</p>
+                <p><strong>Відповідь:</strong> $a_{10} = 39$.</p>
             </div>
 
-            <!-- ===== ТЕСТ ===== -->
-            <div class="test">
-                <div class="test-title">📝 Перевірте себе</div>
-
-                <!-- Питання 1: вибір варіанта -->
-                <div class="question">
-                    <p class="question-text">1. Текст питання?</p>
-                    <div class="options">
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант A</button>
-                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">Варіант B (правильний)</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант C</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант D</button>
-                    </div>
-                    <p class="feedback"></p>
-                </div>
-
-                <!-- Питання 2: введення відповіді -->
-                <div class="question">
-                    <p class="question-text">2. Текст питання? У відповідь запишіть число.</p>
-                    <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
-                    </div>
-                    <p class="feedback"></p>
-                </div>
-
-                <!-- Питання 3: введення + показати розв'язок -->
-                <div class="question">
-                    <p class="question-text">3. Текст питання?</p>
-                    <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
-                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
-                    </div>
-                    <p class="feedback"></p>
-                    <div class="solution">
-                        <div class="solution-title">Розв'язання:</div>
-                        <p><em>Тут буде розв'язання.</em></p>
-                    </div>
-                </div>
-
+            <div class="example">
+                <div class="example-title">Приклад 2. Знайти різницю</div>
+                <p>Знайдіть $d$, якщо $a_1 = 5$, $a_7 = 23$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$a_7 = a_1 + 6d \Rightarrow 23 = 5 + 6d \Rightarrow 6d = 18 \Rightarrow d = 3$.</p>
+                <p><strong>Відповідь:</strong> $d = 3$.</p>
             </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 3. Сума перших членів</div>
+                <p>Знайдіть суму перших 20 членів арифметичної прогресії, якщо $a_1 = 2$, $d = 3$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$a_{20} = 2 + 19 \cdot 3 = 2 + 57 = 59$.</p>
+                <p>$S_{20} = \dfrac{a_1 + a_{20}}{2} \cdot 20 = \dfrac{2 + 59}{2} \cdot 20 = \dfrac{61}{2} \cdot 20 = 61
+                    \cdot 10 = 610$.</p>
+                <p><strong>Відповідь:</strong> $S_{20} = 610$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 4. Задача з НМТ</div>
+                <p>В арифметичній прогресії $a_1 = 5$, $d = 0{,}6$. Знайдіть $a_5$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$a_5 = a_1 + 4d = 5 + 4 \cdot 0{,}6 = 5 + 2{,}4 = 7{,}4$.</p>
+                <p><strong>Відповідь:</strong> $a_5 = 7{,}4$.</p>
+            </div>
+
+            <h2>2. Геометрична прогресія</h2>
+
+            <p><strong>Геометрична прогресія</strong> — це послідовність, кожен наступний член якої дорівнює
+                попередньому, помноженому на одне й те саме число $q$ (знаменник прогресії):</p>
+            <p>$$b_{n+1} = b_n \cdot q$$</p>
+
+            <p>де $q$ — <strong>знаменник</strong> геометричної прогресії.</p>
+            <div class="theory-example">
+                <div class="theory-example-title">
+                    <span class="theory-example-icon">📌</span>
+                    Приклади:
+                </div>
+                <ul>
+                    <li>$2, 6, 18, 54, \ldots$ — тут $b_1 = 2$, $q = 3$.</li>
+                    <li>$16, 8, 4, 2, \ldots$ — тут $b_1 = 16$, $q = \dfrac{1}{2}$.</li>
+                    <li>$1, -3, 9, -27, \ldots$ — тут $b_1 = 1$, $q = -3$.</li>
+                </ul>
+            </div>
+
+
+            <h3>Формула $n$-го члена</h3>
+            <p>$$b_n = b_1 \cdot q^{n-1}$$</p>
+
+            <h3>Властивість середнього (характеристична властивість)</h3>
+            <p>Квадрат кожного члена, починаючи з другого, дорівнює добутку сусідніх:</p>
+            <p>$$b_n^2 = b_{n-1} \cdot b_{n+1}$$</p>
+
+            <h3>Сума $n$ перших членів</h3>
+            <p>Якщо $q \neq 1$:</p>
+            <p>$$S_n = \dfrac{b_1(q^n - 1)}{q - 1}$$</p>
+            <p>Якщо $q = 1$:</p>
+            <p>$$S_n = n \cdot b_1$$</p>
+
+            <h3>Сума нескінченної спадної геометричної прогресії</h3>
+            <p>Якщо $|q| < 1$, існує сума всіх членів:</p>
+                    <p>$$S = \dfrac{b_1}{1 - q}$$</p>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 5. Знайти $n$-й член</div>
+                        <p>Знайдіть $b_5$ геометричної прогресії, якщо $b_1 = 2$, $q = 3$.</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$b_5 = b_1 \cdot q^4 = 2 \cdot 3^4 = 2 \cdot 81 = 162$.</p>
+                        <p><strong>Відповідь:</strong> $b_5 = 162$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 6. Знайти знаменник</div>
+                        <p>Знайдіть $q$, якщо $b_1 = 5$, $b_4 = 40$.</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$b_4 = b_1 \cdot q^3 \Rightarrow 40 = 5 q^3 \Rightarrow q^3 = 8 \Rightarrow q = 2$.</p>
+                        <p><strong>Відповідь:</strong> $q = 2$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 7. Сума перших членів</div>
+                        <p>Знайдіть суму перших 6 членів геометричної прогресії, якщо $b_1 = 3$, $q = 2$.</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$S_6 = \dfrac{b_1(q^6 - 1)}{q - 1} = \dfrac{3(2^6 - 1)}{2 - 1} = 3 \cdot 63 = 189$.</p>
+                        <p><strong>Відповідь:</strong> $S_6 = 189$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">Приклад 8. Нескінченна сума</div>
+                        <p>Знайдіть суму нескінченної спадної геометричної прогресії $8, 4, 2, 1, \ldots$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$b_1 = 8$, $q = \dfrac{1}{2}$.</p>
+                        <p>$S = \dfrac{b_1}{1 - q} = \dfrac{8}{1 - \frac{1}{2}} = \dfrac{8}{\frac{1}{2}} = 16$.</p>
+                        <p><strong>Відповідь:</strong> $S = 16$.</p>
+                    </div>
+
+                    <h2>3. Порівняння прогресій</h2>
+
+                    <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+                        <tr style="background: #f1f5f9;">
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Ознака</strong></td>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Арифметична</strong></td>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Геометрична</strong></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;">Правило</td>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;">$+ d$</td>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;">$\cdot q$</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;">$n$-й член</td>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;">$a_1 + (n-1)d$</td>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;">$b_1 \cdot q^{n-1}$</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;">Властивість</td>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;">$a_n = \dfrac{a_{n-1}+a_{n+1}}{2}$
+                            </td>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;">$b_n^2 = b_{n-1} \cdot b_{n+1}$</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;">Сума $S_n$</td>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;">$\dfrac{a_1+a_n}{2} \cdot n$</td>
+                            <td style="padding: 10px; border: 1px solid #e2e8f0;">$\dfrac{b_1(q^n-1)}{q-1}$</td>
+                        </tr>
+                    </table>
+
+                    <div class="remember">
+                        <span class="remember-icon">💡</span>
+                        <div class="remember-text">
+                            <strong>Як розрізнити:</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>Якщо між сусідніми членами однакова <strong>різниця</strong> — це арифметична
+                                    прогресія.</li>
+                                <li>Якщо між сусідніми членами однакове <strong>відношення</strong> — це геометрична
+                                    прогресія.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>4. Завдання з НМТ</h2>
+
+                    <div class="example">
+                        <div class="example-title">НМТ. Сума членів</div>
+                        <p>Знайдіть суму перших 12 членів арифметичної прогресії, якщо $a_1 = 4$ і $a_{12} = 37$.</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$S_{12} = \dfrac{a_1 + a_{12}}{2} \cdot 12 = \dfrac{4 + 37}{2} \cdot 12 = \dfrac{41}{2} \cdot
+                            12 = 41 \cdot 6 = 246$.</p>
+                        <p><strong>Відповідь:</strong> $246$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">НМТ. Середнє арифметичне</div>
+                        <p>Між числами $3$ і $19$ вставили три числа так, щоб усі п'ять утворили арифметичну прогресію.
+                            Знайдіть ці числа.</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$a_1 = 3$, $a_5 = 19$.</p>
+                        <p>$a_5 = a_1 + 4d \Rightarrow 19 = 3 + 4d \Rightarrow d = 4$.</p>
+                        <p>Прогресія: $3, 7, 11, 15, 19$.</p>
+                        <p><strong>Відповідь:</strong> $7, 11, 15$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">НМТ. Геометрична прогресія</div>
+                        <p>Знайдіть $b_6$ геометричної прогресії, якщо $b_1 = 3$, $q = -2$.</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$b_6 = b_1 \cdot q^5 = 3 \cdot (-2)^5 = 3 \cdot (-32) = -96$.</p>
+                        <p><strong>Відповідь:</strong> $b_6 = -96$.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-title">НМТ. Сума нескінченної прогресії</div>
+                        <p>Знайдіть суму нескінченної спадної геометричної прогресії $\dfrac{1}{2}, \dfrac{1}{4},
+                            \dfrac{1}{8}, \ldots$</p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>$b_1 = \dfrac{1}{2}$, $q = \dfrac{1}{2}$.</p>
+                        <p>$S = \dfrac{b_1}{1 - q} = \dfrac{\frac{1}{2}}{1 - \frac{1}{2}} =
+                            \dfrac{\frac{1}{2}}{\frac{1}{2}} = 1$.</p>
+                        <p><strong>Відповідь:</strong> $S = 1$.</p>
+                    </div>
+
+                    <!-- ===== ТЕСТ ===== -->
+                    <div class="test">
+                        <div class="test-title">📝 Перевірте себе</div>
+
+                        <div class="question">
+                            <p class="question-text">1. Знайдіть $a_{10}$ арифметичної прогресії, якщо $a_1 = 4$, $d =
+                                3$.</p>
+                            <div class="options">
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$30$</button>
+                                <button class="option" data-correct="true"
+                                    onclick="checkChoice(this, true)">$31$</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$34$</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$40$</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">2. Знайдіть $d$ арифметичної прогресії, якщо $a_1 = 7$, $a_5 = 23$.
+                            </p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Ваша відповідь">
+                                <button class="btn" onclick="checkInput(this, '4')">Перевірити</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">3. Знайдіть суму перших 10 членів арифметичної прогресії, якщо $a_1
+                                = 2$, $a_{10} = 38$.</p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Ваша відповідь">
+                                <button class="btn" onclick="checkInput(this, '200')">Перевірити</button>
+                                <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
+                                    розв'язок</button>
+                            </div>
+                            <p class="feedback"></p>
+                            <div class="solution">
+                                <div class="solution-title">Розв'язання:</div>
+                                <p>$S_{10} = \dfrac{a_1 + a_{10}}{2} \cdot 10 = \dfrac{2 + 38}{2} \cdot 10 =
+                                    \dfrac{40}{2} \cdot 10 = 200$.</p>
+                                <p><strong>Відповідь:</strong> $200$.</p>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">4. Знайдіть $b_4$ геометричної прогресії, якщо $b_1 = 2$, $q = 3$.
+                            </p>
+                            <div class="options">
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$18$</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$24$</button>
+                                <button class="option" data-correct="true"
+                                    onclick="checkChoice(this, true)">$54$</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$162$</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">5. Знайдіть $q$ геометричної прогресії, якщо $b_1 = 5$, $b_3 = 20$.
+                            </p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Ваша відповідь">
+                                <button class="btn" onclick="checkInput(this, '2')">Перевірити</button>
+                                <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
+                                    розв'язок</button>
+                            </div>
+                            <p class="feedback"></p>
+                            <div class="solution">
+                                <div class="solution-title">Розв'язання:</div>
+                                <p>$b_3 = b_1 \cdot q^2 \Rightarrow 20 = 5 q^2 \Rightarrow q^2 = 4 \Rightarrow q = \pm
+                                    2$.</p>
+                                <p>Якщо всі члени додатні — $q = 2$.</p>
+                                <p><strong>Відповідь:</strong> $q = 2$.</p>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">6. Знайдіть суму перших 5 членів геометричної прогресії $b_1 = 1$,
+                                $q = 2$.</p>
+                            <div class="options">
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$15$</button>
+                                <button class="option" data-correct="true"
+                                    onclick="checkChoice(this, true)">$31$</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$32$</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$63$</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">7. Знайдіть суму нескінченної спадної геометричної прогресії $b_1 =
+                                6$, $q = \dfrac{1}{3}$.</p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Ваша відповідь">
+                                <button class="btn" onclick="checkInput(this, '9')">Перевірити</button>
+                                <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
+                                    розв'язок</button>
+                            </div>
+                            <p class="feedback"></p>
+                            <div class="solution">
+                                <div class="solution-title">Розв'язання:</div>
+                                <p>$S = \dfrac{b_1}{1 - q} = \dfrac{6}{1 - \frac{1}{3}} = \dfrac{6}{\frac{2}{3}} = 9$.
+                                </p>
+                                <p><strong>Відповідь:</strong> $9$.</p>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">8. Яке число є середнім арифметичним сусідніх членів $3$ та $11$ в
+                                арифметичній прогресії?</p>
+                            <div class="options">
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$6$</button>
+                                <button class="option" data-correct="true"
+                                    onclick="checkChoice(this, true)">$7$</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$8$</button>
+                                <button class="option" data-correct="false"
+                                    onclick="checkChoice(this, false)">$14$</button>
+                            </div>
+                            <p class="feedback"></p>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">9. Між числами $1$ і $16$ вставили одне число так, щоб утворилася
+                                геометрична прогресія. Знайдіть це число (додатне).</p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Ваша відповідь">
+                                <button class="btn" onclick="checkInput(this, '4')">Перевірити</button>
+                                <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
+                                    розв'язок</button>
+                            </div>
+                            <p class="feedback"></p>
+                            <div class="solution">
+                                <div class="solution-title">Розв'язання:</div>
+                                <p>За властивістю $b_2^2 = b_1 \cdot b_3 = 1 \cdot 16 = 16$.</p>
+                                <p>$b_2 = 4$ (додатне).</p>
+                                <p><strong>Відповідь:</strong> $4$.</p>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p class="question-text">10. В арифметичній прогресії $a_3 = 7$, $a_5 = 13$. Знайдіть $a_1$.
+                            </p>
+                            <div class="input-answer">
+                                <input type="text" placeholder="Ваша відповідь">
+                                <button class="btn" onclick="checkInput(this, '1')">Перевірити</button>
+                                <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
+                                    розв'язок</button>
+                            </div>
+                            <p class="feedback"></p>
+                            <div class="solution">
+                                <div class="solution-title">Розв'язання:</div>
+                                <p>$a_5 - a_3 = 2d \Rightarrow 13 - 7 = 2d \Rightarrow d = 3$.</p>
+                                <p>$a_1 = a_3 - 2d = 7 - 6 = 1$.</p>
+                                <p><strong>Відповідь:</strong> $a_1 = 1$.</p>
+                            </div>
+                        </div>
+
+                    </div>
         </article>
 
         <nav class="lesson-nav">
@@ -106,4 +445,5 @@
 
     <script src="../script.js"></script>
 </body>
+
 </html>
