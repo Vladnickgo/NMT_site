@@ -1,9 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Урок 01: Основні фігури площини та їхні властивості: відрізки, кути. Коло, круг: елементи та основні властивості — Optima</title>
+    <title>Урок 01: Основні фігури площини та їхні властивості: відрізки, кути. Коло, круг: елементи та основні
+        властивості — Optima</title>
     <link rel="stylesheet" href="../style.css">
     <script>
         MathJax = {
@@ -13,6 +15,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 </head>
+
 <body>
     <header class="site-header">
         <div class="container">
@@ -28,65 +31,441 @@
                 <a href="../index.html#geometry">📐 Геометрія</a> ›
                 Урок 01
             </p>
-            <h1>Основні фігури площини та їхні властивості: відрізки, кути. Коло, круг: елементи та основні властивості</h1>
+            <h1>Основні фігури площини та їхні властивості: відрізки, кути. Коло, круг: елементи та основні властивості
+            </h1>
         </div>
 
         <article class="lesson-content">
 
             <h2>Мета заняття</h2>
-            <p><em>Тут буде мета уроку.</em></p>
+            <p>Повторити основні фігури на площині (точка, пряма, відрізок, промінь), види кутів, їхні властивості.
+                Розглянути елементи кола та круга, їхні основні властивості. Підготуватися до виконання завдань НМТ з
+                геометрії.</p>
 
-            <h2>Теоретична довідка</h2>
-            <p><em>Тут буде теорія. Формули записуються в LaTeX між знаками $ ... $.</em></p>
-            <p>Наприклад: $a^2 + b^2 = c^2$</p>
+            <h2>1. Основні фігури на площині</h2>
+
+            <ul>
+                <li><strong>Точка</strong> — найпростіша фігура, не має розмірів. Позначається великими латинськими
+                    літерами: $A$, $B$, $C$.</li>
+                <li><strong>Пряма</strong> — необмежена лінія, що не має ні початку, ні кінця. Позначається малою
+                    літерою $a$ або через дві точки: $AB$.</li>
+                <li><strong>Відрізок</strong> — частина прямої, обмежена двома точками (кінцями).</li>
+                <li><strong>Промінь</strong> — частина прямої, що має початок, але не має кінця.</li>
+            </ul>
+
+            <figure class="example-figure">
+                <svg width="320" height="200" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Пряма -->
+                    <line x1="20" y1="40" x2="300" y2="40" stroke="#1e293b" stroke-width="1.5" />
+                    <text x="10" y="35" font-size="14" font-weight="700" fill="#dc2626">a</text>
+                    <text x="100" y="25" font-size="13" fill="#64748b">Пряма — необмежена</text>
+
+                    <!-- Відрізок -->
+                    <line x1="80" y1="90" x2="300" y2="90" stroke="#2563eb" stroke-width="1.5" />
+                    <circle cx="80" cy="90" r="3" fill="#2563eb" />
+                    <circle cx="300" cy="90" r="3" fill="#2563eb" />
+                    <text x="72" y="110" font-size="14" font-weight="700" fill="#2563eb">A</text>
+                    <text x="298" y="110" font-size="14" font-weight="700" fill="#2563eb">B</text>
+                    <text x="160" y="85" font-size="13" fill="#64748b">Відрізок AB</text>
+
+                    <!-- Промінь -->
+                    <line x1="20" y1="140" x2="297" y2="140" stroke="#16a34a" stroke-width="1.5" />
+                    <polygon points="300,140 290,143 290,137" fill="#16a34a" />
+                    <circle cx="20" cy="140" r="3" fill="#16a34a" />
+                    <text x="15" y="130" font-size="14" font-weight="700" fill="#16a34a">C</text>
+                    <text x="100" y="130" font-size="13" fill="#64748b">Промінь CD</text>
+
+                    <!-- Точки -->
+                    <text x="30" y="180" font-size="13" fill="#64748b">Точки: A, B, C ...</text>
+                </svg>
+                <figcaption>Основні фігури на площині: пряма, відрізок, промінь</figcaption>
+            </figure>
+
+            <h2>2. Кути та їх види</h2>
+
+            <p><strong>Кут</strong> — фігура, утворена двома променями, що виходять з однієї точки (вершини кута).</p>
+
+            <p>Позначення: $\angle AOB$ або $\angle O$, де $O$ — вершина.</p>
+
+            <h3>Види кутів</h3>
+
+            <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+                <tr style="background: #f1f5f9;">
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Вид кута</strong></td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Градусна міра</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">Гострий</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">$0° < \alpha < 90°$</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">Прямий</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">$\alpha = 90°$</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">Тупий</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">$90° < \alpha < 180°$</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">Розгорнутий</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">$\alpha = 180°$</td>
+                </tr>
+            </table>
+
+            <figure class="example-figure">
+                <svg width="320" height="160" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Гострий кут -->
+                    <line x1="10" y1="110" x2="70" y2="110" stroke="#1e293b" stroke-width="2" />
+                    <line x1="10" y1="110" x2="45" y2="60" stroke="#1e293b" stroke-width="2" />
+                    <path d="M 45 110 A 30 30 0 0 0 31 81" fill="none" stroke="#16a34a" stroke-width="2" />
+                    <text x="50" y="100" font-size="13" font-weight="700" fill="#16a34a">α</text>
+                    <text x="15" y="140" font-size="13" font-weight="700" fill="#1e293b">Гострий</text>
+
+                    <!-- Прямий кут -->
+                    <line x1="90" y1="110" x2="150" y2="110" stroke="#1e293b" stroke-width="2" />
+                    <line x1="90" y1="110" x2="90" y2="50" stroke="#1e293b" stroke-width="2" />
+                    <rect x="90" y="95" width="15" height="15" fill="none" stroke="#2563eb" stroke-width="2" />
+                    <text x="90" y="140" font-size="13" font-weight="700" fill="#1e293b">Прямий</text>
+
+                    <!-- Тупий кут -->
+                    <line x1="170" y1="110" x2="230" y2="110" stroke="#1e293b" stroke-width="2" />
+                    <line x1="170" y1="110" x2="140" y2="55" stroke="#1e293b" stroke-width="2" />
+                    <path d="M 195 110 A 30 30 0 0 0 157 86" fill="none" stroke="#f59e0b" stroke-width="2" />
+                    <text x="180" y="80" font-size="13" font-weight="700" fill="#f59e0b">β</text>
+                    <text x="170" y="140" font-size="13" font-weight="700" fill="#1e293b">Тупий</text>
+
+                    <!-- Розгорнутий кут -->
+                    <line x1="240" y1="110" x2="320" y2="110" stroke="#1e293b" stroke-width="1.5" />
+                    <path d="M 255 110 A 10 10 0 0 1 305 110" fill="none" stroke="#dc2626" stroke-width="1.5" />
+                    <text x="278" y="75" font-size="13" font-weight="700" fill="#dc2626">γ</text>
+                    <text x="240" y="140" font-size="13" font-weight="700" fill="#1e293b">Розгорнутий</text>
+                </svg>
+                <figcaption>Види кутів: гострий, прямий, тупий, розгорнутий</figcaption>
+            </figure>
+
+            <h3>Суміжні та вертикальні кути</h3>
+
+            <ul>
+                <li><strong>Суміжні кути</strong> — два кути із спільною стороною, сума яких $180°$.</li>
+                <li><strong>Вертикальні кути</strong> — кути, утворені перетином двох прямих, рівні між собою.</li>
+            </ul>
+
+            <figure class="example-figure">
+                <svg width="320" height="200" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Дві прямі, що перетинаються -->
+                    <line x1="20" y1="100" x2="300" y2="100" stroke="#1e293b" stroke-width="2" />
+                    <line x1="60" y1="30" x2="260" y2="170" stroke="#1e293b" stroke-width="2" />
+
+                    <!-- Точка перетину -->
+                    <circle cx="160" cy="100" r="4" fill="#1e293b" />
+
+                    <!-- Кути -->
+                    <text x="160" y="90" font-size="14" font-weight="700" fill="#2563eb">1</text>
+                    <text x="200" y="120" font-size="14" font-weight="700" fill="#dc2626">2</text>
+                    <text x="150" y="120" font-size="14" font-weight="700" fill="#2563eb">3</text>
+                    <text x="110" y="90" font-size="14" font-weight="700" fill="#dc2626">4</text>
+
+                    <text x="20" y="145" font-size="12" fill="#64748b">∠1 і ∠3 — вертикальні (рівні)</text>
+                    <text x="20" y="165" font-size="12" fill="#64748b">∠1 + ∠2 = 180° — суміжні</text>
+                </svg>
+                <figcaption>Суміжні та вертикальні кути</figcaption>
+            </figure>
+
+            <div class="remember">
+                <span class="remember-icon">💡</span>
+                <div class="remember-text">
+                    <strong>Ключові факти:</strong>
+                    <ul style="margin-top: 8px;">
+                        <li>Сума суміжних кутів = $180°$.</li>
+                        <li>Вертикальні кути рівні.</li>
+                        <li>Бісектриса ділить кут навпіл.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>3. Коло та круг</h2>
+
+            <p><strong>Коло</strong> — це множина всіх точок площини, рівновіддалених від даної точки (центра).</p>
+            <p><strong>Круг</strong> — це частина площини, обмежена колом (коло + внутрішня область).</p>
+
+            <h3>Елементи кола</h3>
+
+            <ul>
+                <li><strong>Центр</strong> — точка $O$, рівновіддалена від усіх точок кола.</li>
+                <li><strong>Радіус</strong> $R$ — відрізок від центра до точки кола.</li>
+                <li><strong>Діаметр</strong> $D$ — відрізок, що проходить через центр і з'єднує дві точки кола. $D =
+                    2R$.</li>
+                <li><strong>Хорда</strong> — відрізок, що з'єднує дві точки кола (не обов'язково через центр).</li>
+                <li><strong>Дуга</strong> — частина кола між двома точками.</li>
+            </ul>
+
+            <figure class="example-figure">
+                <svg width="320" height="320" viewBox="0 0 440 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Коло -->
+                    <circle cx="220" cy="200" r="150" fill="none" stroke="#2563eb" stroke-width="2" />
+
+                    <!-- Центр -->
+                    <circle cx="220" cy="200" r="4" fill="#dc2626" />
+                    <text x="228" y="218" font-size="14" font-weight="700" fill="#dc2626">O</text>
+
+                    <!-- Радіус -->
+                    <line x1="220" y1="200" x2="220" y2="50" stroke="#16a34a" stroke-width="2.5" />
+                    <text x="228" y="125" font-size="14" font-weight="700" fill="#16a34a">R</text>
+
+                    <!-- Діаметр -->
+                    <line x1="70" y1="200" x2="370" y2="200" stroke="#9333ea" stroke-width="2.5" />
+                    <text x="200" y="195" font-size="14" font-weight="700" fill="#9333ea">D = 2R</text>
+                    <circle cx="70" cy="200" r="4" fill="#9333ea" />
+                    <circle cx="370" cy="200" r="4" fill="#9333ea" />
+                    <text x="60" y="220" font-size="13" font-weight="700" fill="#9333ea">A</text>
+                    <text x="368" y="220" font-size="13" font-weight="700" fill="#9333ea">B</text>
+
+                    <!-- Хорда -->
+                    <line x1="110" y1="100" x2="330" y2="100" stroke="#f59e0b" stroke-width="2.5" />
+                    <text x="200" y="92" font-size="13" font-weight="700" fill="#f59e0b">Хорда</text>
+
+                    <!-- Дуга (виділена кольором) -->
+                    <path d="M 70 200 A 150 150 0 0 1 370 200" fill="none" stroke="#dc2626" stroke-width="3"
+                        opacity="0.5" />
+                    <text x="200" y="340" font-size="13" font-weight="700" fill="#dc2626">Дуга AB</text>
+                </svg>
+                <figcaption>Елементи кола: центр, радіус, діаметр, хорда, дуга</figcaption>
+            </figure>
+
+            <h3>Основні формули</h3>
+
+            <ul>
+                <li><strong>Довжина кола:</strong> $C = 2\pi R$.</li>
+                <li><strong>Площа круга:</strong> $S = \pi R^2$.</li>
+                <li><strong>Діаметр:</strong> $D = 2R$.</li>
+                <li>$\pi \approx 3{,}14$.</li>
+            </ul>
+
+            <h2>4. Взаємне розташування прямої та кола</h2>
+
+            <p>Пряма та коло можуть:</p>
+            <ul>
+                <li><strong>Не перетинатися</strong> — якщо відстань від центра до прямої $d > R$.</li>
+                <li><strong>Дотикатися</strong> — якщо $d = R$. Пряма називається <strong>дотичною</strong>, а точка
+                    дотику — єдина спільна точка.</li>
+                <li><strong>Перетинатися у двох точках</strong> — якщо $d < R$. Пряма називається <strong>
+                        січною</strong>.</li>
+            </ul>
+
+            <div class="remember">
+                <span class="remember-icon">💡</span>
+                <div class="remember-text">
+                    <strong>Властивість дотичної:</strong> дотична до кола перпендикулярна до радіуса, проведеного в
+                    точку дотику.
+                </div>
+            </div>
+
+            <h2>5. Приклади</h2>
 
             <div class="example">
-                <div class="example-title">Приклад 1</div>
-                <p><em>Умова прикладу.</em></p>
+                <div class="example-title">Приклад 1. Суміжні кути</div>
+                <p>Один із суміжних кутів дорівнює $35°$. Знайдіть другий кут.</p>
                 <p><strong>Розв'язання:</strong></p>
-                <p><em>Покрокове розв'язання.</em></p>
-                <p><strong>Відповідь:</strong> ...</p>
+                <p>Сума суміжних кутів $= 180°$.</p>
+                <p>Другий кут: $180° - 35° = 145°$.</p>
+                <p><strong>Відповідь:</strong> $145°$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 2. Вертикальні кути</div>
+                <p>Дві прямі перетинаються. Один з утворених кутів дорівнює $60°$. Знайдіть решту три кути.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Вертикальний до нього кут теж $60°$.</p>
+                <p>Суміжний: $180° - 60° = 120°$. Вертикальний до нього теж $120°$.</p>
+                <p><strong>Відповідь:</strong> $60°$, $120°$, $120°$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 3. Довжина кола</div>
+                <p>Знайдіть довжину кола, якщо радіус $R = 5$ см. Відповідь залиште у вигляді $\pi$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$C = 2\pi R = 2\pi \cdot 5 = 10\pi$ см.</p>
+                <p><strong>Відповідь:</strong> $10\pi$ см.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 4. Площа круга</div>
+                <p>Знайдіть площу круга, діаметр якого дорівнює 8 см.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$R = D/2 = 4$ см.</p>
+                <p>$S = \pi R^2 = \pi \cdot 16 = 16\pi$ см².</p>
+                <p><strong>Відповідь:</strong> $16\pi$ см².</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 5. Радіус через довжину кола</div>
+                <p>Довжина кола дорівнює $20\pi$. Знайдіть радіус.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$2\pi R = 20\pi \Rightarrow R = 10$.</p>
+                <p><strong>Відповідь:</strong> $R = 10$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 6. Дотична</div>
+                <p>Радіус кола $R = 7$ см. На якій відстані від центра кола знаходиться дотична?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Відстань від центра до дотичної дорівнює радіусу: $d = R = 7$ см.</p>
+                <p><strong>Відповідь:</strong> $7$ см.</p>
+            </div>
+
+            <h2>6. Завдання з НМТ</h2>
+
+            <div class="example">
+                <div class="example-title">НМТ. Коло на площині</div>
+                <p>Точки $A$ і $B$ лежать на колі радіуса $7$. Укажіть найбільше можливе значення довжини відрізка $AB$.
+                </p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Найбільший відрізок між двома точками кола — діаметр: $D = 2R = 14$.</p>
+                <p><strong>Відповідь:</strong> $14$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">НМТ. Кут</div>
+                <p>Знайдіть величину кута, якщо суміжний з ним кут дорівнює $75°$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$180° - 75° = 105°$.</p>
+                <p><strong>Відповідь:</strong> $105°$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">НМТ. Площа круга</div>
+                <p>Знайдіть площу круга, довжина кола якого дорівнює $6\pi$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>$2\pi R = 6\pi \Rightarrow R = 3$.</p>
+                <p>$S = \pi R^2 = \pi \cdot 9 = 9\pi$.</p>
+                <p><strong>Відповідь:</strong> $9\pi$.</p>
             </div>
 
             <!-- ===== ТЕСТ ===== -->
             <div class="test">
                 <div class="test-title">📝 Перевірте себе</div>
 
-                <!-- Питання 1: вибір варіанта -->
                 <div class="question">
-                    <p class="question-text">1. Текст питання?</p>
+                    <p class="question-text">1. Який кут називається тупим?</p>
                     <div class="options">
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант A</button>
-                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">Варіант B (правильний)</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант C</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант D</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Менший за
+                            $90°$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Рівний
+                            $90°$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">Більший за $90°$,
+                            але менший за $180°$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Рівний
+                            $180°$</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
 
-                <!-- Питання 2: введення відповіді -->
                 <div class="question">
-                    <p class="question-text">2. Текст питання? У відповідь запишіть число.</p>
+                    <p class="question-text">2. Один з суміжних кутів дорівнює $48°$. Знайдіть другий кут.</p>
                     <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
-                    </div>
-                    <p class="feedback"></p>
-                </div>
-
-                <!-- Питання 3: введення + показати розв'язок -->
-                <div class="question">
-                    <p class="question-text">3. Текст питання?</p>
-                    <div class="input-answer">
-                        <input type="text" placeholder="Ваша відповідь">
-                        <button class="btn" onclick="checkInput(this, '0')">Перевірити</button>
+                        <input type="text" placeholder="Градуси">
+                        <button class="btn" onclick="checkInput(this, '132')">Перевірити</button>
                         <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
                     </div>
                     <p class="feedback"></p>
                     <div class="solution">
                         <div class="solution-title">Розв'язання:</div>
-                        <p><em>Тут буде розв'язання.</em></p>
+                        <p>$180° - 48° = 132°$.</p>
+                        <p><strong>Відповідь:</strong> $132°$.</p>
                     </div>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">3. При перетині двох прямих утворилися кути. Один з них — $55°$. Який із
+                        запропонованих кутів є вертикальним до нього?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$55°$ і
+                            $125°$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$55°$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$125°$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$90°$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">4. Радіус кола дорівнює 8 см. Чому дорівнює діаметр?</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="см">
+                        <button class="btn" onclick="checkInput(this, '16')">Перевірити</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">5. Знайдіть довжину кола радіуса $R = 3$.</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$3\pi$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$6\pi$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$9\pi$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$12\pi$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">6. Знайдіть площу круга, якщо його діаметр дорівнює 10 см.</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$10\pi$
+                            см²</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$25\pi$
+                            см²</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$100\pi$
+                            см²</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$5\pi$
+                            см²</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">7. Яка з прямих дотикається до кола радіуса $R = 5$, якщо відстань від
+                        центра до прямої дорівнює $d$?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$d = 3$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$d = 5$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$d = 7$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$d = 10$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">8. Відрізок, що з'єднує дві точки кола і проходить через центр,
+                        називається...</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">хордою</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">діаметром</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">радіусом</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">дугою</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">9. Довжина кола дорівнює $12\pi$. Знайдіть радіус.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '6')">Перевірити</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">10. Точки $A$ і $B$ лежать на колі радіуса 5. Яке найбільше значення
+                        довжини відрізка $AB$?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$5$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$10$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$15$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$25$</button>
+                    </div>
+                    <p class="feedback"></p>
                 </div>
 
             </div>
@@ -94,7 +473,7 @@
 
         <nav class="lesson-nav">
             <a href="algebra-20.html">← Завдання з параметром</a>
-            <a href="geometry-02.html">Трикутники. Види. Рівність та подібність →</a>
+            <a href="geometry-02.html">Трикутники →</a>
         </nav>
     </main>
 
@@ -106,4 +485,5 @@
 
     <script src="../script.js"></script>
 </body>
+
 </html>
