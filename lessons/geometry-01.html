@@ -164,9 +164,14 @@
                     <text x="200" y="120" font-size="14" font-weight="700" fill="#dc2626">2</text>
                     <text x="150" y="120" font-size="14" font-weight="700" fill="#2563eb">3</text>
                     <text x="110" y="90" font-size="14" font-weight="700" fill="#dc2626">4</text>
-
-                    <text x="20" y="145" font-size="12" fill="#64748b">∠1 і ∠3 — вертикальні (рівні)</text>
-                    <text x="20" y="165" font-size="12" fill="#64748b">∠1 + ∠2 = 180° — суміжні</text>
+                    <path d="M 120 100 A 40 40 0 0 1 127 77" fill="none" stroke="#dc2626" stroke-width="1.5" />
+                    <path d="M 200 100 A 40 40 0 0 1 192 122" fill="none" stroke="#dc2626" stroke-width="1.5" />
+                    <path d="M 204 100 A 43 43 0 0 0 124 76" fill="none" stroke="blue" stroke-width="1.5"
+                        stroke-dasharray="5 2" />
+                    <path d="M 117 100 A 43 43 0 0 0 195 124" fill="none" stroke="blue" stroke-width="1.5"
+                        stroke-dasharray="5 2" />
+                    <text x="20" y="160" font-size="12" fill="#64748b">∠1 і ∠3 — вертикальні (рівні)</text>
+                    <text x="20" y="180" font-size="12" fill="#64748b">∠1 + ∠2 = 180° — суміжні</text>
                 </svg>
                 <figcaption>Суміжні та вертикальні кути</figcaption>
             </figure>
@@ -182,6 +187,155 @@
                     </ul>
                 </div>
             </div>
+
+            <h2>3. Кути при паралельних прямих і січній</h2>
+
+            <p>Нехай дві паралельні прямі $a$ і $b$ перетинає третя пряма $c$ (січна). Утворюється <strong>вісім
+                    кутів</strong>, які попарно мають спеціальні назви та властивості.</p>
+
+            <figure class="example-figure">
+                <svg width="320" height="200" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+
+                    <!-- Паралельна пряма a (верхня) -->
+                    <line x1="20" y1="60" x2="300" y2="60" stroke="#2563eb" stroke-width="1.5" />
+                    <text x="20" y="50" font-size="16" font-weight="600" fill="#2563eb">a</text>
+
+                    <!-- Паралельна пряма b (нижня) -->
+                    <line x1="20" y1="140" x2="300" y2="140" stroke="#2563eb" stroke-width="1.5" />
+                    <text x="20" y="130" font-size="16" font-weight="600" fill="#2563eb">b</text>
+
+                    <!-- Січна c -->
+                    <line x1="80" y1="20" x2="240" y2="180" stroke="#dc2626" stroke-width="1" />
+                    <text x="95" y="30" font-size="16" font-weight="600" fill="#dc2626">c</text>
+
+                    <!-- Точки перетину -->
+                    <circle cx="120" cy="60" r="4" fill="#1e293b" />
+                    <circle cx="200" cy="140" r="4" fill="#1e293b" />
+
+                    <!-- ===== Кути при точці A (верхня пряма) ===== -->
+                    <!-- ∠1 — верхній лівий -->
+                    <g font-size="14" font-weight="600">
+                        <text x="95" y="55" fill="#16a34a">1</text>
+                        <!-- ∠2 — верхній правий -->
+                        <text x="125" y="55" fill="#9333ea">2</text>
+                        <!-- ∠3 — нижній лівий -->
+                        <text x="110" y="75" fill="#9333ea">3</text>
+                        <!-- ∠4 — нижній правий -->
+                        <text x="140" y="75" fill="#16a34a">4</text>
+
+                        <!-- ===== Кути при точці B (нижня пряма) ===== -->
+                        <!-- ∠5 — верхній лівий -->
+                        <text x="170" y="135" fill="#16a34a">5</text>
+                        <!-- ∠6 — верхній правий -->
+                        <text x="205" y="135" fill="#9333ea">6</text>
+                        <!-- ∠7 — нижній лівий -->
+                        <text x="190" y="155" fill="#9333ea">7</text>
+                        <!-- ∠8 — нижній правий -->
+                        <text x="220" y="155" fill="#16a34a">8</text>
+                    </g>
+                    
+                </svg>
+                <figcaption>Кути, утворені при перетині двох паралельних прямих січною</figcaption>
+            </figure>
+
+            <h3>Назви пар кутів</h3>
+
+            <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+                <tr style="background: #f1f5f9;">
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Назва</strong></td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Пари кутів</strong></td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Властивість</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Внутрішні односторонні</strong></td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">$\angle 3$ і $\angle 5$; $\angle 4$ і $\angle
+                        6$</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">сума $= 180°$</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Внутрішні різносторонні</strong></td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">$\angle 3$ і $\angle 6$; $\angle 4$ і $\angle
+                        5$</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">рівні</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Відповідні</strong></td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">$\angle 1$ і $\angle 5$; $\angle 2$ і $\angle
+                        6$; $\angle 3$ і $\angle 7$; $\angle 4$ і $\angle 8$</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">рівні</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Зовнішні односторонні</strong></td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">$\angle 1$ і $\angle 7$; $\angle 2$ і $\angle
+                        8$</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">сума $= 180°$</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Зовнішні різносторонні</strong></td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">$\angle 1$ і $\angle 8$; $\angle 2$ і $\angle
+                        7$</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">рівні</td>
+                </tr>
+            </table>
+
+            <div class="remember">
+                <span class="remember-icon">💡</span>
+                <div class="remember-text">
+                    <strong>Мнемоніка:</strong>
+                    <ul style="margin-top: 8px;">
+                        <li><strong>Відповідні</strong> — на одному «місці» біля своєї прямої (наприклад, обидва верхні
+                            праві).</li>
+                        <li><strong>Різносторонні</strong> — лежать по різні боки від січної, між паралельними прямими
+                            (внутрішні) або поза ними (зовнішні).</li>
+                        <li><strong>Односторонні</strong> — лежать по один бік від січної. Їх сума завжди $180°$.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="warning">
+                <span class="warning-icon">⚠️</span>
+                <div class="warning-text">
+                    <strong>Увага!</strong> Ці властивості працюють <strong>тільки для паралельних</strong> прямих. Якщо
+                    прямі не паралельні — рівності та суми не виконуються.
+                </div>
+            </div>
+
+            <h3>Ознаки паралельності прямих</h3>
+
+            <p>Якщо при перетині двох прямих січною виконується <strong>хоча б одна</strong> з умов:</p>
+            <ul>
+                <li>відповідні кути рівні; <strong>або</strong></li>
+                <li>внутрішні різносторонні кути рівні; <strong>або</strong></li>
+                <li>сума внутрішніх односторонніх кутів $= 180°$, —</li>
+            </ul>
+            <p>то ці дві прямі <strong>паралельні</strong>.</p>
+
+            <div class="example">
+                <div class="example-title">Приклад. Кути при паралельних прямих</div>
+                <p>Дві паралельні прямі перетинає січна. Один із внутрішніх односторонніх кутів дорівнює $65°$. Знайдіть
+                    другий внутрішній односторонній кут.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Сума внутрішніх односторонніх кутів $= 180°$.</p>
+                <p>Другий кут: $180° - 65° = 115°$.</p>
+                <p><strong>Відповідь:</strong> $115°$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад. Знайти всі кути</div>
+                <p>Дві паралельні прямі перетинає січна. Один з кутів дорівнює $40°$. Знайдіть решту сім кутів.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Нехай $\angle 1 = 40°$.</p>
+                <ul>
+                    <li>$\angle 3 = 40°$ (вертикальний до $\angle 1$).</li>
+                    <li>$\angle 2 = 180° - 40° = 140°$ (суміжний).</li>
+                    <li>$\angle 4 = 140°$ (вертикальний до $\angle 2$).</li>
+                    <li>$\angle 5 = 40°$ (відповідний до $\angle 1$).</li>
+                    <li>$\angle 7 = 40°$ (вертикальний до $\angle 5$).</li>
+                    <li>$\angle 6 = 140°$, $\angle 8 = 140°$.</li>
+                </ul>
+                <p><strong>Відповідь:</strong> чотири кути по $40°$ і чотири по $140°$.</p>
+            </div>
+
 
             <h2>3. Коло та круг</h2>
 
