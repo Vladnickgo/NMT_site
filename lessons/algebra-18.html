@@ -46,67 +46,6 @@
                 $P(x; y)$ лежить на цьому колі, а $\alpha$ — кут між додатним напрямом осі $Ox$ і променем $OP$.</p>
 
             <figure class="example-figure">
-                <svg width="340" height="340" viewBox="-170 -170 340 340" xmlns="http://www.w3.org/2000/svg">
-
-                    <!-- Сітка -->
-                    <g stroke="#000" stroke-opacity="0.08" stroke-width="1">
-                        <line x1="-200" y1="-150" x2="200" y2="-150" />
-                        <line x1="-200" y1="-75" x2="200" y2="-75" />
-                        <line x1="-200" y1="75" x2="200" y2="75" />
-                        <line x1="-200" y1="150" x2="200" y2="150" />
-
-                        <line x1="-150" y1="-200" x2="-150" y2="200" />
-                        <line x1="-75" y1="-200" x2="-75" y2="200" />
-                        <line x1="75" y1="-200" x2="75" y2="200" />
-                        <line x1="150" y1="-200" x2="150" y2="200" />
-                    </g>
-
-                    <!-- Осі -->
-                    <line x1="-210" y1="0" x2="210" y2="0" stroke="#1e293b" stroke-width="1.5" />
-                    <polygon points="170,0 160,-4 160,4" fill="#1e293b" />
-                    <text x="215" y="5" font-size="14" font-weight="700" fill="#1e293b">x</text>
-
-                    <line x1="0" y1="210" x2="0" y2="-210" stroke="#1e293b" stroke-width="1.5" />
-                    <polygon points="0,-170 -4,-160 4,-160" fill="#1e293b" />
-                    <text x="8" y="-212" font-size="14" font-weight="700" fill="#1e293b">y</text>
-
-                    <!-- Одиничне коло -->
-                    <circle cx="0" cy="0" r="150" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.5" />
-
-                    <!-- Радіус (кут 45°) -->
-                    <line x1="0" y1="0" x2="106" y2="-106" stroke="#dc2626" stroke-width="2" />
-                    <circle cx="0" cy="0" r="4" fill="#1e293b" />
-
-                    <!-- Точка P -->
-                    <circle cx="106" cy="-106" r="5" fill="#dc2626" />
-                    <text x="112" y="-108" font-size="14" font-weight="700" fill="#dc2626">P(x; y)</text>
-
-                    <!-- Дуга кута -->
-                    <path d="M 40 0 A 40 40 0 0 0 28 -28" fill="none" stroke="#16a34a" stroke-width="2" />
-                    <text x="55" y="-15" font-size="14" font-weight="700" fill="#16a34a">α</text>
-
-                    <!-- Проекції -->
-                    <line x1="106" y1="0" x2="106" y2="-106" stroke="#64748b" stroke-width="1.5"
-                        stroke-dasharray="4,3" />
-                    <line x1="0" y1="-106" x2="106" y2="-106" stroke="#64748b" stroke-width="1.5"
-                        stroke-dasharray="4,3" />
-
-                    <text x="106" y="18" font-size="12" fill="#64748b" text-anchor="middle">x</text>
-                    <text x="-15" y="-106" font-size="12" fill="#64748b" text-anchor="end">y</text>
-
-                    <!-- Підписи точок -->
-                    <text x="-12" y="18" font-size="14" fill="#1e293b">O</text>
-                    <text x="122" y="18" font-size="12" fill="#1e293b">(1; 0)</text>
-                    <text x="8" y="-155" font-size="12" fill="#1e293b">(0; 1)</text>
-                    <text x="-150" y="18" font-size="12" fill="#1e293b">(−1; 0)</text>
-                    <text x="8" y="165" font-size="12" fill="#1e293b">(0; −1)</text>
-                    <text x="45" y="18" font-size="16" font-weight="bold" fill="#1e293b">cos α</text>
-                    <text x="-40" y="-60" font-size="16" font-weight="bold" fill="#1e293b">sin α</text>
-                </svg>
-                <figcaption>Одиничне коло: точка $P(x; y)$ визначає тригонометричні функції кута $\alpha$</figcaption>
-            </figure>
-
-            <figure class="example-figure">
                 <svg width="320" height="320" viewBox="-160 -160 320 320" xmlns="http://www.w3.org/2000/svg">
 
                     <!-- Сітка -->
@@ -143,7 +82,7 @@
                     <text x="100" y="-85" font-size="14" font-weight="700" fill="#dc2626">P(x; y)</text>
 
                     <!-- Дуга кута -->
-                    
+
                     <path d="M 40 0 A 40 40 0 0 0 34 -20" fill="none" stroke="#16a34a" stroke-width="2" />
                     <text x="55" y="-15" font-size="14" font-weight="700" fill="#16a34a">α</text>
 
@@ -173,9 +112,11 @@
                     <text x="-55" y="-30" font-size="16" font-weight="bold" fill="#1e293b">sin α</text>
 
                     <!-- Фігурна дужка вертикальна-->
-                    <path d="M0 0 Q-5 0 -5 -5 L-5 -5 -5 -30 Q-5 -35 -10 -35 Q-5 -35 -5 -40 L-5 -40 -5 -65 Q-5 -70 0 -70" fill="none" stroke="blue" stroke-width="1.5"/>
-                     <!-- Фігурна дужка горизонтальна-->
-                     <path d="M0 2 Q0 6 6 6 L5 6 56 6 Q61 6 61 11 Q61 6 66 6 L66 6 116 6 Q121 6 121 1" fill="none" stroke="blue" stroke-width="1.5"/>
+                    <path d="M0 0 Q-5 0 -5 -5 L-5 -5 -5 -30 Q-5 -35 -10 -35 Q-5 -35 -5 -40 L-5 -40 -5 -65 Q-5 -70 0 -70"
+                        fill="none" stroke="blue" stroke-width="1.5" />
+                    <!-- Фігурна дужка горизонтальна-->
+                    <path d="M0 2 Q0 6 6 6 L5 6 56 6 Q61 6 61 11 Q61 6 66 6 L66 6 116 6 Q121 6 121 1" fill="none"
+                        stroke="blue" stroke-width="1.5" />
 
                 </svg>
                 <figcaption>Одиничне коло: точка $P(x; y)$ визначає тригонометричні функції кута $\alpha$</figcaption>
@@ -247,6 +188,67 @@
                         −</td>
                 </tr>
             </table>
+
+            <figure class="example-figure">
+                <svg width="320" height="150" viewBox="-160 -75 320 150" xmlns="http://www.w3.org/2000/svg">
+
+                    <!-- Сітка -->
+                    <g stroke="#1e293b" stroke-width="0.9">
+                        <!-- Осі x -->
+                        <line x1="-155" y1="0" x2="-55" y2="0" />
+                        <polygon points="-55,0 -65,-4 -65,4" />
+
+                        <line x1="-50" y1="0" x2="50" y2="0" />
+                        <polygon points="50, 0 40,-4 40, 4" />
+
+                        <line x1="55" y1="0" x2="155" y2="0" />
+                        <polygon points="155, 0 145,-4 145, 4" />
+
+                        <!-- Осі y -->
+                        <line x1="-105" y1="45" x2="-105" y2="-55" />
+                        <polygon points="-105, -55, -101,-45,-109, -45" />
+
+                        <line x1="0" y1="45" x2="0" y2="-55" />
+                        <polygon points="0, -55, -4,-45, 4, -45" />
+
+                        <line x1="105" y1="45" x2="105" y2="-55" />
+                        <polygon points="105, -55, 101,-45, 109, -45" />
+                    </g>
+
+
+                    <!-- Одиничне коло -->
+                    <g fill="none" stroke="#1e293b" stroke-width="0.9" opacity="0.5">
+                        <circle cx="-105" cy="0" r="35" />
+                        <circle cx="0" cy="0" r="35" />
+                        <circle cx="105" cy="0" r="35" />
+                    </g>
+                    <!--Знаки-->
+                    <g font-size="16" font-weight="bold" fill="#1e293b">
+                        <text x="-95" y="-10">+</text>
+                        <text x="-125" y="-10">+</text>
+                        <text x="-93" y="18">-</text>
+                        <text x="-123" y="18">-</text>
+
+                        <text x="-19" y="-10">-</text>
+                        <text x="11" y="-10">+</text>
+                        <text x="-19" y="18">-</text>
+                        <text x="11" y="18">+</text>
+
+                        <text x="85" y="-10">+</text>
+                        <text x="115" y="-10">+</text>
+                        <text x="87" y="18">-</text>
+                        <text x="117" y="18">-</text>
+                    </g>
+
+                    <g font-size="14" font-weight="bold" fill="#1e293b">
+                        <text x="-120" y="60">sin α</text>
+                        <text x="-15" y="60" font-size="14">cos α</text>
+                        <text x="75" y="60" font-size="14">tg α, ctg α</text>
+                    </g>
+
+                </svg>
+                <figcaption>Знаки тригонометричних функцій у чвертях</figcaption>
+            </figure>
 
             <div class="remember">
                 <span class="remember-icon">💡</span>
