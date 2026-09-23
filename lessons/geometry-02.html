@@ -13,6 +13,7 @@
         };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+    <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 </head>
 
 <body>
@@ -710,11 +711,8 @@
                 Радіус:</p>
             <p>$$R = \dfrac{abc}{4S}$$</p>
 
-            <div
-                style="width: 100%; max-width: 700px; height: 420px; margin: 1.5rem auto; overflow: hidden; border: 1px solid #ccc; border-radius: 8px; position: relative;">
-                <iframe src="https://www.desmos.com/geometry/3ef5cd2421?lang=uk&expss=false" width="100%" height="480px"
-                    style="position: absolute; top: -50px; left: 0; border: none;">
-                </iframe>
+            <div id="desmos-container"
+                style="width: 100%; max-width: 700px; height: 420px; margin: 1.5rem auto; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;">
             </div>
 
             <div class="remember">
@@ -977,6 +975,290 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elt = document.getElementById('desmos-container');
+
+            var options = {
+                expressions: false,   // 👈 Скрывает боковую панель выражений
+                settingsMenu: false,  // скрывает меню настроек
+                zoomButtons: false,   // скрывает кнопки масштабирования
+                keypad: false,        // скрывает клавиатуру
+                border: false         // убирает рамку вокруг калькулятора
+            };
+
+            // Для Geometry API (так как в вашем URL используется geometry)
+            var geometry = Desmos.Geometry(elt, options);
+            // Если скопированный текст начинается и заканчивается кавычками
+            var state = {
+                "version": 11,
+                "randomSeed": "74bab576a3806cd78c32a7b4ae7dddf6",
+                "graph": {
+                    "viewport": {
+                        "xmin": -6.267726877003037,
+                        "ymin": -4.474387771966983,
+                        "xmax": 6.046254313788783,
+                        "ymax": 7.839593418824837
+                    },
+                    "showGrid": false,
+                    "showXAxis": false,
+                    "showYAxis": false,
+                    "degreeMode": true,
+                    "product": "geometry-calculator",
+                    "__v12ViewportLatexStash": {
+                        "xmin": "-6.267726877003037",
+                        "xmax": "6.046254313788783",
+                        "ymin": "-4.474387771966983",
+                        "ymax": "7.839593418824837"
+                    }
+                },
+                "expressions": {
+                    "list": [
+                        {
+                            "type": "folder",
+                            "id": "**dcg_geo_folder**",
+                            "title": "geometry",
+                            "secret": true
+                        },
+                        {
+                            "type": "expression",
+                            "id": "3",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#6042a6",
+                            "latex": "\\token{3}=\\left(-1.43,3.57\\right)",
+                            "showLabel": true,
+                            "label": "B"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "4",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#6042a6",
+                            "latex": "\\token{4}=\\left(1.94,-0.26\\right)",
+                            "showLabel": true,
+                            "label": "C"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "5",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#6042a6",
+                            "latex": "\\token{5}=\\left(-2.93,-0.16\\right)",
+                            "showLabel": true,
+                            "label": "A"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "2",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#000000",
+                            "latex": "\\token{2}=\\operatorname{angle}\\left(\\token{3},\\token{4},\\token{5}\\right)",
+                            "label": "γ"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "10",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#2d70b3",
+                            "latex": "\\token{10}=\\operatorname{segment}\\left(\\token{3},\\token{4}\\right)",
+                            "showLabel": true,
+                            "label": "a"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "14",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#2d70b3",
+                            "latex": "\\token{14}=\\operatorname{segment}\\left(\\token{4},\\token{5}\\right)",
+                            "showLabel": true,
+                            "label": "b"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "71",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#000000",
+                            "latex": "\\token{71}=\\operatorname{angle}\\left(\\token{4},\\token{5},\\token{3}\\right)",
+                            "label": "α"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "76",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#000000",
+                            "latex": "\\token{76}=\\operatorname{angle}\\left(\\token{5},\\token{3},\\token{4}\\right)",
+                            "label": "β"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "83",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#2d70b3",
+                            "latex": "\\token{83}=\\operatorname{segment}\\left(\\token{5},\\token{3}\\right)",
+                            "showLabel": true,
+                            "label": "с"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "89",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#6042a6",
+                            "latex": "\\token{89}=\\operatorname{midpoint}\\left(\\token{83}\\right)"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "92",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#6042a6",
+                            "latex": "\\token{92}=\\operatorname{midpoint}\\left(\\token{10}\\right)"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "95",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#6042a6",
+                            "latex": "\\token{95}=\\operatorname{midpoint}\\left(\\token{14}\\right)"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "102",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#2d70b3",
+                            "latex": "\\token{102}=\\operatorname{perpendicular}\\left(\\token{14},\\token{95}\\right)",
+                            "hidden": true
+                        },
+                        {
+                            "type": "expression",
+                            "id": "104",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#2d70b3",
+                            "latex": "\\token{104}=\\operatorname{perpendicular}\\left(\\token{83},\\token{89}\\right)",
+                            "hidden": true
+                        },
+                        {
+                            "type": "expression",
+                            "id": "106",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#2d70b3",
+                            "latex": "\\token{106}=\\operatorname{perpendicular}\\left(\\token{10},\\token{92}\\right)",
+                            "hidden": true
+                        },
+                        {
+                            "type": "expression",
+                            "id": "110",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#6042a6",
+                            "latex": "\\token{110}=\\operatorname{intersection}\\left(\\token{102},\\token{10}\\right)"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "109",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#000000",
+                            "latex": "\\token{109}=\\operatorname{angle}\\left(\\token{110},\\token{95},\\token{4}\\right)",
+                            "showAngleLabel": false
+                        },
+                        {
+                            "type": "expression",
+                            "id": "119",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#6042a6",
+                            "latex": "\\token{119}=\\operatorname{intersection}\\left(\\token{14},\\token{106}\\right)"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "114",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#000000",
+                            "latex": "\\token{114}=\\operatorname{angle}\\left(\\token{3},\\token{92},\\token{119}\\right)",
+                            "showAngleLabel": false
+                        },
+                        {
+                            "type": "expression",
+                            "id": "126",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#6042a6",
+                            "latex": "\\token{126}=\\operatorname{intersection}\\left(\\token{104},\\token{10}\\right)"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "120",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#000000",
+                            "latex": "\\token{120}=\\operatorname{angle}\\left(\\token{3},\\token{89},\\token{126}\\right)",
+                            "showAngleLabel": false
+                        },
+                        {
+                            "type": "expression",
+                            "id": "181",
+                            "folderId": "**dcg_geo_folder**",
+                            "color": "#6042a6",
+                            "latex": "\\token{179}=\\operatorname{intersection}\\left(l_2,l_{1}\\right)",
+                            "showLabel": true,
+                            "label": "O"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "132",
+                            "color": "#fa7e19",
+                            "latex": "l_1=\\operatorname{segment}\\left(\\token{89},\\token{126}\\right)",
+                            "lineStyle": "DASHED",
+                            "lineWidth": "1.5"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "161",
+                            "color": "#fa7e19",
+                            "latex": "l_2=\\operatorname{segment}\\left(\\token{110},\\token{95}\\right)",
+                            "lineStyle": "DASHED",
+                            "lineWidth": "1.5"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "144",
+                            "color": "#fa7e19",
+                            "latex": "l_3=\\operatorname{segment}\\left(\\token{119},\\token{92}\\right)",
+                            "lineStyle": "DASHED",
+                            "lineWidth": "1.5"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "186",
+                            "color": "#388c46",
+                            "latex": "l_4=\\operatorname{segment}\\left(\\token{179},\\token{5}\\right)",
+                            "showLabel": true,
+                            "label": "R"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "193",
+                            "color": "#2d70b3",
+                            "latex": "l_5=\\operatorname{segment}\\left(\\token{179},\\token{3}\\right)",
+                            "showLabel": true,
+                            "label": "R"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "197",
+                            "color": "#2d70b3",
+                            "latex": "l_6=\\operatorname{segment}\\left(\\token{179},\\token{4}\\right)",
+                            "showLabel": true,
+                            "label": "R"
+                        },
+                        {
+                            "type": "expression",
+                            "id": "180",
+                            "color": "#388c46",
+                            "latex": "c_1=\\operatorname{circle}\\left(\\token{179},\\token{3}\\right)"
+                        }
+                    ]
+                },
+                "includeFunctionParametersInRandomSeed": true,
+                "doNotMigrateMovablePointStyle": true
+            }
+            geometry.setState(state);
+        });
+    </script>
 </body>
 
 </html>
