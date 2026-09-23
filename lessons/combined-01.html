@@ -13,6 +13,7 @@
         };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+    <script src="https://www.desmos.com/api/v1.9/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 </head>
 
 <body>
@@ -38,7 +39,7 @@
                 height="320">
                 <defs />
                 <g transform="scale(1,1)">
-                    
+
                     <g id="graphpaper-3e6d7f7eab594658" data-graph-part="graphpaper">
                         <g id="axis-61934ac540d8477e">
                             <g>
@@ -120,18 +121,18 @@
                             <path fill="#6042a6" stroke="none" class="dcg-svg-point" paint-order="stroke fill markers"
                                 d=" M 215.8156242501173 155.81967953059407 A 4 4 0 1 1 215.81562225011749 155.81567953126074 Z" />
                         </g>
-                        
-                        
+
+
                     </g>
-                    
+
                     <g id="expression-9fe9e2af1a3844ec" data-expression-id="25">
                         <title>Выражение1</title>
                         <path fill="#6042a6" stroke="none" class="dcg-svg-point" paint-order="stroke fill markers"
                             d=" M 196.2 203.6 A 4 4 0 1 1 196.19999800000016 203.59600000066666 Z" />
                     </g>
-                    
-                    
-                    <circle cx="167" cy="137.4" r="2"/>
+
+
+                    <circle cx="167" cy="137.4" r="2" />
                     <g id="expression-19933e9b82084e63" data-expression-id="31">
                         <title>Выражение1</title>
                         <path fill="#6042a6" stroke="none" class="dcg-svg-point" paint-order="stroke fill markers"
@@ -141,6 +142,10 @@
                 </g>
             </svg>
 
+        </article>
+        <article>
+            <div id="calculator" style="width: 100%; max-width: 600px; height: 400px; margin: 1rem auto;">
+            </div>
         </article>
 
         <nav class="lesson-nav">
@@ -156,6 +161,16 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script>
+        var elt = document.getElementById('calculator');
+        var calculator = Desmos.GraphingCalculator(elt);
+        
+        // 1. Задаем саму функцию
+        calculator.setExpression({ id: 'graph1', latex: 'y = x^2 - a' });
+    
+        // 2. Явно задаем слайдер для параметра a с границами
+        calculator.setExpression({ id: 'sliderA', latex: 'a = 1', sliderBounds: { min: -5, max: 5, step: 0.5 } });
+    </script>
 </body>
 
 </html>
