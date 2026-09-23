@@ -54,28 +54,35 @@
             <figure class="example-figure">
                 <svg width="320" height="240" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
                     <!-- Трикутник -->
-                    <polygon points="60,200 300,200 180,40" fill="#dbeafe" fill-opacity="0.5" stroke="#2563eb"
+                    <polygon points="60,200 300,200 120,40" fill="#dbeafe" fill-opacity="0.5" stroke="#2563eb"
                         stroke-width="1.5" />
 
                     <!-- Вершини -->
                     <circle cx="60" cy="200" r="4" fill="#1e293b" />
                     <circle cx="300" cy="200" r="4" fill="#1e293b" />
-                    <circle cx="180" cy="40" r="4" fill="#1e293b" />
+                    <circle cx="120" cy="40" r="4" fill="#1e293b" />
 
                     <!-- Підписи вершин -->
                     <text x="40" y="215" font-size="16" font-weight="700" fill="#1e293b">A</text>
                     <text x="305" y="215" font-size="16" font-weight="700" fill="#1e293b">B</text>
-                    <text x="175" y="30" font-size="16" font-weight="700" fill="#1e293b">C</text>
+                    <text x="125" y="30" font-size="16" font-weight="700" fill="#1e293b">C</text>
+                    <text x="80" y="190" font-size="16" font-weight="600" fill="#1e293b">α</text>
+                    <text x="255" y="190" font-size="16" font-weight="600" fill="#1e293b">β</text>
+                    <text x="120" y="75" font-size="16" font-weight="600" fill="#1e293b">γ</text>
 
                     <!-- Підписи сторін -->
-                    <text x="180" y="220" font-size="15" fill="#64748b" text-anchor="middle">c (AB)</text>
-                    <text x="240" y="115" font-size="15" fill="#64748b">a (BC)</text>
-                    <text x="80" y="115" font-size="15" fill="#64748b">b (AC)</text>
+                    <text x="180" y="220" font-size="15" fill="#444444" text-anchor="middle">c (AB)</text>
+                    <text x="225" y="120" font-size="15" fill="#444444">a (BC)</text>
+                    <text x="40" y="120" font-size="15" fill="#444444">b (AC)</text>
 
                     <!-- Кути -->
-                    <path d="M 80 200 A 20 20 0 0 0 70 185" fill="none" stroke="#16a34a" stroke-width="1.5" />
-                    <path d="M 280 200 A 20 20 0 0 1 290 185" fill="none" stroke="#16a34a" stroke-width="1.5" />
-                    <path d="M 170 60 A 25 25 0 0 0 190 60" fill="none" stroke="#16a34a" stroke-width="1.5" />
+
+                    <circle cx="60" cy="200" r="15.915" fill="transparent" stroke="#0005fa" stroke-width="3"
+                        stroke-dasharray="18 82" stroke-dashoffset="-81" />
+                    <circle cx="300" cy="200" r="15.915" fill="transparent" stroke="#0005fa" stroke-width="3"
+                        stroke-dasharray="11 88" stroke-dashoffset="49" />
+                    <circle cx="120" cy="40" r="15.915" fill="transparent" stroke="#0005fa" stroke-width="3"
+                        stroke-dasharray="20 80" stroke-dashoffset="89" />
                 </svg>
                 <figcaption>Трикутник $ABC$: сторони $a$, $b$, $c$ і кути $\angle A$, $\angle B$, $\angle C$
                 </figcaption>
