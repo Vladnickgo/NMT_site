@@ -177,15 +177,11 @@
             <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
                 <tr style="background: #f1f5f9;">
                     <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Ознака</strong></td>
-                    <td style="padding: 10px; border: 1px solid #e2e8f0;">
-                        <strong>Малюнок</strong>
-                    </td>
                     <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Умова</strong></td>
                 </tr>
                 <tr>
                     <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>I. За двома сторонами і кутом між
-                            ними</strong></td>
-                    <td style="padding: 5px; border: 1px solid #e2e8f0;">
+                            ними</strong>
                         <figure class="example-figure">
                             <svg width="120" height="150" viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg">
                                 <!-- A -->
@@ -224,8 +220,8 @@
                 </tr>
                 <tr>
                     <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>II. За стороною і двома прилеглими
-                            кутами</strong></td>
-                    <td style="padding: 10px; border: 1px solid #e2e8f0;">
+                            кутами</strong>
+
                         <figure class="example-figure">
                             <svg width="120" height="150" viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg">
                                 <!-- A -->
@@ -265,8 +261,8 @@
                         $\angle B = \angle B_1$</td>
                 </tr>
                 <tr>
-                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>III. За трьома сторонами</strong></td>
-                    <td style="padding: 10px; border: 1px solid #e2e8f0;">
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>III. За трьома сторонами</strong>
+
                         <figure class="example-figure">
                             <svg width="120" height="150" viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg">
                                 <!-- ABC -->
@@ -315,13 +311,13 @@
 
             <h3>Три ознаки подібності</h3>
 
-            <ul>
+            <ol>
                 <li><strong>За двома кутами:</strong> $\angle A = \angle A_1$, $\angle B = \angle B_1$.</li>
                 <li><strong>За двома сторонами і кутом між ними:</strong> $\dfrac{A_1B_1}{AB} = \dfrac{A_1C_1}{AC}$ і
                     $\angle A = \angle A_1$.</li>
                 <li><strong>За трьома сторонами:</strong> $\dfrac{A_1B_1}{AB} = \dfrac{B_1C_1}{BC} =
                     \dfrac{A_1C_1}{AC}$.</li>
-            </ul>
+            </ol>
 
             <div class="remember">
                 <span class="remember-icon">💡</span>
@@ -714,43 +710,12 @@
                 Радіус:</p>
             <p>$$R = \dfrac{abc}{4S}$$</p>
 
-            <figure class="example-figure">
-                <svg width="620" height="280" viewBox="0 0 620 280" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Лівий трикутник: вписане коло -->
-                    <polygon points="60,220 240,220 150,80" fill="#dbeafe" fill-opacity="0.3" stroke="#2563eb"
-                        stroke-width="2" />
-                    <circle cx="150" cy="171" r="49" fill="none" stroke="#16a34a" stroke-width="2" />
-                    <circle cx="150" cy="185" r="4" fill="#16a34a" />
-                    <text x="155" y="182" font-size="13" font-weight="700" fill="#16a34a">O</text>
-
-                    <!-- Бісектриси (приблизно) -->
-                    <line x1="60" y1="220" x2="150" y2="185" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3" />
-                    <line x1="240" y1="220" x2="150" y2="185" stroke="#dc2626" stroke-width="1"
-                        stroke-dasharray="4,3" />
-                    <line x1="150" y1="80" x2="150" y2="185" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3" />
-
-                    <text x="150" y="260" font-size="14" font-weight="700" fill="#16a34a" text-anchor="middle">Вписане
-                        коло (r = S/p)</text>
-
-                    <!-- Правий трикутник: описане коло -->
-                    <polygon points="380,220 560,220 470,80" fill="#dcfce7" fill-opacity="0.3" stroke="#2563eb"
-                        stroke-width="2" />
-                    <circle cx="470" cy="170" r="95" fill="none" stroke="#9333ea" stroke-width="2" />
-                    <circle cx="470" cy="170" r="4" fill="#9333ea" />
-                    <text x="475" y="167" font-size="13" font-weight="700" fill="#9333ea">O</text>
-
-                    <!-- Радіуси -->
-                    <line x1="470" y1="170" x2="380" y2="220" stroke="#dc2626" stroke-width="1"
-                        stroke-dasharray="4,3" />
-                    <line x1="470" y1="170" x2="560" y2="220" stroke="#dc2626" stroke-width="1"
-                        stroke-dasharray="4,3" />
-                    <line x1="470" y1="170" x2="470" y2="80" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3" />
-
-                    <text x="470" y="260" font-size="14" font-weight="700" fill="#9333ea" text-anchor="middle">Описане
-                        коло (R = abc/4S)</text>
-                </svg>
-                <figcaption>Вписане та описане кола трикутника</figcaption>
-            </figure>
+            <div
+                style="width: 100%; max-width: 700px; height: 420px; margin: 1.5rem auto; overflow: hidden; border: 1px solid #ccc; border-radius: 8px; position: relative;">
+                <iframe src="https://www.desmos.com/geometry/3ef5cd2421?lang=uk&expss=false" width="100%" height="480px"
+                    style="position: absolute; top: -50px; left: 0; border: none;">
+                </iframe>
+            </div>
 
             <div class="remember">
                 <span class="remember-icon">💡</span>
