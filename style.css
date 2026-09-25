@@ -27,6 +27,20 @@ body {
     flex-direction: column;
 }
 
+h3{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #dbeafe;
+    color: #1e40af;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 14px 20px;
+    border-radius: 10px;
+    margin: 26px 0 18px;
+    
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -669,4 +683,45 @@ body {
     .remember-icon {
         font-size: 1.2rem;
     }
+}
+/* ===== Універсальний блок формули ===== */
+.formula {
+    display: block;
+    background: #f8fafc;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 14px 20px;
+    text-align: center;
+    color: #1e40af;
+    font-size: 1.05rem;
+    width: fit-content;
+    max-width: 100%;
+    margin: 16px auto;
+    box-sizing: border-box;
+}
+
+/* Формули MathJax не мають зайвих відступів */
+.formula mjx-container {
+    margin: 0 !important;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+    .formula {
+        padding: 12px 14px;
+        font-size: 0.98rem;
+    }
+}
+
+/* ===== Заголовки h2 уроці ===== */
+.lesson-content h2 {
+    font-size: 1.35rem;
+    color: #1e40af;
+    margin: 60px 0 18px;
+    padding: 6px 0 6px 14px;
+    border-left: 5px solid #2563eb;
+    background: linear-gradient(90deg, #eff6ff 0%, transparent 100%);
+    border-radius: 4px;
+    font-weight: 700;
+    line-height: 1.35;
 }
