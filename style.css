@@ -1,4 +1,4 @@
-* {
+﻿* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -185,6 +185,15 @@ body {
     border: 1px solid var(--border);
 }
 
+.lesson-content .objective {
+    border-bottom: 2px solid var(--border);
+}
+
+.lesson-content .objective h2 {
+    border-bottom: 2px solid var(--border);
+}
+
+
 .lesson-content h2 {
     font-size: 1.2rem;
     margin: 24px 0 12px;
@@ -198,6 +207,14 @@ body {
 
 .lesson-content p {
     margin-bottom: 12px;
+}
+
+.lesson-content .formula {
+    /*border: 1px solid var(--border);*/
+    padding: 2px 25px 2px;
+    border-radius: 6px;
+    display: table;
+    margin: 10px auto;
 }
 
 .lesson-content ul,
@@ -221,6 +238,10 @@ body {
     font-weight: 700;
     color: var(--primary-dark);
     margin-bottom: 8px;
+}
+
+.example-figure {
+    width: fit-content;
 }
 
 /* Тести */
@@ -597,9 +618,11 @@ body {
         padding: 14px 16px;
         margin: 18px 0;
     }
+
     .theory-example-title {
         font-size: 0.98rem;
     }
+
     .theory-example ul li {
         font-size: 0.92rem;
     }
@@ -666,6 +689,7 @@ body {
         font-size: 0.93rem;
         margin: 18px 0;
     }
+
     .remember-icon {
         font-size: 1.2rem;
     }

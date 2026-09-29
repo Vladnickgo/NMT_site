@@ -39,6 +39,9 @@
             <p>Повторити означення лінійного рівняння, навчитися розв'язувати лінійні рівняння та рівняння, що зводяться
                 до лінійних (з дробами, дужками, змінною в обох частинах), досліджувати рівняння з параметром на
                 кількість коренів.</p>
+            <div class="lesson-block">
+
+            </div>
 
             <h2>1. Означення лінійного рівняння</h2>
 
@@ -165,6 +168,200 @@
                 <p>$2x - 2x = 5 + 6$, отже $0 = 11$ — хибна рівність.</p>
                 <p><strong>Відповідь:</strong> коренів немає.</p>
             </div>
+
+            <h2>4. Системи лінійних рівнянь з двома змінними</h2>
+
+            <div class="lesson-block">
+                <p><strong>Система лінійних рівнянь з двома змінними</strong> — це два (або більше) лінійних рівняння,
+                    які треба розв'язати разом. Розв'язок системи — це <strong>пара чисел</strong> $(x; y)$, яка
+                    задовольняє <em>обидва</em> рівняння одночасно.</p>
+                <div class="formula">
+                    <p>$$\begin{cases} a_1 x + b_1 y = c_1 \\ a_2 x + b_2 y = c_2 \end{cases}$$</p>
+                </div>
+            </div>
+
+            <h3>Способи розв'язування систем</h3>
+
+            <div class="lesson-block">
+                <p><strong>1. Метод підстановки.</strong></p>
+                <p>Виражаємо одну змінну через іншу з одного рівняння і підставляємо в друге.</p>
+                <div class="example">
+                    <div class="example-title">Приклад 1. Метод підстановки</div>
+                    <p>Розв'яжіть систему: $\begin{cases} 2x + y = 7 \\ x - y = 2 \end{cases}$</p>
+                    <p><strong>Розв'язання:</strong></p>
+                    <p>З другого рівняння виразимо $y$: $y = x - 2$.</p>
+                    <p>Підставимо в перше: $2x + (x - 2) = 7 \Rightarrow 3x = 9 \Rightarrow x = 3$.</p>
+                    <p>Тоді $y = 3 - 2 = 1$.</p>
+                    <p><strong>Відповідь:</strong> $(x; y) = (3; 1)$.</p>
+                </div>
+            </div>
+
+            <div class="lesson-block">
+                <p><strong>2. Метод додавання.</strong></p>
+                <p>Додаємо або віднімаємо рівняння так, щоб одна зі змінних зникла.</p>
+                <div class="example">
+                    <div class="example-title">Приклад 2. Метод додавання</div>
+                    <p>Розв'яжіть систему: $\begin{cases} 3x + 2y = 12 \\ 2x - 2y = 8 \end{cases}$</p>
+                    <p><strong>Розв'язання:</strong></p>
+                    <p>Додамо рівняння почленно:</p>
+                    <p>$(3x + 2y) + (2x - 2y) = 12 + 8$</p>
+                    <p>$5x = 20 \Rightarrow x = 4$.</p>
+                    <p>Підставимо в перше: $3 \cdot 4 + 2y = 12 \Rightarrow 12 + 2y = 12 \Rightarrow y = 0$.</p>
+                    <p><strong>Відповідь:</strong> $(x; y) = (4; 0)$.</p>
+                </div>
+            </div>
+
+            <div class="lesson-block">
+                <p><strong>3. Графічний метод.</strong></p>
+                <p>Будуємо графіки обох рівнянь (прямі) і знаходимо точки їх перетину.</p>
+                <p>$\begin{cases} 2x - y = 3 \\ x - y = 1 \end{cases}$</p>
+                <figure>
+                <svg width="320" height="280" viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+                    <!--coordinate axes-->
+                    <line x1="10" y1="140" x2="315" y2="140" stroke="black" />
+                    <line x1="160" y1="10" x2="160" y2="270" stroke="black" />
+                    <text x="310" y="130" style="font: italic 12px sans-serif;">x</text>
+                    <text x="165" y="10" style="font: italic 12px sans-serif;">y</text>
+                    <!--horizontal coordinate grid-->
+                    <line x1="5" y1="40" x2="315" y2="40" stroke="lightgray" />
+                    <line x1="5" y1="90" x2="315" y2="90" stroke="lightgray" />
+                    <line x1="5" y1="190" x2="315" y2="190" stroke="lightgray" />
+                    <line x1="5" y1="240" x2="315" y2="240" stroke="lightgray" />
+                    <!--vertical coordinate grid-->
+                    <line x1="260" y1="10" x2="260" y2="270" stroke="lightgray" />
+                    <line x1="210" y1="10" x2="210" y2="270" stroke="lightgray" />
+                    <line x1="310" y1="10" x2="310" y2="270" stroke="lightgray" />
+                    <line x1="110" y1="10" x2="110" y2="270" stroke="lightgray" />
+                    <line x1="60" y1="10" x2="60" y2="270" stroke="lightgray" />
+                    <line x1="10" y1="10" x2="10" y2="270" stroke="lightgray" />
+                    <!--arrow-->
+                    <polygon points="305,138 315,140 305,142" fill="none" stroke="#1e293b" stroke-width="1" />
+                    <polygon points="158,15 160,5 162,15" fill="none" stroke="#1e293b" stroke-width="1" />
+                    <text x="5" y="155" style="font: italic 12px sans-serif; fill:gray">-3</text>
+                    <text x="55" y="155" style="font: italic 12px sans-serif;fill:gray">-2</text>
+                    <text x="105" y="155" style="font: italic 12px sans-serif;fill:gray">-1</text>
+                    <text x="205" y="155" style="font: italic 12px sans-serif;fill:gray">1</text>
+                    <text x="255" y="155" style="font: italic 12px sans-serif;fill:gray">2</text>
+                    <text x="305" y="155" style="font: italic 12px sans-serif;fill:gray">3</text>
+
+                    <text x="145" y="250" style="font: italic 12px sans-serif;fill:gray">-2</text>
+                    <text x="145" y="200" style="font: italic 12px sans-serif;fill:gray">-1</text>
+                    <text x="145" y="100" style="font: italic 12px sans-serif;fill:gray">1</text>
+                    <text x="145" y="50" style="font: italic 12px sans-serif;fill:gray">2</text>
+
+                    <line x1="60" y1="290" x2="315" y2="35" stroke-width="1.5" stroke="blue" />
+                    <line x1="160" y1="290" x2="310" y2="-10" stroke-width="1.5"stroke="red" />
+                    <line x1="260" y1="90" x2="260" y2="140" stroke="red" stroke-width="2" stroke-dasharray="5 4"/>
+                    <line x1="160" y1="90" x2="260" y2="90" stroke="red" stroke-width="2" stroke-dasharray="5 4"/>
+                    <circle cx="260" cy="90" r="3"/>
+                    <text x="220" y="85" style="font: italic 16px sans-serif;">(2; 1)</text>
+
+                    <text x="100" y="230" style="font: italic 20px serif;fill:blue;" transform="rotate(-40, 100, 230)">2x-y=3</text>
+                    <text x="215" y="230" style="font: italic 20px serif; fill:red;" transform="rotate(-65, 215, 230)">x-y=1</text>
+
+                </svg>
+            </figure>
+            </div>
+
+            <h3>Кількість розв'язків системи</h3>
+
+            <div class="lesson-block">
+                <p>Дві прямі на площині можуть:</p>
+                <ul>
+                    <li><strong>перетинатися в одній точці</strong> — система має <strong>один розв'язок</strong>;</li>
+                    <li><strong>бути паралельними</strong> — система <strong>не має розв'язків</strong>;</li>
+                    <li><strong>збігатися</strong> — система має <strong>безліч розв'язків</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="remember">
+                <span class="remember-icon">💡</span>
+                <div class="remember-text">
+                    <strong>Як швидко визначити кількість розв'язків:</strong>
+                    <ul style="margin-top: 8px;">
+                        <li>$\dfrac{a_1}{a_2} \neq \dfrac{b_1}{b_2}$ — <strong>один розв'язок</strong>;</li>
+                        <li>$\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} \neq \dfrac{c_1}{c_2}$ — <strong>немає
+                                розв'язків</strong>;</li>
+                        <li>$\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} = \dfrac{c_1}{c_2}$ — <strong>безліч
+                                розв'язків</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Приклади</h3>
+
+            <div class="example">
+                <div class="example-title">Приклад 1. Система без розв'язків</div>
+                <p>Розв'яжіть систему: $\begin{cases} x + y = 3 \\ x + y = 5 \end{cases}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Ліві частини однакові, а праві — різні. Отже, рівності суперечливі.</p>
+                <p>Прямі $y = 3 - x$ і $y = 5 - x$ — паралельні.</p>
+                <p><strong>Відповідь:</strong> розв'язків немає.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 2. Система з безліччю розв'язків</div>
+                <p>Розв'яжіть систему: $\begin{cases} x - y = 2 \\ 2x - 2y = 4 \end{cases}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Друге рівняння — це перше, помножене на 2. Отже, це одна й та сама пряма.</p>
+                <p><strong>Відповідь:</strong> безліч розв'язків виду $(x; y) = (t; t - 2)$, де $t$ — будь-яке число.
+                </p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 3. Задача</div>
+                <p>Сума двох чисел дорівнює $12$, а їх різниця — $4$. Знайдіть ці числа.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Нехай числа $x$ і $y$. Складемо систему:</p>
+                <p>$\begin{cases} x + y = 12 \\ x - y = 4 \end{cases}$</p>
+                <p>Додамо: $2x = 16 \Rightarrow x = 8$. Тоді $y = 12 - 8 = 4$.</p>
+                <p><strong>Відповідь:</strong> $8$ і $4$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Приклад 4. Система з дробами</div>
+                <p>Розв'яжіть систему: $\begin{cases} \dfrac{x}{2} + y = 4 \\ x - \dfrac{y}{3} = 1 \end{cases}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Позбудемося дробів. Перше рівняння $\times 2$: $x + 2y = 8$.</p>
+                <p>Друге рівняння $\times 3$: $3x - y = 3$.</p>
+                <p>Маємо: $\begin{cases} x + 2y = 8 \\ 3x - y = 3 \end{cases}$</p>
+                <p>З другого: $y = 3x - 3$. Підставимо: $x + 2(3x - 3) = 8 \Rightarrow 7x = 14 \Rightarrow x = 2$.</p>
+                <p>$y = 3 \cdot 2 - 3 = 3$.</p>
+                <p><strong>Відповідь:</strong> $(x; y) = (2; 3)$.</p>
+            </div>
+
+            <h3>Завдання з НМТ</h3>
+
+            <div class="example">
+                <div class="example-title">НМТ. Знайти суму розв'язку</div>
+                <p>Розв'яжіть систему $\begin{cases} x + y = 7 \\ x - y = 3 \end{cases}$ та знайдіть $x \cdot y$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Додамо: $2x = 10 \Rightarrow x = 5$. Тоді $y = 2$.</p>
+                <p>$x \cdot y = 5 \cdot 2 = 10$.</p>
+                <p><strong>Відповідь:</strong> $10$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">НМТ. Система з параметром</div>
+                <p>При якому значенні $a$ система $\begin{cases} x + y = 3 \\ x - y = a \end{cases}$ має розв'язок $(2;
+                    1)$?</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Підставимо $x = 2$, $y = 1$ у друге рівняння:</p>
+                <p>$2 - 1 = a \Rightarrow a = 1$.</p>
+                <p><strong>Відповідь:</strong> $a = 1$.</p>
+            </div>
+
+            <div class="example">
+                <div class="example-title">НМТ. Система з двох рівнянь</div>
+                <p>Розв'яжіть систему: $\begin{cases} 2x - 3y = 1 \\ 4x + y = 9 \end{cases}$</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>З другого рівняння: $y = 9 - 4x$.</p>
+                <p>Підставимо в перше: $2x - 3(9 - 4x) = 1 \Rightarrow 2x - 27 + 12x = 1 \Rightarrow 14x = 28
+                    \Rightarrow x = 2$.</p>
+                <p>$y = 9 - 8 = 1$.</p>
+                <p><strong>Відповідь:</strong> $(x; y) = (2; 1)$.</p>
+            </div>
+
 
             <!-- ===== ТЕСТ ===== -->
             <div class="test">
@@ -308,6 +505,180 @@
                     <p class="feedback"></p>
                 </div>
 
+                <div class="question">
+                    <p class="question-text">11. Вкажіть рівняння, коренем якого є число $3$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false"
+                            onclick="checkChoice(this, false)">$\dfrac{1}{x-3}=0$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">${x}^{2} - 3 =
+                            3$</button>
+                        <button class="option" data-correct="true"
+                            onclick="checkChoice(this, true)">$\dfrac{4x-9}{2}=1,5$</button>
+                        <button class="option" data-correct="false"
+                            onclick="checkChoice(this, false)">$\dfrac{2x-5}{3}=1$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$2x+3=x$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">12. Укажіть проміжок, якому належить корінь рівняння
+                        $\dfrac{7}{17}x=-4\dfrac{9}{17}$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$[-90;
+                            -80]$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(-80;
+                            77)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$[-77;
+                            -55]$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$(-55;
+                            0]$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(0;
+                            33]$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">13. Розв'яжіть систему: $\begin{cases} x + y = 5 \\ x - y = 1 \end{cases}$
+                    </p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(2; 3)$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$(3; 2)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(1; 4)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(4; 1)$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">14. Розв'яжіть систему: $\begin{cases} 2x + y = 8 \\ x - y = 1 \end{cases}$.
+                        У відповідь запишіть $x$.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="x = ?">
+                        <button class="btn" onclick="checkInput(this, '3')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>Додамо рівняння: $(2x + y) + (x - y) = 8 + 1 \Rightarrow 3x = 9 \Rightarrow x = 3$.</p>
+                        <p>Тоді $y = 8 - 6 = 2$.</p>
+                        <p><strong>Відповідь:</strong> $x = 3$.</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">15. Якщо $\begin{cases} x + y = 10 \\ x - y = 4 \end{cases}$, то $x \cdot y
+                        = ?$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$7$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$21$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$24$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$40$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">16. Скільки розв'язків має система $\begin{cases} x + y = 3 \\ x + y = 7
+                        \end{cases}$ ?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Один</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">Жодного</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Два</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Безліч</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">17. Розв'яжіть систему: $\begin{cases} 3x - y = 4 \\ x + y = 4 \end{cases}$.
+                        У відповідь запишіть $y$.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="y = ?">
+                        <button class="btn" onclick="checkInput(this, '2')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>Додамо рівняння: $4x = 8 \Rightarrow x = 2$.</p>
+                        <p>Тоді $y = 4 - 2 = 2$.</p>
+                        <p><strong>Відповідь:</strong> $y = 2$.</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">18. Розв'яжіть систему: $\begin{cases} 4x + y = 11 \\ 2x - y = 1
+                        \end{cases}$</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(1; 4)$</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">$(2; 3)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(3; 2)$</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">$(4;
+                            -5)$</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">19. Розв'яжіть систему: $\begin{cases} x + 2y = 8 \\ 3x - y = 3
+                        \end{cases}$. У відповідь запишіть $x$.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="x = ?">
+                        <button class="btn" onclick="checkInput(this, '2')">Перевірити</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">20. Сума двох чисел $= 15$, різниця $= 3$. Знайдіть більше число.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '9')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>Система: $\begin{cases} x + y = 15 \\ x - y = 3 \end{cases}$</p>
+                        <p>Додамо: $2x = 18 \Rightarrow x = 9$, тоді $y = 6$.</p>
+                        <p><strong>Відповідь:</strong> $9$.</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">21. Скільки розв'язків має система $\begin{cases} x - y = 1 \\ 2x - 2y = 2
+                        \end{cases}$?</p>
+                    <div class="options">
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Один</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Жодного</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">Безліч</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Два</button>
+                    </div>
+                    <p class="feedback"></p>
+                </div>
+
+                <div class="question">
+                    <p class="question-text">22. Розв'яжіть систему: $\begin{cases} 2x + 3y = 12 \\ x - y = 1
+                        \end{cases}$. У відповідь запишіть суму $x + y$.</p>
+                    <div class="input-answer">
+                        <input type="text" placeholder="Ваша відповідь">
+                        <button class="btn" onclick="checkInput(this, '5')">Перевірити</button>
+                        <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати розв'язок</button>
+                    </div>
+                    <p class="feedback"></p>
+                    <div class="solution">
+                        <div class="solution-title">Розв'язання:</div>
+                        <p>З другого рівняння: $x = y + 1$.</p>
+                        <p>Підставимо в перше: $2(y + 1) + 3y = 12 \Rightarrow 2y + 2 + 3y = 12 \Rightarrow 5y = 10
+                            \Rightarrow y = 2$.</p>
+                        <p>$x = 3$.</p>
+                        <p>$x + y = 3 + 2 = 5$.</p>
+                        <p><strong>Відповідь:</strong> $5$.</p>
+                    </div>
+                </div>
             </div>
         </article>
         <nav class="lesson-nav">
@@ -323,6 +694,8 @@
     </footer>
 
     <script src="../script.js"></script>
+
+
 </body>
 
 </html>
