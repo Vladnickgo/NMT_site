@@ -226,6 +226,39 @@ body {
     margin-bottom: 6px;
 }
 
+.lesson-content .lesson-block .item-card .subcard-wrapper {
+    display: flex;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.lesson-content .lesson-block .item-card .subcard-wrapper .subcard {  
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    background: #eff6ff;
+    border-left: 4px solid #1d4ed8;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 10px 0;
+}
+
+/* Адаптивность для мобильных устройств (экраны до 768px) */
+@media (max-width: 768px) {
+    .lesson-content .lesson-block .item-card .subcard-wrapper {
+        flex-direction: column; /* Меняем направление на вертикальное */
+        gap: 1px; /* Увеличиваем отступ, так как элементы теперь друг под другом */
+    }
+}
+
+.lesson-content .lesson-block .item-card h3 {
+    background-color:#1d4ed8;
+    color: white;
+    text-align: center;
+    padding: 12px 0 12px;
+    border-radius: 8px;
+}
+
 .example {
     background: #f1f5f9;
     border-left: 4px solid var(--primary);
@@ -529,6 +562,7 @@ body {
     padding: 14px 18px;
     margin: 20px 0;
     color: #78350f;
+    text-align: justify;
 }
 
 .warning-icon {

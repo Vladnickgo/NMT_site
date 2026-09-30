@@ -40,42 +40,67 @@
                 до лінійних (з дробами, дужками, змінною в обох частинах), досліджувати рівняння з параметром на
                 кількість коренів.</p>
             <div class="lesson-block">
+                <h2>1. Означення лінійного рівняння</h2>
+
+                <p><strong>Лінійне рівняння з однією змінною</strong> — це рівняння виду:</p>
+                <p>$$ax = b$$</p>
+                <p>де $a$ і $b$ — деякі числа, $x$ — змінна.</p>
+
+                <p><strong>Корінь рівняння</strong> — значення змінної, при якому рівняння перетворюється в правильну
+                    числову рівність.</p>
+
+                <p><strong>Розв'язати рівняння</strong> — значить знайти всі його корені або довести, що їх немає.</p>
+                <div class="item-card">
+                    <h3>Три випадки для рівняння $ax = b$</h3>
+                    <div class="subcard-wrapper">
+                        <div class="subcard">
+                            <p>Якщо $a \neq 0$, то рівняння має <strong>єдиний корінь</strong>:</p>
+                            <p class="formula">$x = \dfrac{b}{a}$.</p>
+                        </div>
+                        <div class="subcard">
+                            <p>Якщо $a = 0$ і $b = 0$, то рівняння <strong>має безліч коренів</strong>
+                                (будь-яке $x$).</p>
+                            <p class="formula">$x \in \mathbb{R}$.</p>
+                        </div>
+                        <div class="subcard">
+                            <p>Якщо $a = 0$ і $b \neq 0$, то рівняння <strong>не має коренів</strong>.</p>
+                            <p class="formula">$x \in \varnothing$</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="lesson-block">
+                <h2>2. Рівносильні перетворення</h2>
+                <p>Два рівняння називаються <strong>рівносильними</strong>, якщо вони мають однакові множини коренів.
+                </p>
+                <p>При розв'язуванні рівнянь використовують такі перетворення, що зберігають рівносильність:</p>
+                <div class="item-card">
+                    <h3>Перетворення, що зберігають рівносильність</h3>
+                    <div class="subcard-wrapper">
+                        <div class="subcard">
+                            <p>1️⃣<strong>Перенесення</strong> доданка з однієї частини в іншу зі зміною знака.</p>
+                        </div>
+                        <div class="subcard">
+                            <p>2️⃣<strong>Множення або ділення</strong> обох частин на одне і те ж число, відмінне від
+                                нуля.</p>
+                        </div>
+                        <div class="subcard">
+                            <p>3️⃣<strong>Розкриття дужок</strong> і зведення подібних доданків.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="warning">
+                    <a class="warning-icon">⚠️</a>
+                    <p><strong>Увага:</strong> множення або ділення на вираз зі змінною може призвести до появи
+                        сторонніх
+                        коренів або їх втрати. Тому після розв'язування обов'язково роблять перевірку.</p>
+                </div>
 
             </div>
 
-            <h2>1. Означення лінійного рівняння</h2>
-
-            <p><strong>Лінійне рівняння з однією змінною</strong> — це рівняння виду:</p>
-            <p>$$ax = b$$</p>
-            <p>де $a$ і $b$ — деякі числа, $x$ — змінна.</p>
-
-            <p><strong>Корінь рівняння</strong> — значення змінної, при якому рівняння перетворюється в правильну
-                числову рівність.</p>
-
-            <p><strong>Розв'язати рівняння</strong> — значить знайти всі його корені або довести, що їх немає.</p>
-
-            <h3>Три випадки для рівняння $ax = b$</h3>
-
-            <ul>
-                <li>Якщо $a \neq 0$, то рівняння має <strong>єдиний корінь</strong>: $x = \dfrac{b}{a}$.</li>
-                <li>Якщо $a = 0$ і $b = 0$, то рівняння має <strong>безліч коренів</strong> (будь-яке $x$).</li>
-                <li>Якщо $a = 0$ і $b \neq 0$, то рівняння <strong>не має коренів</strong>.</li>
-            </ul>
-
-            <h2>2. Рівносильні перетворення</h2>
-
-            <p>Два рівняння називаються <strong>рівносильними</strong>, якщо вони мають однакові множини коренів.</p>
-
-            <p>При розв'язуванні рівнянь використовують такі перетворення, що зберігають рівносильність:</p>
-
-            <ol>
-                <li><strong>Перенесення</strong> доданка з однієї частини в іншу зі зміною знака.</li>
-                <li><strong>Множення або ділення</strong> обох частин на одне і те ж число, відмінне від нуля.</li>
-                <li><strong>Розкриття дужок</strong> і зведення подібних доданків.</li>
-            </ol>
-
-            <p><strong>Увага:</strong> множення або ділення на вираз зі змінною може призвести до появи сторонніх
-                коренів або їх втрати. Тому після розв'язування обов'язково роблять перевірку.</p>
 
             <h2>3. Алгоритм розв'язування лінійного рівняння</h2>
 
@@ -216,62 +241,192 @@
                 <p>Будуємо графіки обох рівнянь (прямі) і знаходимо точки їх перетину.</p>
                 <p>$\begin{cases} 2x - y = 3 \\ x - y = 1 \end{cases}$</p>
                 <figure>
-                <svg width="320" height="280" viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
-                    <!--coordinate axes-->
-                    <line x1="10" y1="140" x2="315" y2="140" stroke="black" />
-                    <line x1="160" y1="10" x2="160" y2="270" stroke="black" />
-                    <text x="310" y="130" style="font: italic 12px sans-serif;">x</text>
-                    <text x="165" y="10" style="font: italic 12px sans-serif;">y</text>
-                    <!--horizontal coordinate grid-->
-                    <line x1="5" y1="40" x2="315" y2="40" stroke="lightgray" />
-                    <line x1="5" y1="90" x2="315" y2="90" stroke="lightgray" />
-                    <line x1="5" y1="190" x2="315" y2="190" stroke="lightgray" />
-                    <line x1="5" y1="240" x2="315" y2="240" stroke="lightgray" />
-                    <!--vertical coordinate grid-->
-                    <line x1="260" y1="10" x2="260" y2="270" stroke="lightgray" />
-                    <line x1="210" y1="10" x2="210" y2="270" stroke="lightgray" />
-                    <line x1="310" y1="10" x2="310" y2="270" stroke="lightgray" />
-                    <line x1="110" y1="10" x2="110" y2="270" stroke="lightgray" />
-                    <line x1="60" y1="10" x2="60" y2="270" stroke="lightgray" />
-                    <line x1="10" y1="10" x2="10" y2="270" stroke="lightgray" />
-                    <!--arrow-->
-                    <polygon points="305,138 315,140 305,142" fill="none" stroke="#1e293b" stroke-width="1" />
-                    <polygon points="158,15 160,5 162,15" fill="none" stroke="#1e293b" stroke-width="1" />
-                    <text x="5" y="155" style="font: italic 12px sans-serif; fill:gray">-3</text>
-                    <text x="55" y="155" style="font: italic 12px sans-serif;fill:gray">-2</text>
-                    <text x="105" y="155" style="font: italic 12px sans-serif;fill:gray">-1</text>
-                    <text x="205" y="155" style="font: italic 12px sans-serif;fill:gray">1</text>
-                    <text x="255" y="155" style="font: italic 12px sans-serif;fill:gray">2</text>
-                    <text x="305" y="155" style="font: italic 12px sans-serif;fill:gray">3</text>
+                    <svg width="320" height="280" viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+                        <!--coordinate axes-->
+                        <line x1="10" y1="140" x2="315" y2="140" stroke="black" />
+                        <line x1="160" y1="10" x2="160" y2="270" stroke="black" />
+                        <text x="310" y="130" style="font: italic 12px sans-serif;">x</text>
+                        <text x="165" y="10" style="font: italic 12px sans-serif;">y</text>
+                        <!--horizontal coordinate grid-->
+                        <line x1="5" y1="40" x2="315" y2="40" stroke="lightgray" />
+                        <line x1="5" y1="90" x2="315" y2="90" stroke="lightgray" />
+                        <line x1="5" y1="190" x2="315" y2="190" stroke="lightgray" />
+                        <line x1="5" y1="240" x2="315" y2="240" stroke="lightgray" />
+                        <!--vertical coordinate grid-->
+                        <line x1="260" y1="10" x2="260" y2="270" stroke="lightgray" />
+                        <line x1="210" y1="10" x2="210" y2="270" stroke="lightgray" />
+                        <line x1="310" y1="10" x2="310" y2="270" stroke="lightgray" />
+                        <line x1="110" y1="10" x2="110" y2="270" stroke="lightgray" />
+                        <line x1="60" y1="10" x2="60" y2="270" stroke="lightgray" />
+                        <line x1="10" y1="10" x2="10" y2="270" stroke="lightgray" />
+                        <!--arrow-->
+                        <polygon points="305,138 315,140 305,142" fill="none" stroke="#1e293b" stroke-width="1" />
+                        <polygon points="158,15 160,5 162,15" fill="none" stroke="#1e293b" stroke-width="1" />
+                        <text x="5" y="155" style="font: italic 12px sans-serif; fill:gray">-3</text>
+                        <text x="55" y="155" style="font: italic 12px sans-serif;fill:gray">-2</text>
+                        <text x="105" y="155" style="font: italic 12px sans-serif;fill:gray">-1</text>
+                        <text x="205" y="155" style="font: italic 12px sans-serif;fill:gray">1</text>
+                        <text x="255" y="155" style="font: italic 12px sans-serif;fill:gray">2</text>
+                        <text x="305" y="155" style="font: italic 12px sans-serif;fill:gray">3</text>
 
-                    <text x="145" y="250" style="font: italic 12px sans-serif;fill:gray">-2</text>
-                    <text x="145" y="200" style="font: italic 12px sans-serif;fill:gray">-1</text>
-                    <text x="145" y="100" style="font: italic 12px sans-serif;fill:gray">1</text>
-                    <text x="145" y="50" style="font: italic 12px sans-serif;fill:gray">2</text>
+                        <text x="145" y="250" style="font: italic 12px sans-serif;fill:gray">-2</text>
+                        <text x="145" y="200" style="font: italic 12px sans-serif;fill:gray">-1</text>
+                        <text x="145" y="100" style="font: italic 12px sans-serif;fill:gray">1</text>
+                        <text x="145" y="50" style="font: italic 12px sans-serif;fill:gray">2</text>
 
-                    <line x1="60" y1="290" x2="315" y2="35" stroke-width="1.5" stroke="blue" />
-                    <line x1="160" y1="290" x2="310" y2="-10" stroke-width="1.5"stroke="red" />
-                    <line x1="260" y1="90" x2="260" y2="140" stroke="red" stroke-width="2" stroke-dasharray="5 4"/>
-                    <line x1="160" y1="90" x2="260" y2="90" stroke="red" stroke-width="2" stroke-dasharray="5 4"/>
-                    <circle cx="260" cy="90" r="3"/>
-                    <text x="220" y="85" style="font: italic 16px sans-serif;">(2; 1)</text>
+                        <line x1="60" y1="290" x2="315" y2="35" stroke-width="1.5" stroke="blue" />
+                        <line x1="160" y1="290" x2="310" y2="-10" stroke-width="1.5" stroke="red" />
+                        <line x1="260" y1="90" x2="260" y2="140" stroke="red" stroke-width="2" stroke-dasharray="5 4" />
+                        <line x1="160" y1="90" x2="260" y2="90" stroke="red" stroke-width="2" stroke-dasharray="5 4" />
+                        <circle cx="260" cy="90" r="3" />
+                        <text x="220" y="85" style="font: italic 16px sans-serif;">(2; 1)</text>
 
-                    <text x="100" y="230" style="font: italic 20px serif;fill:blue;" transform="rotate(-40, 100, 230)">2x-y=3</text>
-                    <text x="215" y="230" style="font: italic 20px serif; fill:red;" transform="rotate(-65, 215, 230)">x-y=1</text>
+                        <text x="100" y="230" style="font: italic 20px serif;fill:blue;"
+                            transform="rotate(-40, 100, 230)">2x-y=3</text>
+                        <text x="215" y="230" style="font: italic 20px serif; fill:red;"
+                            transform="rotate(-65, 215, 230)">x-y=1</text>
 
-                </svg>
-            </figure>
+                    </svg>
+                </figure>
             </div>
 
             <h3>Кількість розв'язків системи</h3>
 
             <div class="lesson-block">
-                <p>Дві прямі на площині можуть:</p>
-                <ul>
-                    <li><strong>перетинатися в одній точці</strong> — система має <strong>один розв'язок</strong>;</li>
-                    <li><strong>бути паралельними</strong> — система <strong>не має розв'язків</strong>;</li>
-                    <li><strong>збігатися</strong> — система має <strong>безліч розв'язків</strong>.</li>
-                </ul>
+                <p></p>
+                <div class="item-card">
+                    <h3>Дві прямі на площині можуть:</h3>
+                    <div class="subcard-wrapper">
+                        <div class="subcard">
+                            <a class="warning-icon">1️⃣<strong>перетинатися</strong></a>
+                            <p> — система має <strong>один
+                                    розв'язок</strong>;</p>
+                            <figure style="text-align: center;">
+                                <svg width="240" height="240" viewBox="0 0 240 240" style="background-color: white;"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <!--coordinate axes-->
+                                    <line x1="5" y1="120" x2="235" y2="120" stroke="black" />
+                                    <line x1="120" y1="5" x2="120" y2="235" stroke="black" />
+                                    <text x="235" y="130" style="font: italic 12px sans-serif;">x</text>
+                                    <text x="125" y="10" style="font: italic 12px sans-serif;">y</text>
+                                    <!--horizontal coordinate grid-->
+                                    <line x1="5" y1="40" x2="235" y2="40" stroke="lightgray" />
+                                    <line x1="5" y1="80" x2="235" y2="80" stroke="lightgray" />
+                                    <line x1="5" y1="160" x2="315" y2="160" stroke="lightgray" />
+                                    <line x1="5" y1="200" x2="315" y2="200" stroke="lightgray" />
+                                    <!--vertical coordinate grid-->
+                                    <line x1="200" y1="10" x2="200" y2="270" stroke="lightgray" />
+                                    <line x1="160" y1="10" x2="160" y2="270" stroke="lightgray" />
+                                    <line x1="80" y1="10" x2="80" y2="270" stroke="lightgray" />
+                                    <line x1="40" y1="10" x2="40" y2="270" stroke="lightgray" />
+                                    <!--arrow-->
+                                    <polygon points="230,118 240,120 230,122" fill="none" stroke="#1e293b"
+                                        stroke-width="1" />
+                                    <polygon points="118,15 120,5 122,15" fill="none" stroke="#1e293b"
+                                        stroke-width="1" />
+                                    <text x="25" y="135" style="font: italic 12px sans-serif;fill:gray">-2</text>
+                                    <text x="65" y="135" style="font: italic 12px sans-serif;fill:gray">-1</text>
+                                    <text x="145" y="135" style="font: italic 12px sans-serif;fill:gray">1</text>
+                                    <text x="185" y="135" style="font: italic 12px sans-serif;fill:gray">2</text>
+                                    <text x="125" y="215" style="font: italic 12px sans-serif;fill:gray">-2</text>
+                                    <text x="125" y="175" style="font: italic 12px sans-serif;fill:gray">-1</text>
+                                    <text x="125" y="100" style="font: italic 12px sans-serif;fill:gray">1</text>
+                                    <text x="125" y="50" style="font: italic 12px sans-serif;fill:gray">2</text>
+
+                                    <line x1="40" y1="240" x2="240" y2="40" stroke-width="1.5" stroke="blue" />
+                                    <line x1="0" y1="160" x2="240" y2="80" stroke-width="1.5" stroke="red" />
+                                    <circle cx="180" cy="100" r="3" />
+                                    <text x="110" y="100" style="font: italic 12pt serif;fill:blue;">Розв'язок</text>
+                                </svg>
+                            </figure>
+                        </div>
+                        <div class="subcard">
+                            <a class="warning-icon">2️⃣<strong>бути паралельними</strong></a>
+                            <p>— система <strong>не має розв'язків</strong></p>
+                            <figure style="text-align: center;">
+                                <svg width="240" height="240" viewBox="0 0 240 240" style="background-color: white;"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <!--coordinate axes-->
+                                    <line x1="5" y1="120" x2="235" y2="120" stroke="black" />
+                                    <line x1="120" y1="5" x2="120" y2="235" stroke="black" />
+                                    <text x="235" y="130" style="font: italic 12px sans-serif;">x</text>
+                                    <text x="125" y="10" style="font: italic 12px sans-serif;">y</text>
+                                    <!--horizontal coordinate grid-->
+                                    <line x1="5" y1="40" x2="235" y2="40" stroke="lightgray" />
+                                    <line x1="5" y1="80" x2="235" y2="80" stroke="lightgray" />
+                                    <line x1="5" y1="160" x2="315" y2="160" stroke="lightgray" />
+                                    <line x1="5" y1="200" x2="315" y2="200" stroke="lightgray" />
+                                    <!--vertical coordinate grid-->
+                                    <line x1="200" y1="10" x2="200" y2="270" stroke="lightgray" />
+                                    <line x1="160" y1="10" x2="160" y2="270" stroke="lightgray" />
+                                    <line x1="80" y1="10" x2="80" y2="270" stroke="lightgray" />
+                                    <line x1="40" y1="10" x2="40" y2="270" stroke="lightgray" />
+                                    <!--arrow-->
+                                    <polygon points="230,118 240,120 230,122" fill="none" stroke="#1e293b"
+                                        stroke-width="1" />
+                                    <polygon points="118,15 120,5 122,15" fill="none" stroke="#1e293b"
+                                        stroke-width="1" />
+                                    <text x="25" y="135" style="font: italic 12px sans-serif;fill:gray">-2</text>
+                                    <text x="65" y="135" style="font: italic 12px sans-serif;fill:gray">-1</text>
+                                    <text x="145" y="135" style="font: italic 12px sans-serif;fill:gray">1</text>
+                                    <text x="185" y="135" style="font: italic 12px sans-serif;fill:gray">2</text>
+                                    <text x="125" y="215" style="font: italic 12px sans-serif;fill:gray">-2</text>
+                                    <text x="125" y="175" style="font: italic 12px sans-serif;fill:gray">-1</text>
+                                    <text x="125" y="100" style="font: italic 12px sans-serif;fill:gray">1</text>
+                                    <text x="125" y="50" style="font: italic 12px sans-serif;fill:gray">2</text>
+
+                                    <line x1="40" y1="240" x2="240" y2="40" stroke-width="1.5" stroke="blue" />
+                                    <line x1="0" y1="200" x2="200" y2="0" stroke-width="1.5" stroke="red" />
+                                    <text x="150" y="160" style="font: italic 12pt serif;fill:blue;">Розв'язків</text>
+                                    <text x="150" y="180" style="font: italic 12pt serif;fill:blue;">немає</text>
+                                </svg>
+                            </figure>
+                        </div>
+                        <div class="subcard">
+                            <a class="warning-icon">3️⃣<strong>збігатися</strong></a>
+                            <p> — система має <strong>безліч розв'язків</strong></p>
+                            <figure style="text-align: center;">
+                                <svg width="240" height="240" viewBox="0 0 240 240" style="background-color: white;"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <!--coordinate axes-->
+                                    <line x1="5" y1="120" x2="235" y2="120" stroke="black" />
+                                    <line x1="120" y1="5" x2="120" y2="235" stroke="black" />
+                                    <text x="235" y="130" style="font: italic 12px sans-serif;">x</text>
+                                    <text x="125" y="10" style="font: italic 12px sans-serif;">y</text>
+                                    <!--horizontal coordinate grid-->
+                                    <line x1="5" y1="40" x2="235" y2="40" stroke="lightgray" />
+                                    <line x1="5" y1="80" x2="235" y2="80" stroke="lightgray" />
+                                    <line x1="5" y1="160" x2="315" y2="160" stroke="lightgray" />
+                                    <line x1="5" y1="200" x2="315" y2="200" stroke="lightgray" />
+                                    <!--vertical coordinate grid-->
+                                    <line x1="200" y1="10" x2="200" y2="270" stroke="lightgray" />
+                                    <line x1="160" y1="10" x2="160" y2="270" stroke="lightgray" />
+                                    <line x1="80" y1="10" x2="80" y2="270" stroke="lightgray" />
+                                    <line x1="40" y1="10" x2="40" y2="270" stroke="lightgray" />
+                                    <!--arrow-->
+                                    <polygon points="230,118 240,120 230,122" fill="none" stroke="#1e293b"
+                                        stroke-width="1" />
+                                    <polygon points="118,15 120,5 122,15" fill="none" stroke="#1e293b"
+                                        stroke-width="1" />
+                                    <text x="25" y="135" style="font: italic 12px sans-serif;fill:gray">-2</text>
+                                    <text x="65" y="135" style="font: italic 12px sans-serif;fill:gray">-1</text>
+                                    <text x="145" y="135" style="font: italic 12px sans-serif;fill:gray">1</text>
+                                    <text x="185" y="135" style="font: italic 12px sans-serif;fill:gray">2</text>
+                                    <text x="125" y="215" style="font: italic 12px sans-serif;fill:gray">-2</text>
+                                    <text x="125" y="175" style="font: italic 12px sans-serif;fill:gray">-1</text>
+                                    <text x="125" y="100" style="font: italic 12px sans-serif;fill:gray">1</text>
+                                    <text x="125" y="50" style="font: italic 12px sans-serif;fill:gray">2</text>
+
+                                    <line x1="40" y1="240" x2="240" y2="40" stroke-width="2" stroke="blue" />
+                                    <line x1="43" y1="240" x2="243" y2="40" stroke-width="2" stroke="red" />
+                                    <text x="150" y="160" style="font: italic 12pt serif;fill:blue;">Розв'язків</text>
+                                    <text x="150" y="180" style="font: italic 12pt serif;fill:blue;">безліч</text>
+                                </svg>
+                            </figure>
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="remember">
@@ -356,9 +511,11 @@
                 <p>Розв'яжіть систему: $\begin{cases} 2x - 3y = 1 \\ 4x + y = 9 \end{cases}$</p>
                 <p><strong>Розв'язання:</strong></p>
                 <p>З другого рівняння: $y = 9 - 4x$.</p>
-                <p>Підставимо в перше: $2x - 3(9 - 4x) = 1 \Rightarrow 2x - 27 + 12x = 1 \Rightarrow 14x = 28
-                    \Rightarrow x = 2$.</p>
-                <p>$y = 9 - 8 = 1$.</p>
+                <p>Підставимо в перше:</p>
+                <p>$2x - 3(9 - 4x) = 1 \Rightarrow $</p>
+                <p>$2x - 27 + 12x = 1 \Rightarrow $</p>
+                <p>$14x = 28 \Rightarrow x = 2$.</p>
+                <p>$y = 9 - 4\cdot 2 = 9 - 8 = 1$.</p>
                 <p><strong>Відповідь:</strong> $(x; y) = (2; 1)$.</p>
             </div>
 
@@ -552,7 +709,8 @@
                 </div>
 
                 <div class="question">
-                    <p class="question-text">14. Розв'яжіть систему: $\begin{cases} 2x + y = 8 \\ x - y = 1 \end{cases}$.
+                    <p class="question-text">14. Розв'яжіть систему: $\begin{cases} 2x + y = 8 \\ x - y = 1
+                        \end{cases}$.
                         У відповідь запишіть $x$.</p>
                     <div class="input-answer">
                         <input type="text" placeholder="x = ?">
@@ -593,7 +751,8 @@
                 </div>
 
                 <div class="question">
-                    <p class="question-text">17. Розв'яжіть систему: $\begin{cases} 3x - y = 4 \\ x + y = 4 \end{cases}$.
+                    <p class="question-text">17. Розв'яжіть систему: $\begin{cases} 3x - y = 4 \\ x + y = 4
+                        \end{cases}$.
                         У відповідь запишіть $y$.</p>
                     <div class="input-answer">
                         <input type="text" placeholder="y = ?">
@@ -662,7 +821,8 @@
 
                 <div class="question">
                     <p class="question-text">22. Розв'яжіть систему: $\begin{cases} 2x + 3y = 12 \\ x - y = 1
-                        \end{cases}$. У відповідь запишіть суму $x + y$.</p>
+                        \end{cases}$.</p>
+                    <p>У відповідь запишіть суму $x + y$.</p>
                     <div class="input-answer">
                         <input type="text" placeholder="Ваша відповідь">
                         <button class="btn" onclick="checkInput(this, '5')">Перевірити</button>
