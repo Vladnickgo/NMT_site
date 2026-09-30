@@ -187,6 +187,8 @@ body {
 
 .lesson-content .objective {
     border-bottom: 2px solid var(--border);
+    background-color: #eff6ff;
+    padding: 10px 20px;
 }
 
 .lesson-content .objective h2 {
