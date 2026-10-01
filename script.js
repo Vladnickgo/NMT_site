@@ -15,11 +15,15 @@ function checkChoice(btn, isCorrect) {
 }
 
 // ===== ТЕСТ: ВВЕДЕННЯ ВІДПОВІДІ =====
-function checkInput(btn, correctAnswer, tolerance = 0) {
+function checkInput(btn, correctAnswer, tolerance = 0.001) {
     const wrap = btn.closest('.input-answer');
     const input = wrap.querySelector('input');
     const feedback = wrap.parentElement.querySelector('.feedback');
-    const userAnswer = input.value.trim().replace(',', '.');
+
+    // Нормалізуємо обидва значення: кома → крапка, прибираємо пробіли
+    const normalize = (s) => String(s).trim().replace(/\s/g, '').replace(',', '.');
+    const userAnswer = normalize(input.value);
+    const correctNormalized = normalize(correctAnswer);
 
     if (!userAnswer) {
         feedback.textContent = '⚠️ Введіть відповідь';
@@ -29,12 +33,14 @@ function checkInput(btn, correctAnswer, tolerance = 0) {
 
     let isCorrect;
     const userNum = parseFloat(userAnswer);
-    const correctNum = parseFloat(correctAnswer);
+    const correctNum = parseFloat(correctNormalized);
 
     if (!isNaN(userNum) && !isNaN(correctNum)) {
+        // Числове порівняння з допуском
         isCorrect = Math.abs(userNum - correctNum) <= tolerance;
     } else {
-        isCorrect = userAnswer.toLowerCase() === correctAnswer.toLowerCase();
+        // Текстове порівняння (без урахування регістру)
+        isCorrect = userAnswer.toLowerCase() === correctNormalized.toLowerCase();
     }
 
     input.classList.remove('correct', 'incorrect');
@@ -42,10 +48,11 @@ function checkInput(btn, correctAnswer, tolerance = 0) {
     input.disabled = true;
     btn.disabled = true;
 
-    feedback.textContent = isCorrect ? '✅ Правильно!' : `❌ Неправильно. Правильна відповідь: ${correctAnswer}`;
+    feedback.textContent = isCorrect
+        ? '✅ Правильно!'
+        : `❌ Неправильно. Правильна відповідь: ${correctAnswer}`;
     feedback.className = 'feedback ' + (isCorrect ? 'correct' : 'incorrect');
 }
-
 // Enter у полі введення = клік по кнопці
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && e.target.matches('.input-answer input')) {
