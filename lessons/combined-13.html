@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 </head>
+
 <body>
     <header class="site-header">
         <div class="container">
@@ -44,6 +46,13 @@
                 <div class="example-title">Приклад 1</div>
                 <p><em>Умова прикладу.</em></p>
                 <p><strong>Розв'язання:</strong></p>
+                <figure>
+                    <svg width="320" heigh="200" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M100 20 A100 100 0 0 1 20 100" fill="none" stroke="blue" stroke-width="10" stroke-linecap="round"/>
+                        <path d="M120 20 A120 120 0 0 1 20 120" fill="none" stroke="blue" stroke-width="10" stroke-linecap="round"/>
+                        <path d="M140 20 A140 140 0 0 1 20 140" fill="none" stroke="blue" stroke-width="10" stroke-linecap="round"/>
+                    </svg>
+                </figure>
                 <p><em>Покрокове розв'язання.</em></p>
                 <p><strong>Відповідь:</strong> ...</p>
             </div>
@@ -56,10 +65,14 @@
                 <div class="question">
                     <p class="question-text">1. Текст питання?</p>
                     <div class="options">
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант A</button>
-                        <button class="option" data-correct="true"  onclick="checkChoice(this, true)">Варіант B (правильний)</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант C</button>
-                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант D</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант
+                            A</button>
+                        <button class="option" data-correct="true" onclick="checkChoice(this, true)">Варіант B
+                            (правильний)</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант
+                            C</button>
+                        <button class="option" data-correct="false" onclick="checkChoice(this, false)">Варіант
+                            D</button>
                     </div>
                     <p class="feedback"></p>
                 </div>
@@ -94,7 +107,7 @@
 
         <nav class="lesson-nav">
             <a href="combined-12.html">← Робота з комплексним завданням. Геометри</a>
-            <a href="algebra-01.html">Множини чисел та дії з ними. Числові та  →</a>
+            <a href="algebra-01.html">Множини чисел та дії з ними. Числові та →</a>
         </nav>
     </main>
 
@@ -106,4 +119,5 @@
 
     <script src="../script.js"></script>
 </body>
+
 </html>

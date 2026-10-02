@@ -44,264 +44,453 @@
                 області допустимих значень (ОДЗ), виконувати перевірку коренів та
                 відсіювати сторонні корені.
             </p>
-
             <h2>Теоретична довідка</h2>
 
-            <h3>1. Лінійні рівняння</h3>
-            <p>
-                Лінійним називають рівняння виду
-            </p>
-            <p class="formula">$ax + b = 0$,</p>
-            <p>де $a$ і $b$ — дані числа (коефіцієнти), а $x$ — невідоме.</p>
-
-            <p>Залежно від значень коефіцієнтів можливі
-                три випадки:
-            </p>
-            <ol>
-                <li>якщо $a \neq 0$ — рівняння має єдиний корінь $x = -\dfrac{b}{a}$;</li>
-                <li>якщо $a = 0,\ b \neq 0$ — рівняння коренів не має (набуває вигляду $0=b$, що хибно);</li>
-                <li>якщо $a = 0,\ b = 0$ — коренем є будь-яке число (рівняння $0=0$ істинне завжди).</li>
-            </ol>
-            <p>
-                До лінійних також зводяться рівняння, що містять розкриття дужок, зведення
-                подібних доданків і перенесення невідомих в одну частину рівняння.
-            </p>
-
-            <div class="example">
-                <div class="example-title">Приклад 1</div>
-                <p><em>Розв'яжіть рівняння: $3(x - 2) = 5x + 4$.</em></p>
-                <p><strong>Розв'язання:</strong></p>
-                <p>
-                    Розкриємо дужки: $3x - 6 = 5x + 4$.<br>
-                    Перенесемо доданки з $x$ в один бік, числа — в інший:<br>
-                    $3x - 5x = 4 + 6$<br>
-                    $-2x = 10$<br>
-                    $x = -5$.
+            <div class="lesson-block">
+                <h2>
+                    1. Лінійні рівняння
+                </h2>
+                <p> Лінійним називають рівняння виду
                 </p>
-                <p><strong>Відповідь:</strong> $x = -5$.</p>
-            </div>
+                <p class="formula">$ax + b = 0$,</p>
+                <p>де $a$ і $b$ — дані числа (коефіцієнти), а $x$ — невідоме.</p>
+                <div class="item-card">
+                    <h3>
+                        Залежно від значень коефіцієнтів можливі три випадки:
+                    </h3>
+                    <div class="subcard-wrapper">
+                        <div class="subcard">
+                            <div class="subcard-image">1️⃣</div>
+                            <div class="subcard-content">
+                                <p>$a \neq 0$ — рівняння має єдиний корінь</p>
+                                <p> $$x = -\dfrac{b}{a}$$ </p>
+                            </div>
+                        </div>
+                        <div class="subcard">
+                            <div class="subcard-image">2️⃣</div>
+                            <div class="subcard-content">
+                                <p>$a = 0,\ b \neq 0$</p>
+                                <p>рівняння коренів не має (набуває вигляду $0=b$, що хибно)</p>
+                            </div>
+                        </div>
+                        <div class="subcard">
+                            <div class="subcard-image">3️⃣</div>
+                            <div class="subcard-content">
+                                <p>$a = 0,\ b = 0$</p>
+                                <p>коренем є будь-яке число (рівняння $0=0$ істинне завжди)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <h3>2. Квадратні рівняння</h3>
-            <p>
-                Квадратним називають рівняння виду $ax^2 + bx + c = 0$, де $a \neq 0$.
-                Кількість і вигляд коренів визначає дискримінант:
-            </p>
-            <p>$D = b^2 - 4ac$</p>
-            <ul>
-                <li>якщо $D > 0$ — два різних корені: $x_{1,2} = \dfrac{-b \pm \sqrt{D}}{2a}$;</li>
-                <li>якщо $D = 0$ — один (подвійний) корінь: $x = -\dfrac{b}{2a}$;</li>
-                <li>якщо $D < 0$ — дійсних коренів немає.</li>
-            </ul>
-            <p>
-                <strong>Теорема Вієта:</strong> якщо $x_1$ і $x_2$ — корені зведеного квадратного
-                рівняння $x^2 + px + q = 0$, то $x_1 + x_2 = -p$ та $x_1 \cdot x_2 = q$.
-                Для рівняння загального вигляду $ax^2+bx+c=0$: $x_1+x_2 = -\dfrac{b}{a}$,
-                $x_1 x_2 = \dfrac{c}{a}$.
-            </p>
-            <p>
-                Неповні квадратні рівняння розв'язують без формули дискримінанта:
-                $ax^2 + c = 0 \Rightarrow x = \pm\sqrt{-\dfrac{c}{a}}$ (якщо $-\dfrac{c}{a}\ge 0$);
-                $ax^2 + bx = 0 \Rightarrow x(ax+b)=0 \Rightarrow x=0$ або $x=-\dfrac{b}{a}$.
-            </p>
-
-            <div class="example">
-                <div class="example-title">Приклад 2</div>
-                <p><em>Розв'яжіть рівняння: $2x^2 - 5x - 3 = 0$.</em></p>
-                <p><strong>Розв'язання:</strong></p>
                 <p>
-                    Тут $a=2,\ b=-5,\ c=-3$.<br>
-                    $D = (-5)^2 - 4\cdot 2\cdot(-3) = 25 + 24 = 49$.<br>
-                    $\sqrt{D} = 7$.<br>
-                    $x_{1,2} = \dfrac{5 \pm 7}{4}$, тобто $x_1 = \dfrac{12}{4} = 3$, $x_2 = \dfrac{-2}{4} = -0{,}5$.
+                    До лінійних також зводяться рівняння, що містять розкриття дужок, зведення
+                    подібних доданків і перенесення невідомих в одну частину рівняння.
                 </p>
-                <p><strong>Відповідь:</strong> $x_1 = 3$, $x_2 = -0{,}5$.</p>
-            </div>
 
-            <h3>3. Дробово-раціональні рівняння</h3>
-            <p>
-                Дробово-раціональним називають рівняння, в якому невідома змінна міститься
-                у знаменнику хоча б одного дробу. Алгоритм розв'язування:
-            </p>
-            <ol>
-                <li>Знайти ОДЗ — значення змінної, за яких усі знаменники не дорівнюють нулю.</li>
-                <li>Звести всі доданки до спільного знаменника й прирівняти чисельник до нуля.</li>
-                <li>Розв'язати здобуте рівняння (лінійне або квадратне).</li>
-                <li>Перевірити знайдені корені на відповідність ОДЗ; корені, що не входять в ОДЗ, є сторонніми і
-                    відкидаються.</li>
-            </ol>
-
-            <div class="example">
-                <div class="example-title">Приклад 3</div>
-                <p><em>Розв'яжіть рівняння: $\dfrac{2x}{x-1} = \dfrac{4}{x-1} + 1$.</em></p>
-                <p><strong>Розв'язання:</strong></p>
-                <p>
-                    ОДЗ: $x - 1 \neq 0 \Rightarrow x \neq 1$.<br>
-                    Перенесемо всі доданки в одну частину та зведемо до спільного знаменника:<br>
-                    $\dfrac{2x}{x-1} - \dfrac{4}{x-1} - 1 = 0 \ \Rightarrow\ \dfrac{2x - 4 - (x-1)}{x-1} = 0$<br>
-                    $\dfrac{x - 3}{x-1} = 0$.<br>
-                    Дріб дорівнює нулю, коли чисельник дорівнює нулю (а знаменник — ні):<br>
-                    $x - 3 = 0 \Rightarrow x = 3$.<br>
-                    $x = 3$ входить в ОДЗ ($3 \neq 1$), отже це не сторонній корінь.
-                </p>
-                <p><strong>Відповідь:</strong> $x = 3$.</p>
-            </div>
-
-            <h3>4. Рівняння з модулем</h3>
-            <p>
-                Модулем числа $a$ називають його відстань до нуля на координатній прямій:
-                $|a| = a$, якщо $a \ge 0$, і $|a| = -a$, якщо $a < 0$. Звідси випливають основні прийоми розв'язування
-                    рівнянь з модулем. </p>
-                    <p><strong>Найпростіше рівняння</strong> $|f(x)| = a$:</p>
-                    <ul>
-                        <li>якщо $a < 0$ — коренів немає;</li>
-                        <li>якщо $a = 0$ — розв'язуємо $f(x) = 0$;</li>
-                        <li>якщо $a > 0$ — рівняння рівносильне сукупності $f(x) = a$ або $f(x) = -a$.</li>
-                    </ul>
-                    <p><strong>Рівняння виду</strong> $|f(x)| = g(x)$ рівносильне системі:
-                        $f(x) = g(x)$ або $f(x) = -g(x)$, за умови $g(x) \ge 0$ (цю умову зручно
-                        перевірити безпосередньою підстановкою знайдених коренів).
+                <div class="example">
+                    <div class="example-title">Приклад 1</div>
+                    <p><em>Розв'яжіть рівняння: $3(x - 2) = 5x + 4$.</em></p>
+                    <p><strong>Розв'язання:</strong></p>
+                    <p>
+                        Розкриємо дужки: $3x - 6 = 5x + 4$.<br>
+                        Перенесемо доданки з $x$ в один бік, числа — в інший:<br>
+                        $3x - 5x = 4 + 6$<br>
+                        $-2x = 10$<br>
+                        $x = -5$.
                     </p>
-                    <p><strong>Рівняння виду</strong> $|f(x)| = |g(x)|$ рівносильне сукупності
-                        $f(x) = g(x)$ або $f(x) = -g(x)$ (без додаткових умов на знак).
-                    </p>
+                    <p><strong>Відповідь:</strong> $x = -5$.</p>
+                </div>
+            </div>
+            <h3></h3>
+            <div class="lesson-block">
+                <h2>2. Квадратні рівняння</h2>
+                <p>
+                    Квадратним називають рівняння виду $$ax^2 + bx + c = 0,$$ де $a \neq 0$.
+                </p>
+                <p>
+                    Кількість і вигляд коренів визначає дискримінант:
+                </p>
+                <p>$$D = b^2 - 4ac$$</p>
 
+                <div class="item-card">
+                    <h3>Значення дискримінанта</h3>
+                    <div class="subcard-wrapper">
+                        <div class="subcard">
+                            <div class="subcard-image">1️⃣</div>
+                            <div class="subcard-content">якщо $D > 0$ — два різних корені: $$x_{1,2} = \dfrac{-b \pm
+                                \sqrt{D}}{2a}$$</div>
+                        </div>
+                        <div class="subcard">
+                            <div class="subcard-image">2️⃣</div>
+                            <div class="subcard-content">якщо $D = 0$ — один корінь: $$x = -\dfrac{b}{2a}$$</div>
+                        </div>
+                        <div class="subcard">
+                            <div class="subcard-image">3️⃣</div>
+                            <div class="subcard-content">якщо $D < 0$ — дійсних коренів немає</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example">
+                        <div class="example-title">Приклад 2</div>
+                        <p><em>Розв'яжіть рівняння: $2x^2 - 5x - 3 = 0$.</em></p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>
+                            Тут $a=2,\ b=-5,\ c=-3$.<br>
+                            $D = (-5)^2 - 4\cdot 2\cdot(-3) = 25 + 24 = 49$.<br>
+                            $\sqrt{D} = 7$.<br>
+                            $x_{1,2} = \dfrac{5 \pm 7}{4}$, тобто $x_1 = \dfrac{12}{4} = 3$, $x_2 =
+                            \dfrac{-2}{4} =
+                            -0{,}5$.
+                        </p>
+                        <p><strong>Відповідь:</strong> $x_1 = 3$, $x_2 = -0{,}5$.</p>
+                    </div>
+                    <div class="example">
+                        <div class="example-title">Приклад 3</div>
+                        <p><em>Розв'яжіть рівняння: $3x^2 - 2x + 3 = 0$.</em></p>
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>
+                            Тут $a=3,\ b=-2,\ c=3$.<br>
+                            $D = (-2)^2 - 4\cdot 3\cdot 3 = 4 - 36 = -32$.<br>
+                            $ {D} < 0$ - дійсних коренів не існує.<br>
+
+                        </p>
+                        <p><strong>Відповідь:</strong> дійсних коренів не існує.</p>
+                    </div>
                     <div class="example">
                         <div class="example-title">Приклад 4</div>
-                        <p><em>Розв'яжіть рівняння: $|2x - 1| = 5$.</em></p>
+                        <p><em>Розв'яжіть рівняння: $x^2 - 6x + 9 = 0$.</em></p>
                         <p><strong>Розв'язання:</strong></p>
                         <p>
-                            Оскільки $5 > 0$, маємо сукупність:<br>
-                            $2x - 1 = 5$ або $2x - 1 = -5$.<br>
-                            З першого рівняння: $2x = 6 \Rightarrow x = 3$.<br>
-                            З другого: $2x = -4 \Rightarrow x = -2$.
+                            Тут $a=1,\ b=-6,\ c=9$.<br>
+                            $D = (-6)^2 - 4\cdot 1\cdot 9 = 36 - 36 = 0$.<br>
+                            $ {D} = 0$.<br>
+                            $x=-\dfrac{b}{2a}=-\dfrac{-6}{2\cdot 1}=3.$
+
                         </p>
-                        <p><strong>Відповідь:</strong> $x_1 = 3$, $x_2 = -2$.</p>
+                        <p><strong>Відповідь: </strong> ${x=3}$.</p>
+                    </div>
+                </div>
+                <div class="lesson-block">
+                    <h2>Теорема Вієта</h2>
+
+                    <div class="theory-block">
+                        <div class="theory-header">
+                            <svg class="theory-icon" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                                </path>
+                            </svg>
+                            <span>Зведене квадратне рівняння</span>
+                        </div>
+                        <div class="theory-content">
+                            <p><strong>Зведеним квадратним рівнянням</strong> називається квадратне рівняння, у якого
+                                перший коефіцієнт при $x^{2}$ дорівнює 1.</p>
+                            <p><strong>Загальний вигляд</strong> зведеного квадратного рівняння:$$x^{2}+px+q=0$$ де
+                                $p$ і $q$ — деякі дійсні числа, а коефіцієнт біля $x^2$ дорівнює одиниці.
+                        </div>
+                    </div>
+                </div>
+                <div class="lesson-block">
+                    <p>
+                        <strong>Теорема Вієта. </strong> Якщо $x_1$ і $x_2$ — корені зведеного квадратного
+                        рівняння $$x^2 + px + q = 0,$$
+                    </p>
+                    <p>то $x_1 + x_2 = -p$ та $x_1 \cdot x_2 = q$.</p>
+                    </p>
+                    <br>
+                    <p>Для рівняння загального вигляду $$ax^2+bx+c=0$$</p>
+                    <p> $x_1+x_2 = -\dfrac{b}{a}$,</p>
+                    <p>$x_1 x_2 = \dfrac{c}{a}$.</p>
+
+                </div>
+                <div class="lesson-block">
+                    <div class="item-card">
+                        <h3>Неповні квадратні рівняння</h3>
+                        <div class="subcard-wrapper">
+                            <div class="subcard">
+                                <div class="subcard-image">1️⃣</div>
+                                <div class="subcard-content">
+                                    <p>$ax^2 + c = 0$</p>
+                                    <p>$x = \pm\sqrt{-\dfrac{c}{a}}$</p>
+                                    <p>(якщо $-\dfrac{c}{a}\ge 0$);</p>
+                                </div>
+                            </div>
+                            <div class="subcard">
+                                <div class="subcard-image">2️⃣ </div>
+                                <div class="subcard-content">
+                                    <p>$ax^2 + bx = 0$</p>
+                                    <p>$x(ax+b)=0$</p>
+                                    <p>$x=0$ або $x=-\dfrac{b}{a}$.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="example">
-                        <div class="example-title">Приклад 5</div>
-                        <p><em>Розв'яжіть рівняння: $|x - 3| = 2x - 1$.</em></p>
-                        <p><strong>Розв'язання:</strong></p>
-                        <p>
-                            Права частина має бути невід'ємною: $2x - 1 \ge 0 \Rightarrow x \ge 0{,}5$.<br>
-                            Розглядаємо сукупність:<br>
-                            1) $x - 3 = 2x - 1 \Rightarrow -x = 2 \Rightarrow x = -2$ — не задовольняє умову $x \ge
-                            0{,}5$, тому стороннє;<br>
-                            2) $x - 3 = -(2x - 1) \Rightarrow x - 3 = -2x + 1 \Rightarrow 3x = 4 \Rightarrow x =
-                            \dfrac{4}{3}$ — задовольняє умову.
+                </div>
+
+
+                <h3>3. Дробово-раціональні рівняння</h3>
+                <p>
+                    Дробово-раціональним називають рівняння, в якому невідома змінна міститься
+                    у знаменнику хоча б одного дробу. Алгоритм розв'язування:
+                </p>
+                <ol>
+                    <li>Знайти ОДЗ — значення змінної, за яких усі знаменники не дорівнюють нулю.</li>
+                    <li>Звести всі доданки до спільного знаменника й прирівняти чисельник до нуля.</li>
+                    <li>Розв'язати здобуте рівняння (лінійне або квадратне).</li>
+                    <li>Перевірити знайдені корені на відповідність ОДЗ; корені, що не входять в ОДЗ, є
+                        сторонніми і
+                        відкидаються.</li>
+                </ol>
+
+                <div class="example">
+                    <div class="example-title">Приклад 5</div>
+                    <p><em>Розв'яжіть рівняння: $\dfrac{2x}{x-1} = \dfrac{4}{x-1} + 1$.</em></p>
+                    <p><strong>Розв'язання:</strong></p>
+                    <p>
+                    <p>ОДЗ: $x - 1 \neq 0 \Rightarrow x \neq 1$.</p>
+                    <figure>
+                        <svg width="320" height="80" viewBox="0 0 320 80" style="background-color: white;"
+                            xmlns="http//www.w3.org/2000/svg">
+                            <line x1="10" y1="60" x2="310" y2="60" stroke="black" stroke-width="1.5"/>
+                            <line x1="20" y1="57" x2="20" y2="63" stroke="black" />
+                            <line x1="70" y1="57" x2="70" y2="63" stroke="black" />
+                            <line x1="120" y1="57" x2="120" y2="63" stroke="black" />
+
+                            <line x1="220" y1="57" x2="220" y2="63" stroke="black" />
+                            <line x1="270" y1="57" x2="270" y2="63" stroke="black" />
+                            <polygon points="300,57 310,60 300,63" fill="white" stroke="#1e293b" stroke-width="1" />
+                            <path d="M10 35 h125 Q160 35 168 56 " fill="none" stroke="#1e293b" stroke-width="1"/>
+                            <path d="M310 35 h-115 Q180 35 172 56 " fill="none" stroke="#1e293b" stroke-width="1"/>
+                            <polygon points="160,58 170,60 160,62" stroke="#1e293b" fill="white" stroke-width="1" transform="rotate(57 174 55)"/>
+                            <polygon points="160,58 170,60 160,62" stroke="#1e293b" fill="white" stroke-width="1" transform="translate(10, 0) rotate(117 168 55)"/>
+                            <text x="310" y="70" style="font: italic 12px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">x</text>
+                            <text x="15" y="75" style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">-2</text>
+                            <text x="65" y="75" style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">-1</text>
+                            <text x="115" y="75" style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">0</text>
+                            <text x="165" y="75" style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">1</text>
+                            <text x="215" y="75" style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">2</text>
+                            <text x="265" y="75" style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">3</text>
+                            <circle cx="170" cy="60" r="5" fill="white" stroke="#1e293b" stroke-width="1" />
+                            <text x="10" y="15" style="font: bold 14px sans-serif;">ОДЗ</text>
+                        </svg>
+                    </figure>
+                    <p>Перенесемо всі доданки в одну частину та зведемо до спільного знаменника:</p>
+                    <p>$\dfrac{2x}{x-1} - \dfrac{4}{x-1} - 1 = 0$</p>
+                    <p>$\dfrac{2x - 4 - (x-1)}{x-1}= 0$</p>
+                    <p>$\dfrac{x - 3}{x-1} = 0$.</p>
+                    <p>Дріб дорівнює нулю, коли чисельник дорівнює нулю (а знаменник — ні):</p>
+                    <p>$x - 3 = 0 \Rightarrow x = 3$.</p>
+                    <figure>
+                        <svg width="320" height="80" viewBox="0 0 320 80" style="background-color: white;"
+                            xmlns="http//www.w3.org/2000/svg">
+                            <line x1="10" y1="60" x2="310" y2="60" stroke="black" stroke-width="1.5"/>
+                            <line x1="20" y1="57" x2="20" y2="63" stroke="black" />
+                            <line x1="70" y1="57" x2="70" y2="63" stroke="black" />
+                            <line x1="120" y1="57" x2="120" y2="63" stroke="black" />
+
+                            <line x1="220" y1="57" x2="220" y2="63" stroke="black" />
+                            <line x1="270" y1="57" x2="270" y2="63" stroke="black" />
+                            <polygon points="300,57 310,60 300,63" fill="white" stroke="#1e293b" stroke-width="1" />
+                            <path d="M10 35 h125 Q160 35 168 56 " fill="none" stroke="#1e293b" stroke-width="1"/>
+                            <path d="M310 35 h-115 Q180 35 172 56 " fill="none" stroke="#1e293b" stroke-width="1"/>
+                            <polygon points="160,58 170,60 160,62" stroke="#1e293b" fill="white" stroke-width="1" transform="rotate(57 174 55)"/>
+                            <polygon points="160,58 170,60 160,62" stroke="#1e293b" fill="white" stroke-width="1" transform="translate(10, 0) rotate(117 168 55)"/>
+                            <text x="310" y="70" style="font: italic 12px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">x</text>
+                            <text x="15" y="75" style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">-2</text>
+                            <text x="65" y="75" style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">-1</text>
+                            <text x="115" y="75" style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">0</text>
+                            <text x="165" y="75" style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">1</text>
+                            <text x="215" y="75" style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">2</text>
+                            <text x="265" y="75" style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">3</text>
+                            <circle cx="170" cy="60" r="5" fill="white" stroke="#1e293b" stroke-width="1" />
+                            <circle cx="270" cy="60" r="3" fill="blue" stroke="white" stroke-width="1" />
+                            
+                            <text x="255" y="50" style="font: italic 10px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">корінь</text>
+                            <text x="10" y="15" style="font: bold 14px sans-serif;">ОДЗ</text>
+                        </svg>
+                    </figure>
+                    <p>$x = 3$ входить в ОДЗ ($3 \neq 1$), отже це не сторонній корінь.</p>
+                    </p>
+                    <p><strong>Відповідь:</strong> $x = 3$.</p>
+                </div>
+
+                <h3>4. Рівняння з модулем</h3>
+                <p>
+                    Модулем числа $a$ називають його відстань до нуля на координатній прямій:
+                    $|a| = a$, якщо $a \ge 0$, і $|a| = -a$, якщо $a < 0$. Звідси випливають основні прийоми
+                        розв'язування рівнянь з модулем. </p>
+                        <p><strong>Найпростіше рівняння</strong> $|f(x)| = a$:</p>
+                        <ul>
+                            <li>якщо $a < 0$ — коренів немає;</li>
+                            <li>якщо $a = 0$ — розв'язуємо $f(x) = 0$;</li>
+                            <li>якщо $a > 0$ — рівняння рівносильне сукупності $f(x) = a$ або $f(x) = -a$.
+                            </li>
+                        </ul>
+                        <p><strong>Рівняння виду</strong> $|f(x)| = g(x)$ рівносильне системі:
+                            $f(x) = g(x)$ або $f(x) = -g(x)$, за умови $g(x) \ge 0$ (цю умову зручно
+                            перевірити безпосередньою підстановкою знайдених коренів).
                         </p>
-                        <p><strong>Відповідь:</strong> $x = \dfrac{4}{3}$.</p>
-                    </div>
+                        <p><strong>Рівняння виду</strong> $|f(x)| = |g(x)|$ рівносильне сукупності
+                            $f(x) = g(x)$ або $f(x) = -g(x)$ (без додаткових умов на знак).
+                        </p>
 
-                    <!-- ===== ТЕСТ ===== -->
-                    <div class="test">
-                        <div class="test-title">📝 Перевірте себе</div>
-
-                        <!-- Питання 1: лінійне рівняння -->
-                        <div class="question">
-                            <p class="question-text">1. Розв'яжіть рівняння $4x - 7 = 2x + 9$.</p>
-                            <div class="options">
-                                <button class="option" data-correct="true" onclick="checkChoice(this, true)">$x =
-                                    8$</button>
-                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x =
-                                    -8$</button>
-                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x =
-                                    1$</button>
-                                <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x =
-                                    16$</button>
-                            </div>
-                            <p class="feedback"></p>
+                        <div class="example">
+                            <div class="example-title">Приклад 4</div>
+                            <p><em>Розв'яжіть рівняння: $|2x - 1| = 5$.</em></p>
+                            <p><strong>Розв'язання:</strong></p>
+                            <p>
+                                Оскільки $5 > 0$, маємо сукупність:<br>
+                                $2x - 1 = 5$ або $2x - 1 = -5$.<br>
+                                З першого рівняння: $2x = 6 \Rightarrow x = 3$.<br>
+                                З другого: $2x = -4 \Rightarrow x = -2$.
+                            </p>
+                            <p><strong>Відповідь:</strong> $x_1 = 3$, $x_2 = -2$.</p>
                         </div>
 
-                        <!-- Питання 2: теорема Вієта -->
-                        <div class="question">
-                            <p class="question-text">2. Знайдіть суму коренів рівняння $x^2 - 5x + 6 = 0$. У відповідь
-                                запишіть число.</p>
-                            <div class="input-answer">
-                                <input type="text" placeholder="Ваша відповідь">
-                                <button class="btn" onclick="checkInput(this, '5')">Перевірити</button>
-                            </div>
-                            <p class="feedback"></p>
+                        <div class="example">
+                            <div class="example-title">Приклад 5</div>
+                            <p><em>Розв'яжіть рівняння: $|x - 3| = 2x - 1$.</em></p>
+                            <p><strong>Розв'язання:</strong></p>
+                            <p>
+                                Права частина має бути невід'ємною: $2x - 1 \ge 0 \Rightarrow x \ge
+                                0{,}5$.<br>
+                                Розглядаємо сукупність:<br>
+                                1) $x - 3 = 2x - 1 \Rightarrow -x = 2 \Rightarrow x = -2$ — не задовольняє
+                                умову
+                                $x \ge
+                                0{,}5$, тому стороннє;<br>
+                                2) $x - 3 = -(2x - 1) \Rightarrow x - 3 = -2x + 1 \Rightarrow 3x = 4
+                                \Rightarrow
+                                x =
+                                \dfrac{4}{3}$ — задовольняє умову.
+                            </p>
+                            <p><strong>Відповідь:</strong> $x = \dfrac{4}{3}$.</p>
                         </div>
 
-                        <!-- Питання 3: неповне квадратне рівняння -->
-                        <div class="question">
-                            <p class="question-text">3. Скільки коренів має рівняння $D<0$ для квадратного рівняння з
-                                    дійсними коефіцієнтами?</p>
-                                    <div class="options">
-                                        <button class="option" data-correct="false"
-                                            onclick="checkChoice(this, false)">Один</button>
-                                        <button class="option" data-correct="false"
-                                            onclick="checkChoice(this, false)">Два</button>
-                                        <button class="option" data-correct="true"
-                                            onclick="checkChoice(this, true)">Жодного</button>
-                                        <button class="option" data-correct="false"
-                                            onclick="checkChoice(this, false)">Безліч</button>
-                                    </div>
-                                    <p class="feedback"></p>
-                        </div>
+                        <!-- ===== ТЕСТ ===== -->
+                        <div class="test">
+                            <div class="test-title">📝 Перевірте себе</div>
 
-                        <!-- Питання 4: дробово-раціональне рівняння + розв'язок -->
-                        <div class="question">
-                            <p class="question-text">4. Розв'яжіть рівняння $\dfrac{3x}{x+2} = \dfrac{6}{x+2} + 1$. У
-                                відповідь запишіть корінь.</p>
-                            <div class="input-answer">
-                                <input type="text" placeholder="Ваша відповідь">
-                                <button class="btn" onclick="checkInput(this, '4')">Перевірити</button>
-                                <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
-                                    розв'язок</button>
+                            <!-- Питання 1: лінійне рівняння -->
+                            <div class="question">
+                                <p class="question-text">1. Розв'яжіть рівняння $4x - 7 = 2x + 9$.</p>
+                                <div class="options">
+                                    <button class="option" data-correct="true" onclick="checkChoice(this, true)">$x
+                                        =
+                                        8$</button>
+                                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x =
+                                        -8$</button>
+                                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x =
+                                        1$</button>
+                                    <button class="option" data-correct="false" onclick="checkChoice(this, false)">$x =
+                                        16$</button>
+                                </div>
+                                <p class="feedback"></p>
                             </div>
-                            <p class="feedback"></p>
-                            <div class="solution">
-                                <div class="solution-title">Розв'язання:</div>
-                                <p>
-                                    ОДЗ: $x \neq -2$.<br>
-                                    $\dfrac{3x}{x+2} - \dfrac{6}{x+2} - 1 = 0 \Rightarrow \dfrac{3x - 6 - (x+2)}{x+2} =
-                                    0
-                                    \Rightarrow \dfrac{2x - 8}{x+2} = 0$.<br>
-                                    $2x - 8 = 0 \Rightarrow x = 4$. Оскільки $4 \neq -2$, корінь входить в ОДЗ.
-                                </p>
-                            </div>
-                        </div>
 
-                        <!-- Питання 5: рівняння з модулем -->
-                        <div class="question">
-                            <p class="question-text">5. Скільки коренів має рівняння $|x + 2| = -3$?</p>
-                            <div class="options">
-                                <button class="option" data-correct="true" onclick="checkChoice(this, true)">0</button>
-                                <button class="option" data-correct="false"
-                                    onclick="checkChoice(this, false)">1</button>
-                                <button class="option" data-correct="false"
-                                    onclick="checkChoice(this, false)">2</button>
-                                <button class="option" data-correct="false"
-                                    onclick="checkChoice(this, false)">Безліч</button>
+                            <!-- Питання 2: теорема Вієта -->
+                            <div class="question">
+                                <p class="question-text">2. Знайдіть суму коренів рівняння $x^2 - 5x + 6 =
+                                    0$. У
+                                    відповідь
+                                    запишіть число.</p>
+                                <div class="input-answer">
+                                    <input type="text" placeholder="Ваша відповідь">
+                                    <button class="btn" onclick="checkInput(this, '5')">Перевірити</button>
+                                </div>
+                                <p class="feedback"></p>
                             </div>
-                            <p class="feedback"></p>
-                        </div>
 
-                        <!-- Питання 6: рівняння з модулем + розв'язок -->
-                        <div class="question">
-                            <p class="question-text">6. Розв'яжіть рівняння $|3x - 6| = 9$. У відповідь запишіть суму
-                                коренів.</p>
-                            <div class="input-answer">
-                                <input type="text" placeholder="Ваша відповідь">
-                                <button class="btn" onclick="checkInput(this, '4')">Перевірити</button>
-                                <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
-                                    розв'язок</button>
+                            <!-- Питання 3: неповне квадратне рівняння -->
+                            <div class="question">
+                                <p class="question-text">3. Скільки коренів має рівняння $D<0$ для квадратного рівняння
+                                        з дійсними коефіцієнтами?</p>
+                                        <div class="options">
+                                            <button class="option" data-correct="false"
+                                                onclick="checkChoice(this, false)">Один</button>
+                                            <button class="option" data-correct="false"
+                                                onclick="checkChoice(this, false)">Два</button>
+                                            <button class="option" data-correct="true"
+                                                onclick="checkChoice(this, true)">Жодного</button>
+                                            <button class="option" data-correct="false"
+                                                onclick="checkChoice(this, false)">Безліч</button>
+                                        </div>
+                                        <p class="feedback"></p>
                             </div>
-                            <p class="feedback"></p>
-                            <div class="solution">
-                                <div class="solution-title">Розв'язання:</div>
-                                <p>
-                                    Оскільки $9 > 0$: $3x - 6 = 9$ або $3x - 6 = -9$.<br>
-                                    $3x = 15 \Rightarrow x_1 = 5$.<br>
-                                    $3x = -3 \Rightarrow x_2 = -1$.<br>
-                                    Сума коренів: $5 + (-1) = 4$.
-                                </p>
-                            </div>
-                        </div>
 
-                    </div>
+                            <!-- Питання 4: дробово-раціональне рівняння + розв'язок -->
+                            <div class="question">
+                                <p class="question-text">4. Розв'яжіть рівняння $\dfrac{3x}{x+2} =
+                                    \dfrac{6}{x+2} + 1$.
+                                    У
+                                    відповідь запишіть корінь.</p>
+                                <div class="input-answer">
+                                    <input type="text" placeholder="Ваша відповідь">
+                                    <button class="btn" onclick="checkInput(this, '4')">Перевірити</button>
+                                    <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
+                                        розв'язок</button>
+                                </div>
+                                <p class="feedback"></p>
+                                <div class="solution">
+                                    <div class="solution-title">Розв'язання:</div>
+                                    <p>
+                                        ОДЗ: $x \neq -2$.<br>
+                                        $\dfrac{3x}{x+2} - \dfrac{6}{x+2} - 1 = 0 \Rightarrow \dfrac{3x - 6
+                                        -
+                                        (x+2)}{x+2} =
+                                        0
+                                        \Rightarrow \dfrac{2x - 8}{x+2} = 0$.<br>
+                                        $2x - 8 = 0 \Rightarrow x = 4$. Оскільки $4 \neq -2$, корінь входить
+                                        в
+                                        ОДЗ.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Питання 5: рівняння з модулем -->
+                            <div class="question">
+                                <p class="question-text">5. Скільки коренів має рівняння $|x + 2| = -3$?</p>
+                                <div class="options">
+                                    <button class="option" data-correct="true"
+                                        onclick="checkChoice(this, true)">0</button>
+                                    <button class="option" data-correct="false"
+                                        onclick="checkChoice(this, false)">1</button>
+                                    <button class="option" data-correct="false"
+                                        onclick="checkChoice(this, false)">2</button>
+                                    <button class="option" data-correct="false"
+                                        onclick="checkChoice(this, false)">Безліч</button>
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <!-- Питання 6: рівняння з модулем + розв'язок -->
+                            <div class="question">
+                                <p class="question-text">6. Розв'яжіть рівняння $|3x - 6| = 9$. У відповідь
+                                    запишіть
+                                    суму
+                                    коренів.</p>
+                                <div class="input-answer">
+                                    <input type="text" placeholder="Ваша відповідь">
+                                    <button class="btn" onclick="checkInput(this, '4')">Перевірити</button>
+                                    <button class="btn secondary" onclick="toggleSolution(this)">👁 Показати
+                                        розв'язок</button>
+                                </div>
+                                <p class="feedback"></p>
+                                <div class="solution">
+                                    <div class="solution-title">Розв'язання:</div>
+                                    <p>
+                                        Оскільки $9 > 0$: $3x - 6 = 9$ або $3x - 6 = -9$.<br>
+                                        $3x = 15 \Rightarrow x_1 = 5$.<br>
+                                        $3x = -3 \Rightarrow x_2 = -1$.<br>
+                                        Сума коренів: $5 + (-1) = 4$.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
         </article>
 
         <nav class="lesson-nav">
