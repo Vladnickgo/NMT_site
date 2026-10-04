@@ -358,18 +358,12 @@
                             transform="translate(9, 0) rotate(130 118 55)" />
                         <text x="285" y="54"
                             style="font: italic 12px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">x</text>
-                        <text x="15" y="75"
-                            style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">-1</text>
-                        <text x="65" y="75"
-                            style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">0</text>
-                        <text x="115" y="75"
-                            style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">1</text>
-                        <text x="165" y="75"
-                            style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">2</text>
-                        <text x="215" y="75"
-                            style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">3</text>
-                        <text x="265" y="75"
-                            style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">4</text>
+                        <text x="15" y="75" class="coorditate-text">-1</text>
+                        <text x="65" y="75" class="coorditate-text">0</text>
+                        <text x="115" y="75" class="coorditate-text">1</text>
+                        <text x="165" y="75" class="coorditate-text">2</text>
+                        <text x="215" y="75" class="coorditate-text">3</text>
+                        <text x="265" y="75" class="coorditate-text">4</text>
                         <circle cx="120" cy="60" r="5" fill="white" stroke="#1e293b" stroke-width="1" />
                         <text x="10" y="15" style="font: bold 14px sans-serif;">ОДЗ</text>
                     </svg>
@@ -402,18 +396,12 @@
                             transform="translate(9, 0) rotate(130 118 55)" />
                         <text x="285" y="54"
                             style="font: italic 12px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">x</text>
-                        <text x="15" y="75"
-                            style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">-1</text>
-                        <text x="65" y="75"
-                            style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">0</text>
-                        <text x="115" y="75"
-                            style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">1</text>
-                        <text x="165" y="75"
-                            style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">2</text>
-                        <text x="215" y="75"
-                            style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">3</text>
-                        <text x="265" y="75"
-                            style="font: italic 11px sans-serif;fill:gray; stroke: white; stroke-width: 4px; paint-order: stroke fill;">4</text>
+                        <text x="15" y="75" class="coorditate-text">-1</text>
+                        <text x="65" y="75" class="coorditate-text">0</text>
+                        <text x="115" y="75" class="coorditate-text">1</text>
+                        <text x="165" y="75" class="coorditate-text">2</text>
+                        <text x="215" y="75" class="coorditate-text">3</text>
+                        <text x="265" y="75" class="coorditate-text">4</text>
                         <circle cx="120" cy="60" r="5" fill="white" stroke="#1e293b" stroke-width="1" />
                         <circle cx="220" cy="60" r="4" fill="blue" stroke="white" stroke-width="1" />
 
@@ -483,18 +471,97 @@
                 <p><em>Розв'яжіть рівняння: $|x - 3| = 2x - 1$.</em></p>
                 <p><strong>Розв'язання:</strong></p>
                 <p>
-                    Права частина має бути невід'ємною: $2x - 1 \ge 0 \Rightarrow x \ge
-                    0{,}5$.<br>
-                    Розглядаємо сукупність:<br>
-                    1) $x - 3 = 2x - 1 \Rightarrow -x = 2 \Rightarrow x = -2$ — не задовольняє
-                    умову
-                    $x \ge
-                    0{,}5$, тому стороннє;<br>
-                    2) $x - 3 = -(2x - 1) \Rightarrow x - 3 = -2x + 1 \Rightarrow 3x = 4
-                    \Rightarrow
-                    x =
-                    \dfrac{4}{3}$ — задовольняє умову.
+
+                    Права частина має бути невід'ємною:<br>
+                <figure style="margin-left: -10px;">
+                    <svg width="300" height="100" viewBox="0 0 300 100" style="background-color:white;"
+                        xmlns="http\\www.w3.org\2000\svg\">
+                        <style>
+                            .coorditate-text {
+                                font: italic 12px sans-serif;
+                                fill: gray;
+                                stroke: white;
+                                stroke-width: 4px;
+                                paint-order: stroke fill;
+                            }
+                        </style>
+                        <rect x="195" y="45" width="90" height="15" fill="palegreen" fill-opacity="0.8" />
+                        <!--x axis-->
+                        <line x1="10" y1="60" x2="290" y2="60" stroke="black" stroke-width="1.5" />
+                        <line x1="20" y1="57" x2="20" y2="63" stroke="black" />
+                        <line x1="70" y1="57" x2="70" y2="63" stroke="black" />
+                        <line x1="120" y1="57" x2="120" y2="63" stroke="black" />
+                        <line x1="170" y1="57" x2="170" y2="63" stroke="black" />
+                        <line x1="220" y1="57" x2="220" y2="63" stroke="black" />
+                        <line x1="270" y1="57" x2="270" y2="63" stroke="black" />
+                        <!--Arrow-->
+                        <polygon points="285,57 295,60 285,63" fill="white" stroke="#1e293b" stroke-width="1" />
+                        <text x="285" y="54" class="coorditate-text">x</text>
+                        <text x="15" y="75" class="coorditate-text">-3</text>
+                        <text x="65" y="75" class="coorditate-text">-2</text>
+                        <text x="115" y="75" class="coorditate-text">-1</text>
+                        <text x="165" y="75" class="coorditate-text">0</text>
+                        <text x="190" y="80" class="coorditate-text">0,5</text>
+                        <text x="215" y="75" class="coorditate-text">1</text>
+                        <text x="265" y="75" class="coorditate-text">2</text>
+                        <!-- Domain of definition -->
+                        <circle cx="195" cy="60" r="3" fill="blue" stroke="white" />
+                        <text x="250" y="30">ОДЗ</text>
+                    </svg>
+                </figure>
+                $2x - 1 \ge 0 \Rightarrow x \ge 0{,}5$.<br><br>
+                Розглядаємо сукупність:<br>
+                1) $x - 3 = 2x - 1$<br>
+                $ x - 2x = -1 + 3$<br>
+                $ -x = 2$<br>
+                $ x = -2$ - не задовольняє умову<br>
+                $x \ge 0{,}5$, тому стороннє;<br>
+                2) $x - 3 = -(2x - 1)$<br>
+                $x - 3 = -2x + 1 \Rightarrow 3x = 4$<br>
+                $x = \dfrac{4}{3}$ — задовольняє умову.<br>
                 </p>
+                <figure style="margin-left: -10px;">
+                    <svg width="300" height="100" viewBox="0 0 300 100" style="background-color:white;"
+                        xmlns="http\\www.w3.org\2000\svg\">
+                        <style>
+                            .coorditate-text {
+                                font: italic 12px sans-serif;
+                                fill: gray;
+                                stroke: white;
+                                stroke-width: 4px;
+                                paint-order: stroke fill;
+                            }
+                        </style>
+                        <rect x="195" y="45" width="90" height="15" fill="palegreen" fill-opacity="0.8" />
+                        <!--x axis-->
+                        <line x1="10" y1="60" x2="290" y2="60" stroke="black" stroke-width="1.5" />
+                        <line x1="20" y1="57" x2="20" y2="63" stroke="black" />
+                        <line x1="70" y1="57" x2="70" y2="63" stroke="black" />
+                        <line x1="120" y1="57" x2="120" y2="63" stroke="black" />
+                        <line x1="170" y1="57" x2="170" y2="63" stroke="black" />
+                        <line x1="220" y1="57" x2="220" y2="63" stroke="black" />
+                        <line x1="270" y1="57" x2="270" y2="63" stroke="black" />
+                        <!--Arrow-->
+                        <polygon points="285,57 295,60 285,63" fill="white" stroke="#1e293b" stroke-width="1" />
+                        <text x="285" y="54" class="coorditate-text">x</text>
+                        <text x="15" y="75" class="coorditate-text">-3</text>
+                        <text x="65" y="85" class="coorditate-text">-2</text>
+                        <text x="115" y="75" class="coorditate-text">-1</text>
+                        <text x="165" y="75" class="coorditate-text">0</text>
+                        <text x="190" y="85" class="coorditate-text">0,5</text>
+                        <text x="215" y="75" class="coorditate-text">1</text>
+                        <text x="265" y="75" class="coorditate-text">2</text>
+                        <!-- Domain of definition -->
+                        <circle cx="195" cy="60" r="3" fill="blue" stroke="white" />
+                        <text x="250" y="30">ОДЗ</text>
+                        <!-- Roots -->
+                        <circle cx="70" cy="60" r="5" fill="blue" stroke="white" />
+                        <circle cx="238" cy="60" r="5" fill="blue" stroke="white" />
+                        <text x="230" y="85" class="coorditate-text">4/3</text>
+                        <text x="40" y="30" class="coorditate-text">сторонній</text>
+                        <text x="55" y="40" class="coorditate-text">корінь</text>
+                    </svg>
+                </figure>
                 <p><strong>Відповідь:</strong> $x = \dfrac{4}{3}$.</p>
             </div>
 
