@@ -132,11 +132,13 @@
                     </div>
                     <div class="example">
                         <div class="example-title">Приклад 2</div>
-                        <p><em>Розв'яжіть рівняння: $2x^2 - 5x - 3 = 0$.</em></p>
+                        <p><em>Розв'яжіть рівняння:</em></p>
+                        <p>$2x^2 - 5x - 3 = 0$.</p>
                         <p><strong>Розв'язання:</strong></p>
                         <p>
                             Тут $a=2,\ b=-5,\ c=-3$.<br>
-                            $D = (-5)^2 - 4\cdot 2\cdot(-3) = 25 + 24 = 49$.<br>
+                            $D = (-5)^2 - 4\cdot 2\cdot(-3) = 25 + 24 =$<br> 
+                            $ = 49$.<br>
                             $\sqrt{D} = 7$.<br>
                             $x_{1,2} = \dfrac{5 \pm 7}{4}$, тобто $x_1 = \dfrac{12}{4} = 3$, $x_2 =
                             \dfrac{-2}{4} =
@@ -575,7 +577,8 @@
                 <p><strong>Випадок 1:</strong> $2x - 1 = x + 3$</p>
                 <p>$2x - x = 3 + 1 \Rightarrow x = 4$</p>
                 <p><strong>Випадок 2:</strong> $2x - 1 = -(x + 3)$</p>
-                <p>$2x - 1 = -x - 3 \Rightarrow 3x = -2 \Rightarrow x = -\dfrac{2}{3}$</p>
+                <p>$2x - 1 = -x - 3 \Rightarrow 3x = -2 \Rightarrow$</p>
+                <p>$x = -\dfrac{2}{3}$</p>
                 <p>Перевірка:</p>
                 <ul>
                     <li>$x = 4$: $|2 \cdot 4 - 1| = |7| = 7$, $|4 + 3| = 7$ ✅</li>
@@ -624,6 +627,115 @@
                     Це значно швидше, ніж метод інтервалів.
                 </div>
             </div>
+            <div class="example">
+                <h3>Порівняння: два методи для одного рівняння</h3>
+
+                <p>Розв'яжемо рівняння $|2x - 1| = |x + 3|$ <strong>двома способами</strong> і порівняємо, скільки часу
+                    йде на кожен.</p>
+
+                <div class="lesson-block">
+                    <p><strong>Спосіб 1. Через рівність модулів</strong> (правило $|f| = |g|$).</p>
+                    <p>Одразу переходимо до сукупності:</p>
+                    <div class="formula">
+                        <p>$2x - 1 = x + 3$ або</p>
+                        <p>$2x - 1 = -(x + 3)$</p>
+                    </div>
+                    <p>Перше: $x = 4$.</p>
+                    <p>Друге: $3x = -2 \Rightarrow x = -\dfrac{2}{3}$.</p>
+                    <p><strong>Відповідь:</strong> $x_1 = 4$, $x_2 = -\dfrac{2}{3}$. <em>(≈ 30 секунд)</em></p>
+                </div>
+
+                <div class="lesson-block">
+                    <p><strong>Спосіб 2. Метод інтервалів</strong> (розкриття модулів за означенням).</p>
+
+                    <p><strong>Крок 1.</strong> Знайдемо нулі підмодульних виразів:</p>
+                    <p>$2x - 1 = 0 \Rightarrow x = 0{,}5$</p>
+                    <p>$x + 3 = 0 \Rightarrow x = -3$</p>
+
+                    <p><strong>Крок 2.</strong> Розіб'ємо числову пряму на три проміжки:</p>
+
+                    <figure class="example-figure">
+                        <svg width="280" height="100" viewBox="0 0 280 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Вісь -->
+                            <line x1="20" y1="60" x2="540" y2="60" stroke="#1e293b" stroke-width="2" />
+                            <polygon points="270,56 280,60 270,64" fill="#1e293b" />
+
+                            <!-- Точка -3 -->
+                            <circle cx="80" cy="60" r="6" fill="#1e293b" />
+                            <text x="80" y="85" text-anchor="middle" font-size="14" font-weight="700"
+                                fill="#1e293b">−3</text>
+
+                            <!-- Точка 0,5 -->
+                            <circle cx="200" cy="60" r="6" fill="#1e293b" />
+                            <text x="200" y="85" text-anchor="middle" font-size="14" font-weight="700"
+                                fill="#1e293b">0,5</text>
+
+                            <!-- Проміжки зверху -->
+                            <text x="50" y="35" text-anchor="middle" font-size="13" font-weight="700"
+                                fill="#dc2626">I</text>
+                            <text x="150" y="35" text-anchor="middle" font-size="13" font-weight="700"
+                                fill="#16a34a">II</text>
+                            <text x="250" y="35" text-anchor="middle" font-size="13" font-weight="700"
+                                fill="#2563eb">III</text>
+                        </svg>
+                        <figcaption style="font-size: 10pt; font-weight: 700;">Три проміжки: $(-\infty; -3)$, $[-3;
+                            0{,}5)$ і $[0{,}5; +\infty)$</figcaption>
+                    </figure><br>
+
+                    <p><strong>Крок 3.</strong> Розкриваємо модулі на кожному проміжку окремо.</p>
+                </div>
+
+                <div class="lesson-block">
+                    <p><strong>Проміжок I: $x < -3$</strong>
+                    </p>
+                    <p>Тут $2x - 1 < 0$ (модуль розкривається зі знаком «−»), $x + 3 < 0$ (теж «−»).</p>
+                            <p>Рівняння: $-(2x - 1) = -(x + 3)$</p>
+                            <p>$-2x + 1 = -x - 3 \Rightarrow -x = -4 \Rightarrow$</p>
+                            <p>$x = 4$.</p>
+                            <p>Але $4 \notin (-\infty; -3)$ — <strong>сторонній корінь</strong>. ❌</p>
+                </div>
+
+                <div class="lesson-block">
+                    <p><strong>Проміжок II: $-3 \leq x < 0{,}5$</strong>
+                    </p>
+                    <p>Тут $2x - 1 < 0$ («−»), $x + 3 \geq 0$ («+»).</p>
+                            <p>Рівняння: $-(2x - 1) = x + 3$</p>
+                            <p>$-2x + 1 = x + 3 \Rightarrow -3x = 2 \Rightarrow$</p>
+                            <p>$x = -\dfrac{2}{3}$.</p>
+                            <p>Перевірка:</p>
+                            <p>$-\dfrac{2}{3} \approx -0{,}67 \in [-3; 0{,}5)$ ✅</p>
+                </div>
+
+                <div class="lesson-block">
+                    <p><strong>Проміжок III: $x \geq 0{,}5$</strong></p>
+                    <p>Тут $2x - 1 \geq 0$ («+»), $x + 3 > 0$ («+»).</p>
+                    <p>Рівняння: $2x - 1 = x + 3$</p>
+                    <p>$x = 4$.</p>
+                    <p>Перевірка:</p>
+                    <p>$4 \in [0{,}5; +\infty)$ ✅</p>
+                </div>
+
+                <div class="lesson-block">
+                    <p><strong>Відповідь:</strong> $x_1 = 4$, $x_2 = -\dfrac{2}{3}$. <em>(≈ 5 хвилин)</em></p>
+                </div>
+            </div>
+
+
+            <div class="remember">
+                <span class="remember-icon">💡</span>
+                <div class="remember-text">
+                    <strong>Висновок.</strong> Обидва методи дають <strong>однакову відповідь</strong>, але:
+                    <ul style="margin-top: 8px;">
+                        <li><strong>Через рівність модулів</strong> — 2 рівняння, 30 секунд, не треба перевіряти
+                            проміжки.</li>
+                        <li><strong>Метод інтервалів</strong> — 3 проміжки, 3 рівняння, перевірка приналежності коренів
+                            — 5 хвилин.</li>
+                    </ul>
+                    <p style="margin-top: 10px;">Тому на НМТ для рівнянь виду $|f| = |g|$ <strong>завжди</strong>
+                        використовуйте правило сукупності. Це економить час і зменшує кількість помилок.</p>
+                </div>
+            </div>
+
             <!-- ===== ТЕСТ ===== -->
             <div class="test">
                 <div class="test-title">📝 Перевірте себе</div>
@@ -787,7 +899,7 @@
                     </div>
                     <p class="feedback"></p>
                 </div>
-
+            </div>
         </article>
 
         <nav class="lesson-nav">
